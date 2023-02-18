@@ -1,6 +1,5 @@
 import pyxdf
 import pandas as pd
-import mne
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -8,9 +7,6 @@ class Blink:
     def __init__(self, timestamp, index):
         self.timestamp = timestamp
         self.index = index
-
-
-
 
 
 def get_time_stamps(stamps: list):
@@ -35,7 +31,7 @@ def get_time_stamps(stamps: list):
     return start, end
 
 
-data, header = pyxdf.load_xdf('data/LSLData2/LSLData/gaze-and-blinking.xdf')
+data, header = pyxdf.load_xdf('data/data18022023/eeg-and-eyetracking.xdf')
 eeg, header_egg = pyxdf.load_xdf('data/LSLData2/LSLData/raw-eeg.xdf')
 
 left_blinks = None
