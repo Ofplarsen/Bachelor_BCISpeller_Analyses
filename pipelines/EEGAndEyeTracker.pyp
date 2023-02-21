@@ -1,35 +1,36 @@
 <?xml version='1.0' encoding='utf-8'?>
 <scheme description="" title="UnityTest" version="2.0">
 	<nodes>
-		<node id="0" name="LSL Input" position="(1412.0, 677.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="ObjectPositionStream" uuid="a37316ae-4e2e-48b9-8873-fc29f9a58ae8" version="1.5.1" />
-		<node id="1" name="LSL Input" position="(143.0, 151.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="EyeTrackerStream" uuid="6fd28708-6094-4d10-a5cb-22118804f441" version="1.5.1" />
-		<node id="2" name="Select Range" position="(543.0, 251.0)" project_name="NeuroPype" qualified_name="widgets.tensor_math.owselectrange.OWSelectRange" title="Blinking Data" uuid="ba354c07-d200-4a0b-8b57-9f7a80175901" version="1.1.0" />
-		<node id="3" name="Streaming Bar Plot" position="(738.0, 352.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owbarplot.OWBarPlot" title="Blinking bars" uuid="4f9e6254-e88b-436b-aecd-c822f6acb1b5" version="1.0.5" />
-		<node id="4" name="LSL Input" position="(125.0, 637.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="EEG" uuid="0cf9997b-4a79-4e07-a1e9-23370d7a102f" version="1.5.1" />
-		<node id="5" name="Print To Console" position="(462.0, 572.0)" project_name="NeuroPype" qualified_name="widgets.diagnostics.owprinttoconsole.OWPrintToConsole" title="Print To Console (1)" uuid="988a5566-d1e8-4e5f-9e6e-67beeb3785ac" version="1.1.0" />
-		<node id="6" name="Time Series Plot" position="(1078.0, 733.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Time Series Plot" uuid="e0165997-766d-4d69-857d-2f0f06215d4d" version="1.1.0" />
-		<node id="7" name="Dejitter Timestamps" position="(295.0, 647.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owdejittertimestamps.OWDejitterTimestamps" title="Dejitter Timestamps" uuid="f0a2b819-d8c1-46c5-8a29-2f57c47b39c7" version="1.0.0" />
-		<node id="8" name="FIR Filter" position="(395.0, 847.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owfirfilter.OWFIRFilter" title="FIR Filter" uuid="2bc58235-0954-4c48-bdcb-a171e19017b4" version="1.1.0" />
-		<node id="9" name="Remove Unlocalized Channels" position="(595.0, 747.0)" project_name="NeuroPype" qualified_name="widgets.source_localization.owremoveunlocalizedchannels.OWRemoveUnlocalizedChannels" title="Remove Unlocalized Channels" uuid="811f5d4f-96d7-4bbf-9914-395a5cbc49e6" version="1.2.0" />
-		<node id="10" name="Bad Channel Removal" position="(717.0, 880.0)" project_name="NeuroPype" qualified_name="widgets.neural.owbadchannelremoval.OWBadChannelRemoval" title="Bad Channel Removal" uuid="0ca754c4-40dc-445e-8eba-25aa4730d979" version="1.1.2" />
-		<node id="11" name="Artifact Removal" position="(817.0, 880.0)" project_name="NeuroPype" qualified_name="widgets.neural.owartifactremoval.OWArtifactRemoval" title="Artifact Removal" uuid="c926893f-f048-4f76-ac3b-074b659c1eba" version="2.4.1" />
-		<node id="12" name="Interpolate Missing Channels" position="(978.0, 733.0)" project_name="NeuroPype" qualified_name="widgets.neural.owinterpolatemissingchannels.OWInterpolateMissingChannels" title="Interpolate Missing Channels" uuid="57abd6d6-2d34-4223-bd91-0d3a5d949d8d" version="1.4.0" />
-		<node id="13" name="Time Series Plot" position="(700.0, 636.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Time Series Plot (1)" uuid="d7bf9361-eeeb-4b0f-b6bd-94657fa15aaa" version="1.1.0" />
-		<node id="14" name="Assign Channel Locations" position="(495.0, 647.0)" project_name="NeuroPype" qualified_name="widgets.source_localization.owassignchannellocations.OWAssignChannelLocations" title="Assign Channel Locations" uuid="c9018a1a-c477-4580-b4e0-48507326e2c9" version="1.1.0" />
-		<node id="15" name="Extract Channel Names" position="(695.0, 747.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owextractchannels.OWExtractChannels" title="Extract Channel Names" uuid="176ab8aa-bfff-4b09-9ea2-3ae732f0b1a4" version="1.0.1" />
-		<node id="16" name="Merge Streams" position="(448.0, 436.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owmergestreams.OWMergeStreams" title="Merge Streams" uuid="47c65382-1512-498a-b65b-7edb3f50bca2" version="1.0.0" />
-		<node id="17" name="Fuse Streams" position="(616.0, 448.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owfusestreams.OWFuseStreams" title="Fuse Streams" uuid="78314425-66fb-4dc7-ae27-1e8932f7a3a7" version="0.9.6" />
-		<node id="18" name="Record to XDF" position="(225.0, 281.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF" uuid="b3875533-873a-4602-ae21-09527cacff8c" version="1.4.0" />
-		<node id="19" name="Record to XDF" position="(787.0, 436.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (3)" uuid="ca1402a2-ee7b-4bff-a626-8b567eafd9d3" version="1.4.0" />
-		<node id="20" name="Record to XDF" position="(263.0, 780.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (1)" uuid="38494c2b-4210-47d7-bd57-23b2dafb249f" version="1.4.0" />
-		<node id="21" name="Record to XDF" position="(1531.0, 782.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (2)" uuid="67bf3592-a88e-47d5-b67c-bf979fd93fdc" version="1.4.0" />
-		<node id="22" name="Time Series Plot" position="(771.0, 181.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Time Series Plot (2)" uuid="92399c8e-1c6d-477f-9921-8d2b0acac025" version="1.1.0" />
-		<node id="23" name="Add Event Marker" position="(1074.0, 315.0)" project_name="NeuroPype" qualified_name="widgets.markers.owaddeventmarker.OWAddEventMarker" title="Add Event Marker" uuid="e8835d3d-ea88-47e8-b1a7-ea26f709e7b4" version="1.1.0" />
-		<node id="24" name="Marker Stream Window" position="(1226.0, 322.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owmarkerstreamwindow.OWMarkerStreamWindow" title="Marker Stream Window" uuid="8b00a0eb-562f-492a-8d86-fc1024e127d3" version="1.1.1" />
-		<node id="25" name="Break Structure" position="(1376.0, 322.0)" project_name="NeuroPype" qualified_name="widgets.programming.owbreakstructure.OWBreakStructure" title="Break Structure" uuid="596d624c-20b1-4b81-a769-f2afc1580ed3" version="1.0.0" />
-		<node id="26" name="N-Way Passthrough" position="(730.0, 1360.0)" project_name="NeuroPype" qualified_name="widgets.programming.ownwaypassthrough.OWNWayPassthrough" title="N-Way Passthrough" uuid="32394595-ed29-4ec8-a64f-79ee66472a21" version="1.1.0" />
-		<node id="27" name="Shift Timestamps" position="(607.0, 1360.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owshifttimestamps.OWShiftTimestamps" title="Shift Timestamps" uuid="b7dd582c-cddf-4be4-af5f-cd3c979b9b28" version="1.2.1" />
-		<node id="28" name="Delay Signal" position="(848.0, 1357.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owdelaysignal.OWDelaySignal" title="Delay Signal" uuid="e085107d-31bb-4d7f-beb9-e6e180fada73" version="1.0.0" />
+		<node id="0" name="LSL Input" position="(1412.0, 677.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="ObjectPositionStream" uuid="8c629784-c6ea-4953-a407-046840665e5a" version="1.5.1" />
+		<node id="1" name="LSL Input" position="(143.0, 151.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="EyeTrackerStream" uuid="9dd09e27-e0a4-48e5-aa79-698316672fe2" version="1.5.1" />
+		<node id="2" name="Select Range" position="(543.0, 251.0)" project_name="NeuroPype" qualified_name="widgets.tensor_math.owselectrange.OWSelectRange" title="Blinking Data" uuid="bf024a28-3722-402f-a5a8-2a4b3539eb50" version="1.1.0" />
+		<node id="3" name="Streaming Bar Plot" position="(738.0, 352.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owbarplot.OWBarPlot" title="Blinking bars" uuid="d4232ef4-bc1c-4f27-ad5c-9c446d8e0d56" version="1.0.5" />
+		<node id="4" name="LSL Input" position="(125.0, 637.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="EEG" uuid="5efb46d1-a64e-402d-bebf-1c2221f962a3" version="1.5.1" />
+		<node id="5" name="Print To Console" position="(462.0, 572.0)" project_name="NeuroPype" qualified_name="widgets.diagnostics.owprinttoconsole.OWPrintToConsole" title="Print To Console (1)" uuid="3af661aa-1d4d-434c-b209-39632003d0aa" version="1.1.0" />
+		<node id="6" name="Time Series Plot" position="(1078.0, 733.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Time Series Plot" uuid="b76094ea-0116-43ed-865d-9d9a56deddcd" version="1.1.0" />
+		<node id="7" name="Dejitter Timestamps" position="(295.0, 647.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owdejittertimestamps.OWDejitterTimestamps" title="Dejitter Timestamps" uuid="ab833461-e37b-4d41-af50-e5d6d75a88c2" version="1.0.0" />
+		<node id="8" name="FIR Filter" position="(395.0, 847.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owfirfilter.OWFIRFilter" title="FIR Filter" uuid="72c68017-3dbc-435e-9c37-f2c4f03cfea8" version="1.1.0" />
+		<node id="9" name="Remove Unlocalized Channels" position="(595.0, 747.0)" project_name="NeuroPype" qualified_name="widgets.source_localization.owremoveunlocalizedchannels.OWRemoveUnlocalizedChannels" title="Remove Unlocalized Channels" uuid="571a48d1-c212-41d2-a69c-5451b2d87942" version="1.2.0" />
+		<node id="10" name="Bad Channel Removal" position="(717.0, 880.0)" project_name="NeuroPype" qualified_name="widgets.neural.owbadchannelremoval.OWBadChannelRemoval" title="Bad Channel Removal" uuid="25688360-ebfd-44b7-ad40-d9db5069aee5" version="1.1.2" />
+		<node id="11" name="Artifact Removal" position="(817.0, 880.0)" project_name="NeuroPype" qualified_name="widgets.neural.owartifactremoval.OWArtifactRemoval" title="Artifact Removal" uuid="32a59d1a-1a2e-4253-9e29-2238437b10dc" version="2.4.1" />
+		<node id="12" name="Interpolate Missing Channels" position="(978.0, 733.0)" project_name="NeuroPype" qualified_name="widgets.neural.owinterpolatemissingchannels.OWInterpolateMissingChannels" title="Interpolate Missing Channels" uuid="088cf1a2-6d79-46cf-887d-3e17d98be397" version="1.4.0" />
+		<node id="13" name="Time Series Plot" position="(700.0, 636.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Time Series Plot (1)" uuid="382553f6-9795-4b22-945b-c3f35b2c06ff" version="1.1.0" />
+		<node id="14" name="Assign Channel Locations" position="(495.0, 647.0)" project_name="NeuroPype" qualified_name="widgets.source_localization.owassignchannellocations.OWAssignChannelLocations" title="Assign Channel Locations" uuid="948fa426-8113-4c5f-96bb-cad756fd7c66" version="1.1.0" />
+		<node id="15" name="Extract Channel Names" position="(695.0, 747.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owextractchannels.OWExtractChannels" title="Extract Channel Names" uuid="978a157a-d11a-4288-934a-968eaf88a7c0" version="1.0.1" />
+		<node id="16" name="Merge Streams" position="(448.0, 436.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owmergestreams.OWMergeStreams" title="Merge Streams" uuid="5b5f321b-98df-410e-a428-47aa591b8183" version="1.0.0" />
+		<node id="17" name="Fuse Streams" position="(616.0, 448.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owfusestreams.OWFuseStreams" title="Fuse Streams" uuid="230e9ebb-0582-4894-8d42-0a0aca36ae07" version="0.9.6" />
+		<node id="18" name="Record to XDF" position="(225.0, 281.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF" uuid="e50063fe-d208-4a08-8738-9ae9e08ba98c" version="1.4.0" />
+		<node id="19" name="Record to XDF" position="(787.0, 436.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (3)" uuid="eb70a7f4-9109-43f4-82e4-dc27ecc105a7" version="1.4.0" />
+		<node id="20" name="Record to XDF" position="(263.0, 780.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (1)" uuid="3c6a06de-56a3-467c-b4c9-5601bbfb80d7" version="1.4.0" />
+		<node id="21" name="Record to XDF" position="(1531.0, 782.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (2)" uuid="1d507173-9bde-450e-bb7c-e636049ba591" version="1.4.0" />
+		<node id="22" name="Time Series Plot" position="(771.0, 181.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Time Series Plot (2)" uuid="b72168c7-d765-4942-9160-29e6537ee020" version="1.1.0" />
+		<node id="23" name="Add Event Marker" position="(1074.0, 315.0)" project_name="NeuroPype" qualified_name="widgets.markers.owaddeventmarker.OWAddEventMarker" title="Add Event Marker" uuid="ea5c13b5-dedc-4165-bf4e-f2436a257830" version="1.1.0" />
+		<node id="24" name="Marker Stream Window" position="(1226.0, 322.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owmarkerstreamwindow.OWMarkerStreamWindow" title="Marker Stream Window" uuid="1ad97303-79be-49c2-ba19-91a956f86300" version="1.1.1" />
+		<node id="25" name="Break Structure" position="(1376.0, 322.0)" project_name="NeuroPype" qualified_name="widgets.programming.owbreakstructure.OWBreakStructure" title="Break Structure" uuid="e8b261ac-dffd-44d6-b7e5-be4d9b942d37" version="1.0.0" />
+		<node id="26" name="N-Way Passthrough" position="(730.0, 1360.0)" project_name="NeuroPype" qualified_name="widgets.programming.ownwaypassthrough.OWNWayPassthrough" title="N-Way Passthrough" uuid="60fbe2db-14dc-4a8e-b8f1-5af9366ae148" version="1.1.0" />
+		<node id="27" name="Shift Timestamps" position="(607.0, 1360.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owshifttimestamps.OWShiftTimestamps" title="Shift Timestamps" uuid="0b37a203-fa0b-4fa3-8935-3083d0e54054" version="1.2.1" />
+		<node id="28" name="Delay Signal" position="(848.0, 1357.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owdelaysignal.OWDelaySignal" title="Delay Signal" uuid="599f4a81-6ec9-49f4-90e3-8203790504e6" version="1.0.0" />
+		<node id="29" name="Inspect Packet" position="(497.0, 104.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owinspectpacket.OWInspectPacket" title="Inspect Packet" uuid="373b094f-9ea8-47f9-a607-f435b93eb1af" version="3.0.1" />
 	</nodes>
 	<links>
 		<link enabled="true" id="0" sink_channel="Data" sink_node_id="2" source_channel="Data" source_node_id="1" />
@@ -55,6 +56,7 @@
 		<link enabled="false" id="20" sink_channel="Data" sink_node_id="23" source_channel="Data" source_node_id="2" />
 		<link enabled="true" id="21" sink_channel="Data" sink_node_id="24" source_channel="Data" source_node_id="23" />
 		<link enabled="true" id="22" sink_channel="Data2" sink_node_id="16" source_channel="Data" source_node_id="1" />
+		<link enabled="true" id="23" sink_channel="Data" sink_node_id="29" source_channel="Data" source_node_id="1" />
 	</links>
 	<annotations>
 		<text font-family="Helvetica" font-size="16" id="0" rect="(18.0, 543.0, 244.0, 62.0)">LSL stream for EEG and cleaning up data.</text>
@@ -270,6 +272,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
 </properties>
 		<properties format="literal" node_id="27">{'beginning_from_zero': False, 'compensate_filter_lag': False, 'include_markers': False, 'marker_fields': '(use default)', 'metadata': {}, 'offset': 0, 'offset_triggers_state_reset': True, 'savedWidgetGeometry': None, 'set_breakpoint': False, 'timestamp_pairs': '(use default)', 'use_time_axis': False}</properties>
 		<properties format="literal" node_id="28">{'delay': 1, 'delay_unit': 'samples', 'metadata': {}, 'savedWidgetGeometry': None, 'set_breakpoint': False}</properties>
+		<properties format="literal" node_id="29">{'always_on_top': True, 'col_axis': 'time', 'decimals': 6, 'every_n_ticks': 1, 'fewer_buttons': False, 'font_size': 10, 'initial_position': [20, 50, 500, 400], 'metadata': {}, 'row_axis': 'space', 'savedWidgetGeometry': None, 'set_breakpoint': False, 'show_axes_table': True, 'show_data_table': True, 'show_markers_table': False, 'show_max_columns': 20, 'show_max_values': 50, 'show_streams_table': False, 'stream_name': '(use default)', 'verbose': True, 'window_title': 'Inspect Data Packet'}</properties>
 	</node_properties>
 	<patch>{
     "description": {
@@ -298,6 +301,12 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
             "data",
             "node17",
             "data2"
+        ],
+        [
+            "node2",
+            "data",
+            "node30",
+            "data"
         ],
         [
             "node11",
@@ -530,7 +539,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "a37316ae-4e2e-48b9-8873-fc29f9a58ae8"
+            "uuid": "8c629784-c6ea-4953-a407-046840665e5a"
         },
         "node10": {
             "class": "RemoveUnlocalizedChannels",
@@ -552,7 +561,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "811f5d4f-96d7-4bbf-9914-395a5cbc49e6"
+            "uuid": "571a48d1-c212-41d2-a69c-5451b2d87942"
         },
         "node11": {
             "class": "BadChannelRemoval",
@@ -677,7 +686,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     ]
                 }
             },
-            "uuid": "0ca754c4-40dc-445e-8eba-25aa4730d979"
+            "uuid": "25688360-ebfd-44b7-ad40-d9db5069aee5"
         },
         "node12": {
             "class": "ArtifactRemoval",
@@ -822,7 +831,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     ]
                 }
             },
-            "uuid": "c926893f-f048-4f76-ac3b-074b659c1eba"
+            "uuid": "32a59d1a-1a2e-4253-9e29-2238437b10dc"
         },
         "node13": {
             "class": "InterpolateMissingChannels",
@@ -889,7 +898,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "57abd6d6-2d34-4223-bd91-0d3a5d949d8d"
+            "uuid": "088cf1a2-6d79-46cf-887d-3e17d98be397"
         },
         "node14": {
             "class": "TimeSeriesPlot",
@@ -1041,7 +1050,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": true
                 }
             },
-            "uuid": "d7bf9361-eeeb-4b0f-b6bd-94657fa15aaa"
+            "uuid": "382553f6-9795-4b22-945b-c3f35b2c06ff"
         },
         "node15": {
             "class": "AssignChannelLocations",
@@ -1073,7 +1082,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "c9018a1a-c477-4580-b4e0-48507326e2c9"
+            "uuid": "948fa426-8113-4c5f-96bb-cad756fd7c66"
         },
         "node16": {
             "class": "ExtractChannels",
@@ -1100,7 +1109,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "176ab8aa-bfff-4b09-9ea2-3ae732f0b1a4"
+            "uuid": "978a157a-d11a-4288-934a-968eaf88a7c0"
         },
         "node17": {
             "class": "MergeStreams",
@@ -1127,7 +1136,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": "input"
                 }
             },
-            "uuid": "47c65382-1512-498a-b65b-7edb3f50bca2"
+            "uuid": "5b5f321b-98df-410e-a428-47aa591b8183"
         },
         "node18": {
             "class": "FuseStreams",
@@ -1174,7 +1183,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": 1
                 }
             },
-            "uuid": "78314425-66fb-4dc7-ae27-1e8932f7a3a7"
+            "uuid": "230e9ebb-0582-4894-8d42-0a0aca36ae07"
         },
         "node19": {
             "class": "RecordToXDF",
@@ -1261,7 +1270,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "b3875533-873a-4602-ae21-09527cacff8c"
+            "uuid": "e50063fe-d208-4a08-8738-9ae9e08ba98c"
         },
         "node2": {
             "class": "LSLInput",
@@ -1378,7 +1387,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "6fd28708-6094-4d10-a5cb-22118804f441"
+            "uuid": "9dd09e27-e0a4-48e5-aa79-698316672fe2"
         },
         "node20": {
             "class": "RecordToXDF",
@@ -1465,7 +1474,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "ca1402a2-ee7b-4bff-a626-8b567eafd9d3"
+            "uuid": "eb70a7f4-9109-43f4-82e4-dc27ecc105a7"
         },
         "node21": {
             "class": "RecordToXDF",
@@ -1552,7 +1561,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "38494c2b-4210-47d7-bd57-23b2dafb249f"
+            "uuid": "3c6a06de-56a3-467c-b4c9-5601bbfb80d7"
         },
         "node22": {
             "class": "RecordToXDF",
@@ -1639,7 +1648,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "67bf3592-a88e-47d5-b67c-bf979fd93fdc"
+            "uuid": "1d507173-9bde-450e-bb7c-e636049ba591"
         },
         "node23": {
             "class": "TimeSeriesPlot",
@@ -1791,7 +1800,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "92399c8e-1c6d-477f-9921-8d2b0acac025"
+            "uuid": "b72168c7-d765-4942-9160-29e6537ee020"
         },
         "node24": {
             "class": "AddEventMarker",
@@ -1850,7 +1859,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "e8835d3d-ea88-47e8-b1a7-ea26f709e7b4"
+            "uuid": "ea5c13b5-dedc-4165-bf4e-f2436a257830"
         },
         "node25": {
             "class": "MarkerStreamWindow",
@@ -1892,7 +1901,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": "Markers"
                 }
             },
-            "uuid": "8b00a0eb-562f-492a-8d86-fc1024e127d3"
+            "uuid": "1ad97303-79be-49c2-ba19-91a956f86300"
         },
         "node26": {
             "class": "BreakStructure",
@@ -2064,7 +2073,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "596d624c-20b1-4b81-a769-f2afc1580ed3"
+            "uuid": "e8b261ac-dffd-44d6-b7e5-be4d9b942d37"
         },
         "node27": {
             "class": "NWayPassthrough",
@@ -2091,7 +2100,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "32394595-ed29-4ec8-a64f-79ee66472a21"
+            "uuid": "60fbe2db-14dc-4a8e-b8f1-5af9366ae148"
         },
         "node28": {
             "class": "ShiftTimestamps",
@@ -2148,7 +2157,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "b7dd582c-cddf-4be4-af5f-cd3c979b9b28"
+            "uuid": "0b37a203-fa0b-4fa3-8935-3083d0e54054"
         },
         "node29": {
             "class": "DelaySignal",
@@ -2175,7 +2184,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "e085107d-31bb-4d7f-beb9-e6e180fada73"
+            "uuid": "599f4a81-6ec9-49f4-90e3-8203790504e6"
         },
         "node3": {
             "class": "SelectRange",
@@ -2221,7 +2230,114 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": "names"
                 }
             },
-            "uuid": "ba354c07-d200-4a0b-8b57-9f7a80175901"
+            "uuid": "bf024a28-3722-402f-a5a8-2a4b3539eb50"
+        },
+        "node30": {
+            "class": "InspectPacket",
+            "module": "neuropype.nodes.visualization.InspectPacket",
+            "params": {
+                "always_on_top": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": true
+                },
+                "col_axis": {
+                    "customized": false,
+                    "type": "EnumPort",
+                    "value": "time"
+                },
+                "decimals": {
+                    "customized": false,
+                    "type": "IntPort",
+                    "value": 6
+                },
+                "every_n_ticks": {
+                    "customized": false,
+                    "type": "IntPort",
+                    "value": 1
+                },
+                "fewer_buttons": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                },
+                "font_size": {
+                    "customized": false,
+                    "type": "IntPort",
+                    "value": 10
+                },
+                "initial_position": {
+                    "customized": false,
+                    "type": "ListPort",
+                    "value": [
+                        20,
+                        50,
+                        500,
+                        400
+                    ]
+                },
+                "metadata": {
+                    "customized": false,
+                    "type": "DictPort",
+                    "value": {}
+                },
+                "row_axis": {
+                    "customized": false,
+                    "type": "EnumPort",
+                    "value": "space"
+                },
+                "set_breakpoint": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                },
+                "show_axes_table": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": true
+                },
+                "show_data_table": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": true
+                },
+                "show_markers_table": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                },
+                "show_max_columns": {
+                    "customized": false,
+                    "type": "IntPort",
+                    "value": 20
+                },
+                "show_max_values": {
+                    "customized": false,
+                    "type": "IntPort",
+                    "value": 50
+                },
+                "show_streams_table": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                },
+                "stream_name": {
+                    "customized": false,
+                    "type": "StringPort",
+                    "value": null
+                },
+                "verbose": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": true
+                },
+                "window_title": {
+                    "customized": false,
+                    "type": "StringPort",
+                    "value": "Inspect Data Packet"
+                }
+            },
+            "uuid": "373b094f-9ea8-47f9-a607-f435b93eb1af"
         },
         "node4": {
             "class": "BarPlot",
@@ -2321,16 +2437,53 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     ]
                 }
             },
-            "uuid": "4f9e6254-e88b-436b-aecd-c822f6acb1b5"
+            "uuid": "d4232ef4-bc1c-4f27-ad5c-9c446d8e0d56"
         },
         "node5": {
             "class": "LSLInput",
             "module": "neuropype.nodes.network.LSLInput",
             "params": {
                 "channel_names": {
-                    "customized": false,
+                    "customized": true,
                     "type": "ListPort",
-                    "value": []
+                    "value": [
+                        "Fp1",
+                        "Fz",
+                        "F3",
+                        "F7",
+                        "F9",
+                        "FC5",
+                        "FC1",
+                        "C3",
+                        "T7",
+                        "CP5",
+                        "CP1",
+                        "Pz",
+                        "P3",
+                        "P7",
+                        "P9",
+                        "O1",
+                        "Oz",
+                        "O2",
+                        "P10",
+                        "P8",
+                        "P4",
+                        "CP2",
+                        "CP6",
+                        "T8",
+                        "C4",
+                        "Cz",
+                        "FC2",
+                        "FC6",
+                        "F10",
+                        "F8",
+                        "F4",
+                        "Fp2",
+                        "AUX_1",
+                        "ACC_X",
+                        "ACC_Y",
+                        "ACC_Z"
+                    ]
                 },
                 "data_dtype": {
                     "customized": false,
@@ -2438,7 +2591,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "0cf9997b-4a79-4e07-a1e9-23370d7a102f"
+            "uuid": "5efb46d1-a64e-402d-bebf-1c2221f962a3"
         },
         "node6": {
             "class": "PrintToConsole",
@@ -2500,7 +2653,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "988a5566-d1e8-4e5f-9e6e-67beeb3785ac"
+            "uuid": "3af661aa-1d4d-434c-b209-39632003d0aa"
         },
         "node7": {
             "class": "TimeSeriesPlot",
@@ -2652,7 +2805,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": true
                 }
             },
-            "uuid": "e0165997-766d-4d69-857d-2f0f06215d4d"
+            "uuid": "b76094ea-0116-43ed-865d-9d9a56deddcd"
         },
         "node8": {
             "class": "DejitterTimestamps",
@@ -2689,7 +2842,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": -1
                 }
             },
-            "uuid": "f0a2b819-d8c1-46c5-8a29-2f57c47b39c7"
+            "uuid": "ab833461-e37b-4d41-af50-e5d6d75a88c2"
         },
         "node9": {
             "class": "FIRFilter",
@@ -2756,7 +2909,7 @@ CYVxCodxC1JxDFgOAAAAc2V0X2JyZWFrcG9pbnRxDYl1Lg==
                     "value": 50.0
                 }
             },
-            "uuid": "2bc58235-0954-4c48-bdcb-a171e19017b4"
+            "uuid": "72c68017-3dbc-435e-9c37-f2c4f03cfea8"
         }
     },
     "version": 1.1
