@@ -1,28 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
 <scheme description="" title="EEGAndEyeTrackerPlayback" version="2.0">
 	<nodes>
-		<node id="0" name="Stream Data" position="(366.0, 447.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owstreamdata.OWStreamData" title="Stream Data" uuid="3aeab555-e1eb-4fd8-8f8f-863e496df648" version="1.3.0" />
-		<node id="1" name="LSL Output" position="(522.0, 444.0)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output" uuid="c109c12e-29ad-4d0b-98df-674e1b379cc4" version="1.4.3" />
-		<node id="2" name="LSL Input" position="(920.0, 459.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="LSL Input" uuid="6c1b218d-6ef2-4553-83fe-8a8183d86fc8" version="1.5.1" />
-		<node id="3" name="Import XDF" position="(177.0, 448.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owimportxdf.OWImportXDF" title="Import XDF" uuid="ab17b991-bc2d-4436-b4d1-3d414e121349" version="1.4.2" />
-		<node id="4" name="Import XDF" position="(183.0, 899.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owimportxdf.OWImportXDF" title="Import XDF" uuid="b8f37d04-cba6-4bd2-8ae4-23a4bd35bf36" version="1.4.2" />
-		<node id="5" name="LSL Output" position="(497.0, 880.0)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output" uuid="74d5e91c-eaeb-4425-9b8b-3c334b9f4829" version="1.4.3" />
-		<node id="6" name="Stream Data" position="(341.0, 883.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owstreamdata.OWStreamData" title="Stream Data" uuid="bf5bcd96-f863-4932-8168-db965d3dfca5" version="1.3.0" />
-		<node id="7" name="Time Series Plot" position="(1286.0, 312.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Eye tracking stream" uuid="9e8a73d8-bfe8-4d0e-a2e1-c87074a3a136" version="1.1.0" />
-		<node id="8" name="LSL Input" position="(912.0, 954.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="LSL Input (1)" uuid="68fe1b73-dda1-4ef8-a139-d703ff59954b" version="1.5.1" />
-		<node id="9" name="Time Series Plot" position="(1084.0, 928.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="EEG stream without AUX" uuid="bfcd12dc-fe7a-4c09-9152-86b7df8d106c" version="1.1.0" />
-		<node id="10" name="Select Range" position="(1095.0, 1101.0)" project_name="NeuroPype" qualified_name="widgets.tensor_math.owselectrange.OWSelectRange" title="Select Range" uuid="da30510e-684e-4ed4-a6b6-0bd0be1b4289" version="1.1.0" />
-		<node id="11" name="Time Series Plot" position="(1282.0, 1174.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Blink from EEG stream" uuid="c4e39011-e1e3-4b11-8e0c-413cb7eaec71" version="1.1.0" />
-		<node id="12" name="Select Range" position="(1279.0, 489.0)" project_name="NeuroPype" qualified_name="widgets.tensor_math.owselectrange.OWSelectRange" title="Select Range (1)" uuid="4c9c93bf-5036-4256-abb9-3371d85b8fe5" version="1.1.0" />
-		<node id="13" name="Time Series Plot" position="(1544.0, 491.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Blinking from eye tracking stream" uuid="886487e7-224c-45c7-ae28-497cc7f4fff0" version="1.1.0" />
-		<node id="14" name="Scrolling Plot (Offline)" position="(344.0, 1283.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owscrollplot.OWScrollPlot" title="Scrolling Plot (Offline)" uuid="642b0933-7ab8-4af7-abc5-f9015c10acf5" version="1.0.1" />
-		<node id="15" name="Select Range" position="(326.0, 1140.0)" project_name="NeuroPype" qualified_name="widgets.tensor_math.owselectrange.OWSelectRange" title="Select Range (2)" uuid="11a1d78d-3b3d-4f55-8c16-9023cf0146cb" version="1.1.0" />
-		<node id="16" name="Select Range" position="(447.0, 657.0)" project_name="NeuroPype" qualified_name="widgets.tensor_math.owselectrange.OWSelectRange" title="Select Range (3)" uuid="69454dec-1be1-4c1a-b9c2-67e1ee7aae4a" version="1.1.0" />
-		<node id="17" name="Scrolling Plot (Offline)" position="(728.0, 673.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owscrollplot.OWScrollPlot" title="Scrolling Plot (Offline) (1)" uuid="44e0b671-a6e7-4d96-88d6-32b8b0fd7d0f" version="1.0.1" />
-		<node id="18" name="Time Series Sweep Plot" position="(689.0, 801.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriessweepplot.OWTimeSeriesSweepPlot" title="Time Series Sweep Plot" uuid="5a227284-d355-4114-a1a7-ae850ab32c1f" version="1.0.1" />
-		<node id="19" name="Time Series Sweep Plot" position="(339.0, 1439.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriessweepplot.OWTimeSeriesSweepPlot" title="Time Series Sweep Plot (1)" uuid="49590811-f1df-4544-8f2d-01adf34d0472" version="1.0.1" />
-		<node id="20" name="Shift Timestamps" position="(665.0, 527.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owshifttimestamps.OWShiftTimestamps" title="Shift Timestamps" uuid="d6736bef-33fe-4079-8f11-c0d1f41b8460" version="1.2.1" />
-		<node id="21" name="Time Series Sweep Plot" position="(800.0, 549.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriessweepplot.OWTimeSeriesSweepPlot" title="Time Series Sweep Plot (2)" uuid="6569ee3e-bd7f-4150-af65-5f6b651b12b8" version="1.0.1" />
+		<node id="0" name="Stream Data" position="(366.0, 447.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owstreamdata.OWStreamData" title="Stream Data" uuid="79a6bd00-1b0f-4a54-803f-eb412608e186" version="1.3.0" />
+		<node id="1" name="LSL Output" position="(522.0, 444.0)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output" uuid="492a1a3f-3325-465e-84ee-dd43ce78571c" version="1.4.3" />
+		<node id="2" name="LSL Input" position="(920.0, 459.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="LSL Input" uuid="cd7244be-1c1a-4cfa-8d23-f0d40e30d7bf" version="1.5.1" />
+		<node id="3" name="Import XDF" position="(178.0, 448.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owimportxdf.OWImportXDF" title="Import XDF" uuid="378050fc-5afa-43ec-8f4b-b1e570f25510" version="1.4.2" />
+		<node id="4" name="Import XDF" position="(183.0, 899.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owimportxdf.OWImportXDF" title="Import XDF" uuid="135a86e1-2c56-447b-b6f2-8b88243ad9ed" version="1.4.2" />
+		<node id="5" name="LSL Output" position="(497.0, 880.0)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output" uuid="36394d90-a505-4b52-a630-2862813c8c2d" version="1.4.3" />
+		<node id="6" name="Stream Data" position="(341.0, 883.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owstreamdata.OWStreamData" title="Stream Data" uuid="ec18ce8f-2b24-424e-bd9a-255bb0b87b1a" version="1.3.0" />
+		<node id="7" name="Time Series Plot" position="(1286.0, 312.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Eye tracking stream" uuid="3ee0e347-55c4-40b5-92e5-1a6b1484ef58" version="1.1.0" />
+		<node id="8" name="LSL Input" position="(635.0, 966.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="LSL Input (1)" uuid="7c2c5465-a0e7-4e68-b1f6-d9304e19d189" version="1.5.1" />
+		<node id="9" name="Time Series Plot" position="(993.0, 940.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="EEG stream without AUX" uuid="45fb0d31-3855-4b79-a225-f20a8993065d" version="1.1.0" />
+		<node id="10" name="Select Range" position="(1021.0, 1136.0)" project_name="NeuroPype" qualified_name="widgets.tensor_math.owselectrange.OWSelectRange" title="Select Range" uuid="51b7aa60-9b6d-4fa9-ad9d-ec3e8101e5b9" version="1.1.0" />
+		<node id="11" name="Time Series Plot" position="(1282.0, 1174.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Blink from EEG stream" uuid="a3386c8d-97be-47a1-8e58-7dcea81f522d" version="1.1.0" />
+		<node id="12" name="Select Range" position="(1279.0, 489.0)" project_name="NeuroPype" qualified_name="widgets.tensor_math.owselectrange.OWSelectRange" title="Select Range (1)" uuid="ad7e7c49-85f2-4923-98e8-262e242e417a" version="1.1.0" />
+		<node id="13" name="Time Series Plot" position="(1544.0, 491.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Blinking from eye tracking stream" uuid="bc2290a9-8e6b-4d0b-928a-5e848bb15ddf" version="1.1.0" />
+		<node id="14" name="Scrolling Plot (Offline)" position="(344.0, 1283.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owscrollplot.OWScrollPlot" title="Scrolling Plot (Offline)" uuid="11b8b33e-497a-49fb-8cef-e4d93a85adde" version="1.0.1" />
+		<node id="15" name="Select Range" position="(326.0, 1140.0)" project_name="NeuroPype" qualified_name="widgets.tensor_math.owselectrange.OWSelectRange" title="Select Range (2)" uuid="b5963893-6c9e-4c74-95d7-5ca5474af543" version="1.1.0" />
+		<node id="16" name="Select Range" position="(447.0, 657.0)" project_name="NeuroPype" qualified_name="widgets.tensor_math.owselectrange.OWSelectRange" title="Select Range (3)" uuid="9eeffed5-3ee8-4782-915f-b4352eba7e19" version="1.1.0" />
+		<node id="17" name="Scrolling Plot (Offline)" position="(728.0, 673.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owscrollplot.OWScrollPlot" title="Scrolling Plot (Offline) (1)" uuid="7e2d72f8-7c0b-4a3d-a380-dc77760ae716" version="1.0.1" />
+		<node id="18" name="Time Series Sweep Plot" position="(689.0, 801.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriessweepplot.OWTimeSeriesSweepPlot" title="Time Series Sweep Plot" uuid="ff59ad2d-b834-4f6b-8db3-776894fffac6" version="1.0.1" />
+		<node id="19" name="Time Series Sweep Plot" position="(339.0, 1439.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriessweepplot.OWTimeSeriesSweepPlot" title="Time Series Sweep Plot (1)" uuid="a013f6fe-f23e-45b7-af1e-cff22916175b" version="1.0.1" />
+		<node id="20" name="Shift Timestamps" position="(665.0, 527.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owshifttimestamps.OWShiftTimestamps" title="Shift Timestamps" uuid="ca96de70-fbb7-4e72-a623-a653dbc66a12" version="1.2.1" />
+		<node id="21" name="Time Series Sweep Plot" position="(800.0, 549.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriessweepplot.OWTimeSeriesSweepPlot" title="Time Series Sweep Plot (2)" uuid="bead058c-78a7-4ce9-83fd-40b8e8577a62" version="1.0.1" />
 	</nodes>
 	<links>
 		<link enabled="true" id="0" sink_channel="Data" sink_node_id="1" source_channel="Data" source_node_id="0" />
@@ -30,17 +30,17 @@
 		<link enabled="true" id="2" sink_channel="Data" sink_node_id="5" source_channel="Data" source_node_id="6" />
 		<link enabled="true" id="3" sink_channel="Data" sink_node_id="6" source_channel="Data" source_node_id="4" />
 		<link enabled="true" id="4" sink_channel="Data" sink_node_id="7" source_channel="Data" source_node_id="2" />
-		<link enabled="true" id="5" sink_channel="Data" sink_node_id="9" source_channel="Data" source_node_id="8" />
-		<link enabled="true" id="6" sink_channel="Data" sink_node_id="10" source_channel="Data" source_node_id="8" />
-		<link enabled="true" id="7" sink_channel="Data" sink_node_id="11" source_channel="Data" source_node_id="10" />
-		<link enabled="true" id="8" sink_channel="Data" sink_node_id="12" source_channel="Data" source_node_id="2" />
-		<link enabled="true" id="9" sink_channel="Data" sink_node_id="13" source_channel="Data" source_node_id="12" />
-		<link enabled="true" id="10" sink_channel="Data" sink_node_id="15" source_channel="Data" source_node_id="4" />
-		<link enabled="true" id="11" sink_channel="Data" sink_node_id="16" source_channel="Data" source_node_id="3" />
-		<link enabled="true" id="12" sink_channel="Data" sink_node_id="19" source_channel="Data" source_node_id="15" />
-		<link enabled="true" id="13" sink_channel="Data" sink_node_id="18" source_channel="Data" source_node_id="16" />
-		<link enabled="true" id="14" sink_channel="Data" sink_node_id="20" source_channel="Data" source_node_id="16" />
-		<link enabled="true" id="15" sink_channel="Data" sink_node_id="21" source_channel="Data" source_node_id="20" />
+		<link enabled="true" id="5" sink_channel="Data" sink_node_id="10" source_channel="Data" source_node_id="8" />
+		<link enabled="true" id="6" sink_channel="Data" sink_node_id="11" source_channel="Data" source_node_id="10" />
+		<link enabled="true" id="7" sink_channel="Data" sink_node_id="12" source_channel="Data" source_node_id="2" />
+		<link enabled="true" id="8" sink_channel="Data" sink_node_id="13" source_channel="Data" source_node_id="12" />
+		<link enabled="true" id="9" sink_channel="Data" sink_node_id="15" source_channel="Data" source_node_id="4" />
+		<link enabled="true" id="10" sink_channel="Data" sink_node_id="16" source_channel="Data" source_node_id="3" />
+		<link enabled="true" id="11" sink_channel="Data" sink_node_id="19" source_channel="Data" source_node_id="15" />
+		<link enabled="true" id="12" sink_channel="Data" sink_node_id="18" source_channel="Data" source_node_id="16" />
+		<link enabled="true" id="13" sink_channel="Data" sink_node_id="20" source_channel="Data" source_node_id="16" />
+		<link enabled="true" id="14" sink_channel="Data" sink_node_id="21" source_channel="Data" source_node_id="20" />
+		<link enabled="true" id="15" sink_channel="Data" sink_node_id="9" source_channel="Data" source_node_id="8" />
 	</links>
 	<annotations>
 		<text font-family="Helvetica" font-size="16" id="0" rect="(290.0, 356.0, 201.0, 54.0)">Gaze stream</text>
@@ -89,28 +89,29 @@ X3N0cmVhbW5hbWVzcSWJdS4=
 </properties>
 		<properties format="pickle" node_id="3">gAN9cQAoWA0AAABjbG91ZF9hY2NvdW50cQFYAAAAAHECWAwAAABjbG91ZF9idWNrZXRxA2gCWBEA
 AABjbG91ZF9jcmVkZW50aWFsc3EEaAJYCgAAAGNsb3VkX2hvc3RxBVgHAAAARGVmYXVsdHEGWAgA
-AABmaWxlbmFtZXEHWDsAAABFOi9pZGF0dDI5MDBfZ3I5Mi9MU0xEYXRhVHJpcHBsZUJsaW5rL2dh
-emUtYW5kLWJsaW5raW5nLnhkZnEIWBMAAABoYW5kbGVfY2xvY2tfcmVzZXRzcQmIWBEAAABoYW5k
-bGVfY2xvY2tfc3luY3EKiFgVAAAAaGFuZGxlX2ppdHRlcl9yZW1vdmFscQuIWA4AAABtYXhfbWFy
-a2VyX2xlbnEMWA0AAAAodXNlIGRlZmF1bHQpcQ1YCAAAAG1ldGFkYXRhcQ59cQ9YEgAAAHJlb3Jk
-ZXJfdGltZXN0YW1wc3EQiVgOAAAAcmV0YWluX3N0cmVhbXNxEWgNWBMAAABzYXZlZFdpZGdldEdl
-b21ldHJ5cRJjc2lwCl91bnBpY2tsZV90eXBlCnETWAwAAABQeVF0NS5RdENvcmVxFFgKAAAAUUJ5
-dGVBcnJheXEVQ0IB2dDLAAMAAAAABsIAAANnAAAIKwAABcIAAAbDAAADlAAACCoAAAXBAAAAAAAA
-AAAPAAAABsMAAAOUAAAIKgAABcFxFoVxF4dxGFJxGVgOAAAAc2V0X2JyZWFrcG9pbnRxGolYCwAA
-AHVzZV9jYWNoaW5ncRuJWA8AAAB1c2Vfc3RyZWFtbmFtZXNxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
+AABmaWxlbmFtZXEHWEQAAABFOi9pZGF0dDI5MDBfZ3I5Mi9MU0xEYXRhVjIvTFNMRGF0YUxlZnQ1
+dGltZXMyL2dhemUtYW5kLWJsaW5raW5nLnhkZnEIWBMAAABoYW5kbGVfY2xvY2tfcmVzZXRzcQmI
+WBEAAABoYW5kbGVfY2xvY2tfc3luY3EKiFgVAAAAaGFuZGxlX2ppdHRlcl9yZW1vdmFscQuIWA4A
+AABtYXhfbWFya2VyX2xlbnEMWA0AAAAodXNlIGRlZmF1bHQpcQ1YCAAAAG1ldGFkYXRhcQ59cQ9Y
+EgAAAHJlb3JkZXJfdGltZXN0YW1wc3EQiVgOAAAAcmV0YWluX3N0cmVhbXNxEWgNWBMAAABzYXZl
+ZFdpZGdldEdlb21ldHJ5cRJjc2lwCl91bnBpY2tsZV90eXBlCnETWAwAAABQeVF0NS5RdENvcmVx
+FFgKAAAAUUJ5dGVBcnJheXEVQ0IB2dDLAAMAAAAABsIAAANnAAAIKwAABcIAAAbDAAADlAAACCoA
+AAXBAAAAAAAAAAAPAAAABsMAAAOUAAAIKgAABcFxFoVxF4dxGFJxGVgOAAAAc2V0X2JyZWFrcG9p
+bnRxGolYCwAAAHVzZV9jYWNoaW5ncRuJWA8AAAB1c2Vfc3RyZWFtbmFtZXNxHIlYBwAAAHZlcmJv
+c2VxHYl1Lg==
 </properties>
 		<properties format="pickle" node_id="4">gAN9cQAoWA0AAABjbG91ZF9hY2NvdW50cQFYAAAAAHECWAwAAABjbG91ZF9idWNrZXRxA2gCWBEA
 AABjbG91ZF9jcmVkZW50aWFsc3EEaAJYCgAAAGNsb3VkX2hvc3RxBVgHAAAARGVmYXVsdHEGWAgA
-AABmaWxlbmFtZXEHWDEAAABFOi9pZGF0dDI5MDBfZ3I5Mi9MU0xEYXRhVHJpcHBsZUJsaW5rL3Jh
-dy1lZWcueGRmcQhYEwAAAGhhbmRsZV9jbG9ja19yZXNldHNxCYhYEQAAAGhhbmRsZV9jbG9ja19z
-eW5jcQqIWBUAAABoYW5kbGVfaml0dGVyX3JlbW92YWxxC4hYDgAAAG1heF9tYXJrZXJfbGVucQxY
-DQAAACh1c2UgZGVmYXVsdClxDVgIAAAAbWV0YWRhdGFxDn1xD1gSAAAAcmVvcmRlcl90aW1lc3Rh
-bXBzcRCJWA4AAAByZXRhaW5fc3RyZWFtc3ERWA0AAAAodXNlIGRlZmF1bHQpcRJYEwAAAHNhdmVk
-V2lkZ2V0R2VvbWV0cnlxE2NzaXAKX3VucGlja2xlX3R5cGUKcRRYDAAAAFB5UXQ1LlF0Q29yZXEV
-WAoAAABRQnl0ZUFycmF5cRZDQgHZ0MsAAwAAAAAGwgAAA2cAAAgrAAAFwgAABsMAAAOUAAAIKgAA
-BcEAAAAAAAAAAA8AAAAGwwAAA5QAAAgqAAAFwXEXhXEYh3EZUnEaWA4AAABzZXRfYnJlYWtwb2lu
-dHEbiVgLAAAAdXNlX2NhY2hpbmdxHIlYDwAAAHVzZV9zdHJlYW1uYW1lc3EdiVgHAAAAdmVyYm9z
-ZXEeiXUu
+AABmaWxlbmFtZXEHWEYAAABFOi9pZGF0dDI5MDBfZ3I5Mi9MU0xEYXRhVjIvTFNMRGF0YUxlZnQ1
+dGltZXMyL2VlZy1hbmQtZXlldHJhY2tpbmcueGRmcQhYEwAAAGhhbmRsZV9jbG9ja19yZXNldHNx
+CYhYEQAAAGhhbmRsZV9jbG9ja19zeW5jcQqIWBUAAABoYW5kbGVfaml0dGVyX3JlbW92YWxxC4hY
+DgAAAG1heF9tYXJrZXJfbGVucQxYDQAAACh1c2UgZGVmYXVsdClxDVgIAAAAbWV0YWRhdGFxDn1x
+D1gSAAAAcmVvcmRlcl90aW1lc3RhbXBzcRCJWA4AAAByZXRhaW5fc3RyZWFtc3ERWA0AAAAodXNl
+IGRlZmF1bHQpcRJYEwAAAHNhdmVkV2lkZ2V0R2VvbWV0cnlxE2NzaXAKX3VucGlja2xlX3R5cGUK
+cRRYDAAAAFB5UXQ1LlF0Q29yZXEVWAoAAABRQnl0ZUFycmF5cRZDQgHZ0MsAAwAAAAAGwgAAA2cA
+AApLAAAFwgAABsMAAAOUAAAKSgAABcEAAAAAAAAAAA8AAAAGwwAAA5QAAApKAAAFwXEXhXEYh3EZ
+UnEaWA4AAABzZXRfYnJlYWtwb2ludHEbiVgLAAAAdXNlX2NhY2hpbmdxHIlYDwAAAHVzZV9zdHJl
+YW1uYW1lc3EdiVgHAAAAdmVyYm9zZXEeiXUu
 </properties>
 		<properties format="pickle" node_id="5">gAN9cQAoWAkAAABjaHVua19sZW5xAUsAWBUAAABpZ25vcmVfc2lnbmFsX2NoYW5nZWRxAolYEwAA
 AGtlZXBfc2luZ2xldG9uX2F4ZXNxA4lYDAAAAG1hcmtlcl9maWVsZHEEWAYAAABNYXJrZXJxBVgL
@@ -168,8 +169,8 @@ RkYwMDAwcRJYDAAAAG1heF9jaGFubmVsc3ETSyBYCAAAAG1ldGFkYXRhcRR9cRVYDAAAAG5hbnNf
 YXNfemVyb3EWiVgOAAAAbm9fY29uY2F0ZW5hdGVxF4lYDgAAAG92ZXJyaWRlX3NyYXRlcRhYDQAA
 ACh1c2UgZGVmYXVsdClxGVgMAAAAcGxvdF9tYXJrZXJzcRqIWAsAAABwbG90X21pbm1heHEbiVgT
 AAAAc2F2ZWRXaWRnZXRHZW9tZXRyeXEcY3NpcApfdW5waWNrbGVfdHlwZQpxHVgMAAAAUHlRdDUu
-UXRDb3JlcR5YCgAAAFFCeXRlQXJyYXlxH0NCAdnQywADAAAAAAbBAAAC6gAACCwAAAUoAAAGwgAA
-AxcAAAgrAAAFJwAAAAAAAAAADwAAAAbCAAADFwAACCsAAAUncSCFcSGHcSJScSNYBQAAAHNjYWxl
+UXRDb3JlcR5YCgAAAFFCeXRlQXJyYXlxH0NCAdnQywADAAAAAAbBAAAC6gAACCwAAAavAAAGwgAA
+AxcAAAgrAAAGrgAAAAAAAAAADwAAAAbCAAADFwAACCsAAAaucSCFcSGHcSJScSNYBQAAAHNjYWxl
 cSRHP/AAAAAAAABYDgAAAHNldF9icmVha3BvaW50cSWJWAwAAABzaG93X3Rvb2xiYXJxJolYCwAA
 AHN0cmVhbV9uYW1lcSdYDQAAACh1c2UgZGVmYXVsdClxKFgKAAAAdGltZV9yYW5nZXEpR0AUAAAA
 AAAAWAUAAAB0aXRsZXEqWBYAAABFRUcgc3RyZWFtIHdpdGhvdXQgQVVYcStYCgAAAHplcm9fY29s
@@ -178,10 +179,10 @@ b3JxLFgHAAAAIzdGN0Y3RnEtWAgAAAB6ZXJvbWVhbnEuiHUu
 		<properties format="pickle" node_id="10">gAN9cQAoWBMAAABhcHBseV9tdWx0aXBsZV9heGVzcQGJWB8AAABhcHBseV90aW1lX3NlbGVjdGlv
 bl90b19tYXJrZXJzcQKJWAQAAABheGlzcQNYBQAAAHNwYWNlcQRYCAAAAG1ldGFkYXRhcQV9cQZY
 EwAAAHNhdmVkV2lkZ2V0R2VvbWV0cnlxB2NzaXAKX3VucGlja2xlX3R5cGUKcQhYDAAAAFB5UXQ1
-LlF0Q29yZXEJWAoAAABRQnl0ZUFycmF5cQpDQgHZ0MsAAwAAAAAGogAAA4sAAAhLAAAEhgAABqMA
-AAO4AAAISgAABIUAAAAAAAAAAA8AAAAGowAAA7gAAAhKAAAEhXELhXEMh3ENUnEOWAkAAABzZWxl
-Y3Rpb25xD11xEFgFAAAAQVVYXzFxEWFYDgAAAHNldF9icmVha3BvaW50cRKJWAQAAAB1bml0cRNY
-BQAAAG5hbWVzcRR1Lg==
+LlF0Q29yZXEJWAoAAABRQnl0ZUFycmF5cQpDQgHZ0MsAAwAAAAAGogAAA4sAAAhLAAAFAAAABqMA
+AAO4AAAISgAABP8AAAAAAAAAAA8AAAAGowAAA7gAAAhKAAAE/3ELhXEMh3ENUnEOWAkAAABzZWxl
+Y3Rpb25xD11xEFgbAAAATGl2ZUFtcFNOLTA1NjMwOS0wNTUzLUFVWF8xcRFhWA4AAABzZXRfYnJl
+YWtwb2ludHESiVgEAAAAdW5pdHETWAUAAABuYW1lc3EUdS4=
 </properties>
 		<properties format="pickle" node_id="11">gAN9cQAoWA0AAABhYnNvbHV0ZV90aW1lcQGIWA0AAABhbHdheXNfb25fdG9wcQKJWAsAAABhbnRp
 YWxpYXNlZHEDiFgQAAAAYXV0b19saW5lX2NvbG9yc3EEiVgJAAAAYXV0b3NjYWxlcQWIWBAAAABi
@@ -193,8 +194,8 @@ RkYwMDAwcRJYDAAAAG1heF9jaGFubmVsc3ETSyBYCAAAAG1ldGFkYXRhcRR9cRVYDAAAAG5hbnNf
 YXNfemVyb3EWiVgOAAAAbm9fY29uY2F0ZW5hdGVxF4lYDgAAAG92ZXJyaWRlX3NyYXRlcRhYDQAA
 ACh1c2UgZGVmYXVsdClxGVgMAAAAcGxvdF9tYXJrZXJzcRqIWAsAAABwbG90X21pbm1heHEbiVgT
 AAAAc2F2ZWRXaWRnZXRHZW9tZXRyeXEcY3NpcApfdW5waWNrbGVfdHlwZQpxHVgMAAAAUHlRdDUu
-UXRDb3JlcR5YCgAAAFFCeXRlQXJyYXlxH0NCAdnQywADAAAAAAZzAAAC5QAAB94AAAUjAAAGdAAA
-AxIAAAfdAAAFIgAAAAAAAAAADwAAAAZ0AAADEgAAB90AAAUicSCFcSGHcSJScSNYBQAAAHNjYWxl
+UXRDb3JlcR5YCgAAAFFCeXRlQXJyYXlxH0NCAdnQywADAAAAAAZ0AAADEgAAB90AAAapAAAGdAAA
+AxIAAAfdAAAGqQAAAAAAAAAADwAAAAZ0AAADEgAAB90AAAapcSCFcSGHcSJScSNYBQAAAHNjYWxl
 cSRHP7mZmZmZmZpYDgAAAHNldF9icmVha3BvaW50cSWJWAwAAABzaG93X3Rvb2xiYXJxJolYCwAA
 AHN0cmVhbV9uYW1lcSdYDQAAACh1c2UgZGVmYXVsdClxKFgKAAAAdGltZV9yYW5nZXEpR0AUAAAA
 AAAAWAUAAAB0aXRsZXEqWBUAAABCbGluayBmcm9tIEVFRyBzdHJlYW1xK1gKAAAAemVyb19jb2xv
@@ -352,13 +353,13 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
         [
             "node9",
             "data",
-            "node10",
+            "node11",
             "data"
         ],
         [
             "node9",
             "data",
-            "node11",
+            "node10",
             "data"
         ],
         [
@@ -474,7 +475,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": 0.04
                 }
             },
-            "uuid": "3aeab555-e1eb-4fd8-8f8f-863e496df648"
+            "uuid": "79a6bd00-1b0f-4a54-803f-eb412608e186"
         },
         "node10": {
             "class": "TimeSeriesPlot",
@@ -626,7 +627,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": true
                 }
             },
-            "uuid": "bfcd12dc-fe7a-4c09-9152-86b7df8d106c"
+            "uuid": "45fb0d31-3855-4b79-a225-f20a8993065d"
         },
         "node11": {
             "class": "SelectRange",
@@ -656,7 +657,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "customized": true,
                     "type": "Port",
                     "value": [
-                        "AUX_1"
+                        "LiveAmpSN-056309-0553-AUX_1"
                     ]
                 },
                 "set_breakpoint": {
@@ -670,7 +671,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": "names"
                 }
             },
-            "uuid": "da30510e-684e-4ed4-a6b6-0bd0be1b4289"
+            "uuid": "51b7aa60-9b6d-4fa9-ad9d-ec3e8101e5b9"
         },
         "node12": {
             "class": "TimeSeriesPlot",
@@ -822,7 +823,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": true
                 }
             },
-            "uuid": "c4e39011-e1e3-4b11-8e0c-413cb7eaec71"
+            "uuid": "a3386c8d-97be-47a1-8e58-7dcea81f522d"
         },
         "node13": {
             "class": "SelectRange",
@@ -868,7 +869,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": "names"
                 }
             },
-            "uuid": "4c9c93bf-5036-4256-abb9-3371d85b8fe5"
+            "uuid": "ad7e7c49-85f2-4923-98e8-262e242e417a"
         },
         "node14": {
             "class": "TimeSeriesPlot",
@@ -1020,7 +1021,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": false
                 }
             },
-            "uuid": "886487e7-224c-45c7-ae28-497cc7f4fff0"
+            "uuid": "bc2290a9-8e6b-4d0b-928a-5e848bb15ddf"
         },
         "node15": {
             "class": "ScrollPlot",
@@ -1137,7 +1138,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": true
                 }
             },
-            "uuid": "642b0933-7ab8-4af7-abc5-f9015c10acf5"
+            "uuid": "11b8b33e-497a-49fb-8cef-e4d93a85adde"
         },
         "node16": {
             "class": "SelectRange",
@@ -1181,7 +1182,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": "names"
                 }
             },
-            "uuid": "11a1d78d-3b3d-4f55-8c16-9023cf0146cb"
+            "uuid": "b5963893-6c9e-4c74-95d7-5ca5474af543"
         },
         "node17": {
             "class": "SelectRange",
@@ -1227,7 +1228,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": "names"
                 }
             },
-            "uuid": "69454dec-1be1-4c1a-b9c2-67e1ee7aae4a"
+            "uuid": "9eeffed5-3ee8-4782-915f-b4352eba7e19"
         },
         "node18": {
             "class": "ScrollPlot",
@@ -1344,7 +1345,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": true
                 }
             },
-            "uuid": "44e0b671-a6e7-4d96-88d6-32b8b0fd7d0f"
+            "uuid": "7e2d72f8-7c0b-4a3d-a380-dc77760ae716"
         },
         "node19": {
             "class": "TimeSeriesSweepPlot",
@@ -1436,7 +1437,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": true
                 }
             },
-            "uuid": "5a227284-d355-4114-a1a7-ae850ab32c1f"
+            "uuid": "ff59ad2d-b834-4f6b-8db3-776894fffac6"
         },
         "node2": {
             "class": "LSLOutput",
@@ -1543,7 +1544,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": false
                 }
             },
-            "uuid": "c109c12e-29ad-4d0b-98df-674e1b379cc4"
+            "uuid": "492a1a3f-3325-465e-84ee-dd43ce78571c"
         },
         "node20": {
             "class": "TimeSeriesSweepPlot",
@@ -1635,7 +1636,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": true
                 }
             },
-            "uuid": "49590811-f1df-4544-8f2d-01adf34d0472"
+            "uuid": "a013f6fe-f23e-45b7-af1e-cff22916175b"
         },
         "node21": {
             "class": "ShiftTimestamps",
@@ -1692,7 +1693,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": false
                 }
             },
-            "uuid": "d6736bef-33fe-4079-8f11-c0d1f41b8460"
+            "uuid": "ca96de70-fbb7-4e72-a623-a653dbc66a12"
         },
         "node22": {
             "class": "TimeSeriesSweepPlot",
@@ -1784,7 +1785,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": true
                 }
             },
-            "uuid": "6569ee3e-bd7f-4150-af65-5f6b651b12b8"
+            "uuid": "bead058c-78a7-4ce9-83fd-40b8e8577a62"
         },
         "node3": {
             "class": "LSLInput",
@@ -1799,7 +1800,9 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                         "z_direction",
                         "left_blink",
                         "right_blink",
-                        "both_blink"
+                        "both_blink",
+                        "left_openness",
+                        "right_openness"
                     ]
                 },
                 "data_dtype": {
@@ -1908,7 +1911,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": false
                 }
             },
-            "uuid": "6c1b218d-6ef2-4553-83fe-8a8183d86fc8"
+            "uuid": "cd7244be-1c1a-4cfa-8d23-f0d40e30d7bf"
         },
         "node4": {
             "class": "ImportXDF",
@@ -1937,7 +1940,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                 "filename": {
                     "customized": true,
                     "type": "StringPort",
-                    "value": "E:/idatt2900_gr92/LSLDataTrippleBlink/gaze-and-blinking.xdf"
+                    "value": "E:/idatt2900_gr92/LSLDataV2/LSLDataLeft5times2/gaze-and-blinking.xdf"
                 },
                 "handle_clock_resets": {
                     "customized": false,
@@ -1995,7 +1998,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": false
                 }
             },
-            "uuid": "ab17b991-bc2d-4436-b4d1-3d414e121349"
+            "uuid": "378050fc-5afa-43ec-8f4b-b1e570f25510"
         },
         "node5": {
             "class": "ImportXDF",
@@ -2024,7 +2027,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                 "filename": {
                     "customized": true,
                     "type": "StringPort",
-                    "value": "E:/idatt2900_gr92/LSLDataTrippleBlink/raw-eeg.xdf"
+                    "value": "E:/idatt2900_gr92/LSLDataV2/LSLDataLeft5times2/eeg-and-eyetracking.xdf"
                 },
                 "handle_clock_resets": {
                     "customized": false,
@@ -2082,7 +2085,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": false
                 }
             },
-            "uuid": "b8f37d04-cba6-4bd2-8ae4-23a4bd35bf36"
+            "uuid": "135a86e1-2c56-447b-b6f2-8b88243ad9ed"
         },
         "node6": {
             "class": "LSLOutput",
@@ -2189,7 +2192,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": false
                 }
             },
-            "uuid": "74d5e91c-eaeb-4425-9b8b-3c334b9f4829"
+            "uuid": "36394d90-a505-4b52-a630-2862813c8c2d"
         },
         "node7": {
             "class": "StreamData",
@@ -2266,7 +2269,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": 0.04
                 }
             },
-            "uuid": "bf5bcd96-f863-4932-8168-db965d3dfca5"
+            "uuid": "ec18ce8f-2b24-424e-bd9a-255bb0b87b1a"
         },
         "node8": {
             "class": "TimeSeriesPlot",
@@ -2345,7 +2348,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                 "max_channels": {
                     "customized": true,
                     "type": "IntPort",
-                    "value": 6
+                    "value": 8
                 },
                 "metadata": {
                     "customized": false,
@@ -2418,7 +2421,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": true
                 }
             },
-            "uuid": "9e8a73d8-bfe8-4d0e-a2e1-c87074a3a136"
+            "uuid": "3ee0e347-55c4-40b5-92e5-1a6b1484ef58"
         },
         "node9": {
             "class": "LSLInput",
@@ -2428,42 +2431,50 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "customized": true,
                     "type": "ListPort",
                     "value": [
-                        "Fp1",
-                        "Fz",
-                        "F3",
-                        "F7",
-                        "F9",
-                        "FC5",
-                        "FC1",
-                        "C3",
-                        "T7",
-                        "CP5",
-                        "CP1",
-                        "Pz",
-                        "P3",
-                        "P7",
-                        "P9",
-                        "O1",
-                        "Oz",
-                        "O2",
-                        "P10",
-                        "P8",
-                        "P4",
-                        "CP2",
-                        "CP6",
-                        "T8",
-                        "C4",
-                        "Cz",
-                        "FC2",
-                        "FC6",
-                        "F10",
-                        "F8",
-                        "F4",
-                        "Fp2",
-                        "AUX_1",
-                        "ACC_X",
-                        "ACC_Y",
-                        "ACC_Z"
+                        "24ce3d0be54c24b26fa0930d0888db34-x_direction",
+                        "24ce3d0be54c24b26fa0930d0888db34-y_direction",
+                        "24ce3d0be54c24b26fa0930d0888db34-z_direction",
+                        "24ce3d0be54c24b26fa0930d0888db34-left_blink",
+                        "24ce3d0be54c24b26fa0930d0888db34-right_blink",
+                        "24ce3d0be54c24b26fa0930d0888db34-both_blink",
+                        "24ce3d0be54c24b26fa0930d0888db34-left_openness",
+                        "24ce3d0be54c24b26fa0930d0888db34-right_openness",
+                        "LiveAmpSN-056309-0553-Fp1",
+                        "LiveAmpSN-056309-0553-Fz",
+                        "LiveAmpSN-056309-0553-F3",
+                        "LiveAmpSN-056309-0553-F7",
+                        "LiveAmpSN-056309-0553-F9",
+                        "LiveAmpSN-056309-0553-FC5",
+                        "LiveAmpSN-056309-0553-FC1",
+                        "LiveAmpSN-056309-0553-C3",
+                        "LiveAmpSN-056309-0553-T7",
+                        "LiveAmpSN-056309-0553-CP5",
+                        "LiveAmpSN-056309-0553-CP1",
+                        "LiveAmpSN-056309-0553-Pz",
+                        "LiveAmpSN-056309-0553-P3",
+                        "LiveAmpSN-056309-0553-P7",
+                        "LiveAmpSN-056309-0553-P9",
+                        "LiveAmpSN-056309-0553-O1",
+                        "LiveAmpSN-056309-0553-Oz",
+                        "LiveAmpSN-056309-0553-O2",
+                        "LiveAmpSN-056309-0553-P10",
+                        "LiveAmpSN-056309-0553-P8",
+                        "LiveAmpSN-056309-0553-P4",
+                        "LiveAmpSN-056309-0553-CP2",
+                        "LiveAmpSN-056309-0553-CP6",
+                        "LiveAmpSN-056309-0553-T8",
+                        "LiveAmpSN-056309-0553-C4",
+                        "LiveAmpSN-056309-0553-Cz",
+                        "LiveAmpSN-056309-0553-FC2",
+                        "LiveAmpSN-056309-0553-FC6",
+                        "LiveAmpSN-056309-0553-F10",
+                        "LiveAmpSN-056309-0553-F8",
+                        "LiveAmpSN-056309-0553-F4",
+                        "LiveAmpSN-056309-0553-Fp2",
+                        "LiveAmpSN-056309-0553-AUX_1",
+                        "LiveAmpSN-056309-0553-ACC_X",
+                        "LiveAmpSN-056309-0553-ACC_Y",
+                        "LiveAmpSN-056309-0553-ACC_Z"
                     ]
                 },
                 "data_dtype": {
@@ -2572,7 +2583,7 @@ X3BhaXJzcRNoBVgNAAAAdXNlX3RpbWVfYXhpc3EUiXUu
                     "value": false
                 }
             },
-            "uuid": "68fe1b73-dda1-4ef8-a139-d703ff59954b"
+            "uuid": "7c2c5465-a0e7-4e68-b1f6-d9304e19d189"
         }
     },
     "version": 1.1
