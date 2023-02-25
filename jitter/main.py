@@ -32,7 +32,7 @@ def get_time_stamps(stamps: list):
 
 
 data, header = pyxdf.load_xdf('data/data18022023/eeg-and-eyetracking.xdf')
-eeg, header_egg = pyxdf.load_xdf('data/LSLData2/LSLData/raw-eeg.xdf')
+eeg, header_egg = pyxdf.load_xdf('data/LSLDataV1/LSLData2/LSLData/raw-eeg.xdf')
 
 left_blinks = None
 right_blinks = None
