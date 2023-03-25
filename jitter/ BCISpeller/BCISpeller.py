@@ -78,7 +78,7 @@ fragment_duration = 5  # Fragment duration in seconds
 fragment_samples = fs * fragment_duration
 # Resolve an LSL stream on the network
 print("Looking for an LSL stream...")
-streams = resolve_stream('type', 'Test')
+streams = resolve_stream('type', 'Speller')
 inlet = StreamInlet(streams[0])
 buffer = []
 
