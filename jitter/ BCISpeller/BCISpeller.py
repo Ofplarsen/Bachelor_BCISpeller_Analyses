@@ -19,12 +19,13 @@ frequencies = ['8.18_sin_h1','8.18_cos_h1','8.18_sin_h2','8.18_cos_h2','8.18_sin
                '15_sin_h1', '15_cos_h1', '15_sin_h2', '15_cos_h2', '15_sin_h3', '15_cos_h3'
                ]
 
+
 def init_stream():
     # Create an LSL stream
     stream_name = 'CCA'
     stream_type = 'cca'
     channel_count = 1
-    sampling_rate = 0  # Irregular sampling rate (use a positive number for a regular sampling rate)
+    sampling_rate = 1  # Irregular sampling rate (use a positive number for a regular sampling rate)
     channel_format = 'float32'
 
     # Create the stream info object
@@ -37,7 +38,8 @@ def init_stream():
 
 def get_freqs(N):
     start_time = time.time()
-    fs = [8.18, 9, 10, 11.25, 12.85, 15]
+    #fs = [8.18, 9, 10, 11.25, 12.86, 15]
+    fs = [13.0909, 14.4, 16, 18, 20.5714, 24]
     t = N/250
     return_freqs = []
     for fk in fs:
@@ -52,16 +54,19 @@ def get_freqs(N):
     return df
 
 def perform_cca(fragment, n_components):
-    X = fragment[:][['O1', 'O2', 'Oz', 'P3', 'P4', 'Pz', 'P7', 'P8']]
+    X = fragment[:][[ 'O2', 'Oz', 'P3', 'O1', 'P4', 'P7', 'P8']]#,'Pz'
     freqs = []
     t = 0
     for i in range(0, len(frequencies), 6):
         t = t + 1
         Y = fragment[:][frequencies[i:6 * t]]
-        ca = CCA(n_components=1)
+        #print(frequencies[i:6*t])
+        ca = CCA(n_components=2)
         ca.fit(X, Y)
         X_c, Y_c = ca.transform(X, Y)
-        freqs.append(np.corrcoef(X_c[:, 0], Y_c[:, 0])[0][1])
+        coef = np.corrcoef(X_c[:, 0], Y_c[:, 0])
+        freqs.append(coef[0][1])
+        #print(coef)
     return freqs
 
 def return_index(index, info, outlet):
@@ -74,7 +79,7 @@ def return_index(index, info, outlet):
 info, outlet = init_stream()
 
 fs = 250  # Sampling frequency
-fragment_duration = 5  # Fragment duration in seconds
+fragment_duration = 4  # Fragment duration in seconds
 fragment_samples = fs * fragment_duration
 # Resolve an LSL stream on the network
 print("Looking for an LSL stream...")
@@ -100,10 +105,13 @@ while True:
         # Remove the processed fragment from the buffer
         buffer = buffer[fragment_samples:]
         df = pd.DataFrame(fragment)
+        df.columns = ['N'] + channels
         df = pd.concat([df, get_freqs(df[:]['N'])], axis=1, join='inner')
         df.columns = ['N'] + frequencies + channels
-        cca = perform_cca(df,1)
-        print(cca)
-        index = np.argmax(cca)
-        print(index)
-        return_index(index, info, outlet)
+        if (df['N'] == 0).sum() < 250*3:
+            cca = perform_cca(df,1)
+            print(cca)
+            index = np.argmax(cca)
+            print(index)
+            print(np.argpartition(cca, -2)[-2:])
+            return_index(index, info, outlet)
