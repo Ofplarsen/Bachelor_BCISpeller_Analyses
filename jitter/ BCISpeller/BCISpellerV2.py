@@ -116,5 +116,6 @@ while True:
             print(cca)
             index = np.argmax(cca)
             print(index)
+            print(np.argpartition(cca, -2)[-2:])
             return_index(index, info, outlet)
     time.sleep(fragment_duration)
