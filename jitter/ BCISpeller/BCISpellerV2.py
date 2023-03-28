@@ -1,6 +1,7 @@
 import time
 import numpy as np
 import pandas as pd
+from matplotlib import pyplot as plt
 from numpy.random import rand
 from pylsl import StreamInlet, resolve_stream, StreamInfo, StreamOutlet, pylsl, local_clock
 from sklearn.cross_decomposition import CCA
@@ -17,7 +18,7 @@ frequencies = ['8.18_sin_h1','8.18_cos_h1','8.18_sin_h2','8.18_cos_h2','8.18_sin
                '12.85_sin_h1','12.85_cos_h1','12.85_sin_h2','12.85_cos_h2','12.85_sin_h3','12.85_cos_h3',
                '15_sin_h1', '15_cos_h1', '15_sin_h2', '15_cos_h2', '15_sin_h3', '15_cos_h3'
                ]
-
+occ_channels = ['O1', 'O2', 'Oz', 'P3', 'P4', 'Pz', 'P7', 'P8']
 def init_stream():
     # Create an LSL stream
     stream_name = 'CCA'
@@ -33,6 +34,12 @@ def init_stream():
     outlet = StreamOutlet(info)
     return info, outlet
 
+def plot_single(df, column):
+    t = np.arange(0, 10, 1 / fs)
+    axis = plt.subplot()
+    axis.plot(t[:len(df[column])], df[column])
+    axis.set_title(column)
+    plt.show()
 
 def get_freqs(N):
     start_time = time.time()
@@ -52,18 +59,18 @@ def get_freqs(N):
     return df
 
 def perform_cca(fragment, n_components):
-    X = fragment[:][['Pz', 'O2', 'Oz', 'P3', 'O1', 'P4', 'P7', 'P8']]#,
+    X = fragment[:][occ_channels]#,
     freqs = []
     t = 0
     for i in range(0, len(frequencies), 6):
         t = t + 1
         Y = fragment[:][frequencies[i:6 * t]]
         #print(frequencies[i:6*t])
-        ca = CCA(n_components=2)
+        ca = CCA(n_components=1)
         ca.fit(X, Y)
         X_c, Y_c = ca.transform(X, Y)
         coef = np.corrcoef(X_c[:, 0], Y_c[:, 0])
-        print(np.corrcoef(X_c[:,1], Y_c[:, 1]))
+        #print(np.corrcoef(X_c[:,1], Y_c[:, 1]))
         freqs.append(coef[0][1])
         #print(coef)
     return freqs
@@ -82,17 +89,20 @@ inlet = StreamInlet(streams[0])
 
 
 fs = 250  # Sampling frequency
-fragment_duration = 5 # Fragment duration in seconds
+fragment_duration = 4  # Fragment duration in seconds
 fragment_samples = fs * fragment_duration
-pre_trigger_samples = round(fs*1)
+pre_trigger_samples = fs * 1
 target_value = 0
+delay = 35
 
 
 while True:
     buffer = []
     triggered = False
     start_time = None
-    sample_check = False
+    scan_values = False
+    count = False
+    i = 0
     print("Sleep done")
     while not triggered:
         sample, timestamp = inlet.pull_sample()
@@ -102,17 +112,24 @@ while True:
         # Remove old samples from the buffer
         while len(buffer) > fragment_samples:
             buffer.pop(0)
-
+        # print(sample[0])
         # Check if the current sample value is different from target_value
-        #print("Reading LSL Stream")
-        if(sample[0] != target_value and not sample_check):
-            print("stuck")
+        if sample[0] != target_value and not scan_values:
+            print("Deleting buffer")
+            print(sample[0])
+            del buffer[:-1]
             print(len(buffer))
-            del buffer[:-pre_trigger_samples]
-            print(len(buffer))
-            sample_check = True
+            scan_values = True
 
-        if sample_check and len(buffer) >= fragment_samples:
+        if scan_values and len(buffer) == delay and not count:
+            print("Shifting for visual system delay")
+            del buffer[:-1]
+            count = True
+
+        if count and sample[0] == target_value:
+            i += 1
+
+        if count and scan_values and (len(buffer) == fragment_samples or (i == delay)):
             # Find the index of the first non-zero sample
 
             # Get the fragment starting 250 samples before the change and lasting for 7*250 samples
@@ -121,14 +138,18 @@ while True:
             print(fragment)
             triggered = True
             print("Fragment: found")
+
             # Convert the buffer to a NumPy array and reshape it
             fragment = np.array(fragment)
             # Remove the processed fragment from the buffer
             #buffer = buffer[fragment_samples:]
             df = pd.DataFrame(fragment)
             df.columns = ['N'] + channels
-            df = pd.concat([df, get_freqs(df[:]['N'])], axis=1, join='inner')
-            df.columns = ['N'] + frequencies + channels
+            N = np.arange(1, len(df['O1']) + 1)
+            df = pd.concat([df, get_freqs(N)], axis=1, join='inner')
+            print(df)
+            plot_single(df, 'O1')
+            plot_single(df, '8.18_sin_h1')
             cca = perform_cca(df, 1)
             print(cca)
             index = np.argmax(cca)

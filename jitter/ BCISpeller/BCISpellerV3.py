@@ -31,7 +31,7 @@ def normalize_data(data, lower_bound=-1, upper_bound=1):
 
 def plot_single(df, column):
     t = np.arange(0, 10, 1 / fs)
-    #df[column] = normalize_data(df[column])
+    df[column] = normalize_data(df[column])
     axis = plt.subplot()
     axis.plot(t[:len(df[column])], df[column])
     axis.set_title(column)
@@ -179,11 +179,12 @@ while True:
             plot_single(df, 'O1')
             df[occ_channels] = df[occ_channels].apply(lambda x: zero_phase_butter(x))
             plot_single(df, 'O1')
+            for i in occ_channels:
+                df[i] = normalize_data(df[i])
             print("--- Filter time:  %s seconds ---" % (time.time() - start_time))
             N = np.arange(1, len(df['O1']) + 1)
             df = pd.concat([df, get_freqs(N)], axis=1, join='inner')
             plot_single(df, '8.18_sin_h1')
-            df.columns = ['N'] + frequencies + channels
             cca = perform_cca(df, 1)
             print(df['N'])
             print(cca)
