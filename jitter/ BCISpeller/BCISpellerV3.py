@@ -54,6 +54,7 @@ def init_stream():
     return info, outlet
 
 
+
 def get_freqs(N):
     start_time = time.time()
     # fs = [8.18, 9, 10, 11.25, 12.86, 15]
@@ -113,7 +114,7 @@ def zero_phase_butter(data):
     # Butterworth filter parameters
     fs = 250
     lowcut = 12.0
-    highcut = 25.0
+    highcut = 70.0
     order = 3
 
     # Design Butterworth bandpass filter
@@ -145,7 +146,7 @@ fragment_duration = 4  # Fragment duration in seconds
 fragment_samples = fs * fragment_duration
 pre_trigger_samples = fs * 1
 target_value = 0
-delay = round(fs*0.14)
+delay = round(fs*0.1)
 
 while True:
     buffer = []
@@ -201,7 +202,7 @@ while True:
             N = np.arange(1, len(df['O1']) + 1)
             df = pd.concat([df, get_freqs(N)], axis=1, join='inner')
             plot_single(df, '8.18_sin_h1')
-            cca = perform_cca(df, 1)
+            cca = perform_cca_2(df)
             print(df['N'])
             print(cca)
             index = np.argmax(cca)

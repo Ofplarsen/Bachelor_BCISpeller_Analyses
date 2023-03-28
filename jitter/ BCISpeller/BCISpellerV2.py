@@ -75,6 +75,22 @@ def perform_cca(fragment, n_components):
         #print(coef)
     return freqs
 
+def perform_cca_2(fragment):
+    n_components = 2
+    X = fragment[:][occ_channels]
+    freqs = []
+    t = 0
+    for i in range(0, len(frequencies), 6):
+        t = t + 1
+        Y = fragment[:][frequencies[i:6 * t]]
+        ca = CCA(n_components=n_components)
+        ca.fit(X, Y)
+        X_c, Y_c = ca.transform(X, Y)
+        p1 = np.corrcoef(X_c[:, 0], Y_c[:, 0])[0][1]
+        p2 = np.corrcoef(X_c[:, 1], Y_c[:, 1])[0][1]
+        freqs.append(np.sqrt(p1**2+p2**2))
+    return freqs
+
 def return_index(index, info, outlet):
     # Send a single value
     value = float(index)
@@ -150,7 +166,7 @@ while True:
             print(df)
             plot_single(df, 'O1')
             plot_single(df, '8.18_sin_h1')
-            cca = perform_cca(df, 1)
+            cca = perform_cca_2(df)
             print(cca)
             index = np.argmax(cca)
             print(index)
