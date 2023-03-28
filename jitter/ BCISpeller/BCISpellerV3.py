@@ -33,7 +33,7 @@ def plot_single(df, column):
     t = np.arange(0, 10, 1 / fs)
     df[column] = normalize_data(df[column])
     axis = plt.subplot()
-    axis.plot(t[:len(df[column])], df[column])
+    axis.plot(t[250:len(df[column])-250], df[column][250:-250])
     axis.set_title(column)
     plt.show()
 
@@ -54,7 +54,13 @@ def init_stream():
     return info, outlet
 
 
+def hamming_window(data, duration, fs):
+    window_size = int(duration*fs)
+    window = np.hamming(window_size)
 
+    data[:window_size] *= window
+    data[-window_size:] *= window[::-1]
+    return data
 def get_freqs(N):
     start_time = time.time()
     # fs = [8.18, 9, 10, 11.25, 12.86, 15]
@@ -74,7 +80,7 @@ def get_freqs(N):
 
 
 def perform_cca(fragment, n_components):
-    X = fragment[:][occ_channels]
+    X = fragment[250:-250][occ_channels]
     freqs = []
     t = 0
     for i in range(0, len(frequencies), 6):
@@ -114,8 +120,8 @@ def zero_phase_butter(data):
     # Butterworth filter parameters
     fs = 250
     lowcut = 12.0
-    highcut = 70.0
-    order = 3
+    highcut = 28.0
+    order = 10
 
     # Design Butterworth bandpass filter
     nyquist = 0.5 * fs
@@ -124,7 +130,7 @@ def zero_phase_butter(data):
     b_bandpass, a_bandpass = signal.butter(order, [low, high], btype="band")
 
     # Zero-phase filtering using filtfilt
-    return signal.filtfilt(b_bandpass, a_bandpass, data)
+    return signal.filtfilt(b_bandpass, a_bandpass, data, method='gust')
 
 
 def notch(data):
@@ -142,11 +148,11 @@ streams = resolve_stream('type', 'Speller')
 inlet = StreamInlet(streams[0])
 
 fs = 250  # Sampling frequency
-fragment_duration = 4  # Fragment duration in seconds
+fragment_duration = 5  # Fragment duration in seconds
 fragment_samples = fs * fragment_duration
 pre_trigger_samples = fs * 1
 target_value = 0
-delay = round(fs*0.1)
+delay = round(fs*0.14)
 
 while True:
     buffer = []
@@ -191,19 +197,19 @@ while True:
             df = pd.DataFrame(fragment)
             df.columns = ['N'] + channels
             start_time = time.time()
-            plot_single(df, 'O1')
+            #plot_single(df, 'O1')
             df[occ_channels] = df[occ_channels].apply(lambda x: notch(x))
-            plot_single(df, 'O1')
+            #plot_single(df, 'O1')
+            #df[occ_channels] = df[occ_channels].apply(lambda x: hamming_window(x,fragment_duration,fs))
             df[occ_channels] = df[occ_channels].apply(lambda x: zero_phase_butter(x))
-            plot_single(df, 'O1')
+
             for i in occ_channels:
                 df[i] = normalize_data(df[i])
             print("--- Filter time:  %s seconds ---" % (time.time() - start_time))
             N = np.arange(1, len(df['O1']) + 1)
             df = pd.concat([df, get_freqs(N)], axis=1, join='inner')
-            plot_single(df, '8.18_sin_h1')
+
             cca = perform_cca_2(df)
-            print(df['N'])
             print(cca)
             index = np.argmax(cca)
             print(index)

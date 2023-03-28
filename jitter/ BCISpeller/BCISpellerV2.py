@@ -21,8 +21,8 @@ frequencies = ['8.18_sin_h1','8.18_cos_h1','8.18_sin_h2','8.18_cos_h2','8.18_sin
 occ_channels = ['O1', 'O2', 'Oz', 'P3', 'P4', 'Pz', 'P7', 'P8']
 def init_stream():
     # Create an LSL stream
-    stream_name = 'CCA'
-    stream_type = 'cca'
+    stream_name = 'CCA2'
+    stream_type = 'cca2'
     channel_count = 1
     sampling_rate = 1  # Irregular sampling rate (use a positive number for a regular sampling rate)
     channel_format = 'float32'
@@ -100,16 +100,16 @@ def return_index(index, info, outlet):
 
 info, outlet = init_stream()
 print("Looking for an LSL stream...")
-streams = resolve_stream('type', 'Speller')
+streams = resolve_stream('type', 'SpellerV2')
 inlet = StreamInlet(streams[0])
 
 
 fs = 250  # Sampling frequency
-fragment_duration = 4  # Fragment duration in seconds
+fragment_duration = 6  # Fragment duration in seconds
 fragment_samples = fs * fragment_duration
 pre_trigger_samples = fs * 1
 target_value = 0
-delay = 35
+delay = round(fs*0.14)
 
 
 while True:
@@ -163,9 +163,8 @@ while True:
             df.columns = ['N'] + channels
             N = np.arange(1, len(df['O1']) + 1)
             df = pd.concat([df, get_freqs(N)], axis=1, join='inner')
-            print(df)
-            plot_single(df, 'O1')
-            plot_single(df, '8.18_sin_h1')
+            #plot_single(df, 'O1')
+            #plot_single(df, '8.18_sin_h1')
             cca = perform_cca_2(df)
             print(cca)
             index = np.argmax(cca)

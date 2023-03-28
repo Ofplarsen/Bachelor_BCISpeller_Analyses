@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
 <scheme description="" title="test" version="2.0">
 	<nodes>
-		<node id="0" name="Import File" position="(312.0, 312.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owimportfile.OWImportFile" title="Import File" uuid="77298836-e6ab-4d42-815e-f0a928910ff0" version="1.2.1" />
-		<node id="1" name="Stream Data" position="(508.0, 322.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owstreamdata.OWStreamData" title="Stream Data" uuid="a14c4057-de66-4fda-86ea-d0379ba20fcd" version="1.2.1" />
-		<node id="2" name="LSL Output" position="(667.0, 324.0)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output" uuid="75070f23-8e0e-4cbb-88dc-db3ab4a05b29" version="1.4.3" />
-		<node id="3" name="Inspect Data" position="(623.0, 197.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owinspectdata.OWInspectData" title="Inspect Data" uuid="41bdc55f-b466-481d-b6d0-d9690bd06c96" version="2.2.4" />
-		<node id="4" name="LSL Input" position="(315.0, 451.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="LSL Input" uuid="b278cd57-b627-4a30-b34c-3cca5d9664cf" version="1.3.6" />
-		<node id="5" name="Inspect Data" position="(494.0, 442.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owinspectdata.OWInspectData" title="Inspect Data (1)" uuid="9a97fa23-fece-4e61-bf84-bc00eb95122c" version="2.2.4" />
-		<node id="6" name="LSL Output" position="(671.0, 617.0)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output" uuid="696da7f8-1cc3-4036-986e-43c3cb17cbdc" version="1.4.3" />
-		<node id="7" name="Stream Data" position="(511.0, 615.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owstreamdata.OWStreamData" title="Stream Data" uuid="e0ad4490-5a6a-4456-917f-ba2be97fcc6b" version="1.2.1" />
-		<node id="8" name="Import File" position="(320.0, 605.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owimportfile.OWImportFile" title="Import File" uuid="67330d7e-eb99-48ea-857c-f164df968783" version="1.2.1" />
-		<node id="9" name="Record to CSV" position="(464.0, 550.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtocsv.OWRecordToCSV" title="Record to CSV" uuid="40ede1ba-0e58-47c1-baaa-616a5db57234" version="1.0.1" />
+		<node id="0" name="Import File" position="(312.0, 312.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owimportfile.OWImportFile" title="Import File" uuid="5d50d7ca-a41f-4cce-910d-39a7a2b56031" version="1.2.2" />
+		<node id="1" name="Stream Data" position="(508.0, 322.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owstreamdata.OWStreamData" title="Stream Data" uuid="e9c78aee-d714-4601-9828-20e82385d860" version="1.3.0" />
+		<node id="2" name="LSL Output" position="(667.0, 324.0)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output" uuid="04df427b-7957-461a-96bc-ad8d3735688d" version="1.4.3" />
+		<node id="3" name="Inspect Data" position="(623.0, 197.0)" project_name="NeuroPype" qualified_name="widgets.deprecated.owinspectdata.OWInspectData" title="Inspect Data" uuid="d1c5eccc-9de2-4175-b74b-352f1ba5a258" version="1.0.0" />
+		<node id="4" name="LSL Input" position="(315.0, 451.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="LSL Input" uuid="c7545815-0c41-48ea-a5b4-d11d52334ae0" version="1.5.1" />
+		<node id="5" name="Inspect Data" position="(494.0, 442.0)" project_name="NeuroPype" qualified_name="widgets.deprecated.owinspectdata.OWInspectData" title="Inspect Data (1)" uuid="679bfb55-0b65-4c96-a1a1-0cc3268a9cc0" version="1.0.0" />
+		<node id="6" name="LSL Output" position="(671.0, 617.0)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output" uuid="c72da876-ca90-4f95-9943-d6b07cd26cbb" version="1.4.3" />
+		<node id="7" name="Stream Data" position="(511.0, 615.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owstreamdata.OWStreamData" title="Stream Data" uuid="d40f31da-e9a4-43cd-aa37-1a99f682ba45" version="1.3.0" />
+		<node id="8" name="Import File" position="(320.0, 605.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owimportfile.OWImportFile" title="Import File" uuid="7deecb0f-e92c-4a24-88c3-69d1a47a99c9" version="1.2.2" />
+		<node id="9" name="Record to CSV" position="(464.0, 550.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtocsv.OWRecordToCSV" title="Record to CSV" uuid="bf0d0b59-0108-45e3-9948-cd1926c0d54a" version="1.0.1" />
 	</nodes>
 	<links>
 		<link enabled="true" id="0" sink_channel="Data" sink_node_id="1" source_channel="Data" source_node_id="0" />
@@ -26,26 +26,27 @@
 	<node_properties>
 		<properties format="pickle" node_id="0">gAN9cQAoWBgAAABhbGxvd19pbnNlY3VyZV9maWxldHlwZXNxAYlYDQAAAGNsb3VkX2FjY291bnRx
 AlgAAAAAcQNYDAAAAGNsb3VkX2J1Y2tldHEEaANYEQAAAGNsb3VkX2NyZWRlbnRpYWxzcQVoA1gK
-AAAAY2xvdWRfaG9zdHEGWAcAAABEZWZhdWx0cQdYCAAAAGZpbGVuYW1lcQhYegAAAEM6L1VzZXJz
-L3hyYXkyL09uZURyaXZlL0RvY3VtZW50cy9OVE5VL0RhdGFJbmcyMDIzL3MyMDIzL2JhL25ldXJv
-cHlwZS1waXBlbGluZS9qaXR0ZXIvZGF0YS9CQ0lTcGVsbGVyVjYvZGVqaXR0ZXJlZC1lZWcueGRm
-cQlYCwAAAGxvYWRfZXZlbnRzcQqIWAwAAABsb2FkX3NpZ25hbHNxC4hYCAAAAG1ldGFkYXRhcQx9
-cQ1YDgAAAHJldGFpbl9zdHJlYW1zcQ5YDQAAACh1c2UgZGVmYXVsdClxD1gTAAAAc2F2ZWRXaWRn
-ZXRHZW9tZXRyeXEQY3NpcApfdW5waWNrbGVfdHlwZQpxEVgMAAAAUHlRdDUuUXRDb3JlcRJYCgAA
-AFFCeXRlQXJyYXlxE0NCAdnQywADAAAAAAMLAAABOgAABHQAAAMPAAADDAAAAVkAAARzAAADDgAA
-AAAAAAAAB4AAAAMMAAABWQAABHMAAAMOcRSFcRWHcRZScRdYCAAAAHNlZ21lbnRzcRhoD1gOAAAA
-c2V0X2JyZWFrcG9pbnRxGYlYEAAAAHNpZ25hbF9hdXRvc2NhbGVxGohYDAAAAHN0aW1fY2hhbm5l
-bHEbaANYCwAAAHRpbWVfYm91bmRzcRxoD1gPAAAAdXNlX3N0cmVhbW5hbWVzcR2JdS4=
+AAAAY2xvdWRfaG9zdHEGWAcAAABEZWZhdWx0cQdYCAAAAGZpbGVuYW1lcQhYawAAAEM6L1VzZXJz
+L3ZpemxhYl9zdHVkL2lkYXR0MjkwMF9ncjkyL25ldXJvcHlwZS1waXBlbGluZS9CQ0lTcGVsbGVy
+VjgvTkNJU3BlbGxlcl9FXzVfdGltZXMvZGVqaXR0ZXJlZC1lZWcueGRmcQlYCwAAAGxvYWRfZXZl
+bnRzcQqIWAwAAABsb2FkX3NpZ25hbHNxC4hYCAAAAG1ldGFkYXRhcQx9cQ1YDgAAAHJldGFpbl9z
+dHJlYW1zcQ5YDQAAACh1c2UgZGVmYXVsdClxD1gTAAAAc2F2ZWRXaWRnZXRHZW9tZXRyeXEQY3Np
+cApfdW5waWNrbGVfdHlwZQpxEVgMAAAAUHlRdDUuUXRDb3JlcRJYCgAAAFFCeXRlQXJyYXlxE0NC
+AdnQywADAAAAAAOOAAACcwAAC8YAAATYAAADjwAAAqAAAAvFAAAE1wAAAAAAAAAADwAAAAOPAAAC
+oAAAC8UAAATXcRSFcRWHcRZScRdYCAAAAHNlZ21lbnRzcRhoD1gOAAAAc2V0X2JyZWFrcG9pbnRx
+GYlYEAAAAHNpZ25hbF9hdXRvc2NhbGVxGohYDAAAAHN0aW1fY2hhbm5lbHEbaANYCwAAAHRpbWVf
+Ym91bmRzcRxoD1gPAAAAdXNlX3N0cmVhbW5hbWVzcR2JdS4=
 </properties>
-		<properties format="pickle" node_id="1">gAN9cQAoWAoAAABkYXRhX2R0eXBlcQFYBwAAAGZsb2F0NjRxAlgRAAAAaGl0Y2hfcHJvYmFiaWxp
-dHlxA0cAAAAAAAAAAFgOAAAAaml0dGVyX3BlcmNlbnRxBEsFWAwAAABsb2dfcHJvZ3Jlc3NxBYlY
-BwAAAGxvb3BpbmdxBohYCAAAAG1ldGFkYXRhcQd9cQhYCAAAAHJhbmRzZWVkcQlN54ZYEwAAAHNh
-dmVkV2lkZ2V0R2VvbWV0cnlxCmNzaXAKX3VucGlja2xlX3R5cGUKcQtYDAAAAFB5UXQ1LlF0Q29y
-ZXEMWAoAAABRQnl0ZUFycmF5cQ1DQgHZ0MsAAwAAAAADCwAAAS4AAAR0AAACxAAAAwwAAAFNAAAE
-cwAAAsMAAAAAAAAAAAeAAAADDAAAAU0AAARzAAACw3EOhXEPh3EQUnERWA4AAABzZXRfYnJlYWtw
-b2ludHESiVgHAAAAc3BlZWR1cHETRz/wAAAAAAAAWAkAAABzdGFydF9wb3NxFEcAAAAAAAAAAFgQ
-AAAAdGltZXN0YW1wX2ppdHRlcnEVRwAAAAAAAAAAWAYAAAB0aW1pbmdxFlgJAAAAd2FsbGNsb2Nr
-cRdYDwAAAHVwZGF0ZV9pbnRlcnZhbHEYRz+keuFHrhR7dS4=
+		<properties format="pickle" node_id="1">gAN9cQAoWAoAAABkYXRhX2R0eXBlcQFYBwAAAGZsb2F0NjRxAlgUAAAAZGF0YV9yYW5nZV90b19z
+dHJlYW1xA1gLAAAAbGVnYWN5LXdhcm5xBFgRAAAAaGl0Y2hfcHJvYmFiaWxpdHlxBUcAAAAAAAAA
+AFgOAAAAaml0dGVyX3BlcmNlbnRxBksFWAwAAABsb2dfcHJvZ3Jlc3NxB4lYBwAAAGxvb3Bpbmdx
+CIhYCAAAAG1ldGFkYXRhcQl9cQpYCAAAAHJhbmRzZWVkcQtN54ZYEwAAAHNhdmVkV2lkZ2V0R2Vv
+bWV0cnlxDGNzaXAKX3VucGlja2xlX3R5cGUKcQ1YDAAAAFB5UXQ1LlF0Q29yZXEOWAoAAABRQnl0
+ZUFycmF5cQ9DQgHZ0MsAAwAAAAAGfQAAAvIAAAhwAAAFIAAABn4AAAMfAAAIbwAABR8AAAAAAAAA
+AA8AAAAGfgAAAx8AAAhvAAAFH3EQhXERh3ESUnETWA4AAABzZXRfYnJlYWtwb2ludHEUiVgHAAAA
+c3BlZWR1cHEVRz/wAAAAAAAAWAkAAABzdGFydF9wb3NxFkcAAAAAAAAAAFgQAAAAdGltZXN0YW1w
+X2ppdHRlcnEXRwAAAAAAAAAAWAYAAAB0aW1pbmdxGFgJAAAAd2FsbGNsb2NrcRlYDwAAAHVwZGF0
+ZV9pbnRlcnZhbHEaRz+keuFHrhR7dS4=
 </properties>
 		<properties format="pickle" node_id="2">gAN9cQAoWAkAAABjaHVua19sZW5xAUsAWBUAAABpZ25vcmVfc2lnbmFsX2NoYW5nZWRxAolYEwAA
 AGtlZXBfc2luZ2xldG9uX2F4ZXNxA4lYDAAAAG1hcmtlcl9maWVsZHEEWAYAAABNYXJrZXJxBVgL
@@ -61,21 +62,22 @@ AHNyYXRlcR1YDQAAACh1c2UgZGVmYXVsdClxHlgLAAAAc3RyZWFtX25hbWVxH1gVAAAATGl2ZUFt
 cFNOLTA1NjMwOS0wNTMzcSBYCwAAAHN0cmVhbV90eXBlcSFYAwAAAEVFR3EiWBMAAAB1c2VfZGF0
 YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
 </properties>
-		<properties format="literal" node_id="3">{'always_on_top': True, 'auto_close': True, 'col_axis': 'time', 'decimals': 6, 'every_n_ticks': 1, 'fewer_buttons': False, 'font_size': 10, 'initial_position': [20, 50, 500, 400], 'metadata': {}, 'row_axis': 'space', 'savedWidgetGeometry': None, 'set_breakpoint': False, 'show_axes_table': True, 'show_data_table': True, 'show_markers_table': True, 'show_max_columns': 20, 'show_max_values': 50, 'show_streams_table': True, 'stream_name': '(use default)', 'window_title': 'Inspect Data Packet'}</properties>
+		<properties format="literal" node_id="3">{'always_on_top': True, 'col_axis': 'time', 'decimals': 6, 'every_n_ticks': 1, 'fewer_buttons': False, 'font_size': 10, 'initial_position': [20, 50, 500, 400], 'metadata': {}, 'row_axis': 'space', 'savedWidgetGeometry': None, 'set_breakpoint': False, 'show_axes_table': True, 'show_data_table': True, 'show_markers_table': True, 'show_max_columns': 20, 'show_max_values': 50, 'show_streams_table': True, 'stream_name': '(use default)', 'verbose': True, 'window_title': 'Inspect Data Packet'}</properties>
 		<properties format="pickle" node_id="4">gAN9cQAoWA0AAABjaGFubmVsX25hbWVzcQFdcQJYCgAAAGRhdGFfZHR5cGVxA1gHAAAAZmxvYXQ2
-NHEEWAsAAABkaWFnbm9zdGljc3EFiVgTAAAAZXhjbHVkZV9kZXNjX2ZpZWxkc3EGXXEHWAwAAABt
-YXJrZXJfcXVlcnlxCFgAAAAAcQlYDAAAAG1heF9ibG9ja2xlbnEKTQAEWAoAAABtYXhfYnVmbGVu
-cQtLHlgMAAAAbWF4X2NodW5rbGVucQxLAFgIAAAAbWV0YWRhdGFxDX1xDlgMAAAAbm9taW5hbF9y
-YXRlcQ9YDQAAACh1c2UgZGVmYXVsdClxEFgJAAAAb21pdF9kZXNjcRGJWA8AAABwcmVhbGxvY19i
-dWZmZXJxEohYDgAAAHByb2NfY2xvY2tzeW5jcROIWA0AAABwcm9jX2Rlaml0dGVycRSJWA8AAABw
-cm9jX21vbm90b25pemVxFYlYDwAAAHByb2NfdGhyZWFkc2FmZXEWiVgFAAAAcXVlcnlxF1gKAAAA
-bmFtZT0nQ0NBJ3EYWAcAAAByZWNvdmVycRmIWBQAAAByZXNvbHZlX21pbmltdW1fdGltZXEaRz/g
-AAAAAAAAWBMAAABzYXZlZFdpZGdldEdlb21ldHJ5cRtjc2lwCl91bnBpY2tsZV90eXBlCnEcWAwA
-AABQeVF0NS5RdENvcmVxHVgKAAAAUUJ5dGVBcnJheXEeQ0IB2dDLAAMAAAAAAwwAAAF3AAAEcwAA
-ApkAAAMMAAABdwAABHMAAAKZAAAAAAAAAAAHgAAAAwwAAAF3AAAEcwAAAplxH4VxIIdxIVJxIlgO
-AAAAc2V0X2JyZWFrcG9pbnRxI4l1Lg==
+NHEEWAsAAABkaWFnbm9zdGljc3EFiVgTAAAAZXhjbHVkZV9kZXNjX2ZpZWxkc3EGXXEHWA4AAABs
+b2NhbGhvc3Rfb25seXEIiVgMAAAAbWFya2VyX3F1ZXJ5cQlYAAAAAHEKWAwAAABtYXhfYmxvY2ts
+ZW5xC00ABFgKAAAAbWF4X2J1ZmxlbnEMSx5YDAAAAG1heF9jaHVua2xlbnENSwBYCAAAAG1ldGFk
+YXRhcQ59cQ9YDAAAAG5vbWluYWxfcmF0ZXEQWA0AAAAodXNlIGRlZmF1bHQpcRFYCQAAAG9taXRf
+ZGVzY3ESiVgPAAAAcHJlYWxsb2NfYnVmZmVycROIWA4AAABwcm9jX2Nsb2Nrc3luY3EUiFgNAAAA
+cHJvY19kZWppdHRlcnEViVgPAAAAcHJvY19tb25vdG9uaXplcRaJWA8AAABwcm9jX3RocmVhZHNh
+ZmVxF4lYBQAAAHF1ZXJ5cRhYCgAAAG5hbWU9J0NDQSdxGVgHAAAAcmVjb3ZlcnEaiFgUAAAAcmVz
+b2x2ZV9taW5pbXVtX3RpbWVxG0c/4AAAAAAAAFgTAAAAc2F2ZWRXaWRnZXRHZW9tZXRyeXEcY3Np
+cApfdW5waWNrbGVfdHlwZQpxHVgMAAAAUHlRdDUuUXRDb3JlcR5YCgAAAFFCeXRlQXJyYXlxH0NC
+AdnQywADAAAAAAMMAAABdwAABHMAAAKZAAADDAAAAXcAAARzAAACmQAAAAAAAAAAB4AAAAMMAAAB
+dwAABHMAAAKZcSCFcSGHcSJScSNYDgAAAHNldF9icmVha3BvaW50cSSJWA8AAAB1c2Vfc3RyZWFt
+bmFtZXNxJYl1Lg==
 </properties>
-		<properties format="literal" node_id="5">{'always_on_top': True, 'auto_close': True, 'col_axis': 'time', 'decimals': 6, 'every_n_ticks': 1, 'fewer_buttons': False, 'font_size': 10, 'initial_position': [20, 50, 500, 400], 'metadata': {}, 'row_axis': 'space', 'savedWidgetGeometry': None, 'set_breakpoint': False, 'show_axes_table': True, 'show_data_table': True, 'show_markers_table': True, 'show_max_columns': 20, 'show_max_values': 50, 'show_streams_table': True, 'stream_name': '(use default)', 'window_title': 'Inspect Data Packet'}</properties>
+		<properties format="literal" node_id="5">{'always_on_top': True, 'col_axis': 'time', 'decimals': 6, 'every_n_ticks': 1, 'fewer_buttons': False, 'font_size': 10, 'initial_position': [20, 50, 500, 400], 'metadata': {}, 'row_axis': 'space', 'savedWidgetGeometry': None, 'set_breakpoint': False, 'show_axes_table': True, 'show_data_table': True, 'show_markers_table': True, 'show_max_columns': 20, 'show_max_values': 50, 'show_streams_table': True, 'stream_name': '(use default)', 'verbose': True, 'window_title': 'Inspect Data Packet'}</properties>
 		<properties format="pickle" node_id="6">gAN9cQAoWAkAAABjaHVua19sZW5xAUsAWBUAAABpZ25vcmVfc2lnbmFsX2NoYW5nZWRxAolYEwAA
 AGtlZXBfc2luZ2xldG9uX2F4ZXNxA4lYDAAAAG1hcmtlcl9maWVsZHEEWAYAAABNYXJrZXJxBVgL
 AAAAbWFya2VyX25hbWVxBlgRAAAAT3V0U3RyZWFtLW1hcmtlcnNxB1gQAAAAbWFya2VyX3NvdXJj
@@ -90,29 +92,30 @@ AHNyYXRlcR1YDQAAACh1c2UgZGVmYXVsdClxHlgLAAAAc3RyZWFtX25hbWVxH1gSAAAAU2FtcGxl
 UG9pbnRDb3VudGVycSBYCwAAAHN0cmVhbV90eXBlcSFYAQAAAE5xIlgTAAAAdXNlX2RhdGFfdGlt
 ZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
 </properties>
-		<properties format="pickle" node_id="7">gAN9cQAoWAoAAABkYXRhX2R0eXBlcQFYBwAAAGZsb2F0NjRxAlgRAAAAaGl0Y2hfcHJvYmFiaWxp
-dHlxA0cAAAAAAAAAAFgOAAAAaml0dGVyX3BlcmNlbnRxBEsFWAwAAABsb2dfcHJvZ3Jlc3NxBYlY
-BwAAAGxvb3BpbmdxBohYCAAAAG1ldGFkYXRhcQd9cQhYCAAAAHJhbmRzZWVkcQlN54ZYEwAAAHNh
-dmVkV2lkZ2V0R2VvbWV0cnlxCmNzaXAKX3VucGlja2xlX3R5cGUKcQtYDAAAAFB5UXQ1LlF0Q29y
-ZXEMWAoAAABRQnl0ZUFycmF5cQ1DQgHZ0MsAAwAAAAADCwAAAS4AAAR0AAACxAAAAwwAAAFNAAAE
-cwAAAsMAAAAAAAAAAAeAAAADDAAAAU0AAARzAAACw3EOhXEPh3EQUnERWA4AAABzZXRfYnJlYWtw
-b2ludHESiVgHAAAAc3BlZWR1cHETRz/wAAAAAAAAWAkAAABzdGFydF9wb3NxFEcAAAAAAAAAAFgQ
-AAAAdGltZXN0YW1wX2ppdHRlcnEVRwAAAAAAAAAAWAYAAAB0aW1pbmdxFlgJAAAAd2FsbGNsb2Nr
-cRdYDwAAAHVwZGF0ZV9pbnRlcnZhbHEYRz+keuFHrhR7dS4=
+		<properties format="pickle" node_id="7">gAN9cQAoWAoAAABkYXRhX2R0eXBlcQFYBwAAAGZsb2F0NjRxAlgUAAAAZGF0YV9yYW5nZV90b19z
+dHJlYW1xA1gLAAAAbGVnYWN5LXdhcm5xBFgRAAAAaGl0Y2hfcHJvYmFiaWxpdHlxBUcAAAAAAAAA
+AFgOAAAAaml0dGVyX3BlcmNlbnRxBksFWAwAAABsb2dfcHJvZ3Jlc3NxB4lYBwAAAGxvb3Bpbmdx
+CIhYCAAAAG1ldGFkYXRhcQl9cQpYCAAAAHJhbmRzZWVkcQtN54ZYEwAAAHNhdmVkV2lkZ2V0R2Vv
+bWV0cnlxDGNzaXAKX3VucGlja2xlX3R5cGUKcQ1YDAAAAFB5UXQ1LlF0Q29yZXEOWAoAAABRQnl0
+ZUFycmF5cQ9DQgHZ0MsAAwAAAAAGfQAAAvIAAAhwAAAFIAAABn4AAAMfAAAIbwAABR8AAAAAAAAA
+AA8AAAAGfgAAAx8AAAhvAAAFH3EQhXERh3ESUnETWA4AAABzZXRfYnJlYWtwb2ludHEUiVgHAAAA
+c3BlZWR1cHEVRz/wAAAAAAAAWAkAAABzdGFydF9wb3NxFkcAAAAAAAAAAFgQAAAAdGltZXN0YW1w
+X2ppdHRlcnEXRwAAAAAAAAAAWAYAAAB0aW1pbmdxGFgJAAAAd2FsbGNsb2NrcRlYDwAAAHVwZGF0
+ZV9pbnRlcnZhbHEaRz+keuFHrhR7dS4=
 </properties>
 		<properties format="pickle" node_id="8">gAN9cQAoWBgAAABhbGxvd19pbnNlY3VyZV9maWxldHlwZXNxAYlYDQAAAGNsb3VkX2FjY291bnRx
 AlgAAAAAcQNYDAAAAGNsb3VkX2J1Y2tldHEEaANYEQAAAGNsb3VkX2NyZWRlbnRpYWxzcQVoA1gK
-AAAAY2xvdWRfaG9zdHEGWAcAAABEZWZhdWx0cQdYCAAAAGZpbGVuYW1lcQhYkAAAAEM6L1VzZXJz
-L3hyYXkyL09uZURyaXZlL0RvY3VtZW50cy9OVE5VL0RhdGFJbmcyMDIzL3MyMDIzL2JhL25ldXJv
-cHlwZS1waXBlbGluZS9qaXR0ZXIvZGF0YS9CQ0lTcGVsbGVyVjYvZGVqaXR0ZXJlZC11bml0eS1m
-cmVxdWVuY2llcy1ZZm9ybWF0LnhkZnEJWAsAAABsb2FkX2V2ZW50c3EKiFgMAAAAbG9hZF9zaWdu
-YWxzcQuIWAgAAABtZXRhZGF0YXEMfXENWA4AAAByZXRhaW5fc3RyZWFtc3EOWA0AAAAodXNlIGRl
-ZmF1bHQpcQ9YEwAAAHNhdmVkV2lkZ2V0R2VvbWV0cnlxEGNzaXAKX3VucGlja2xlX3R5cGUKcRFY
-DAAAAFB5UXQ1LlF0Q29yZXESWAoAAABRQnl0ZUFycmF5cRNDQgHZ0MsAAwAAAAADCwAAAQ4AAAR0
-AAAC4wAAAwwAAAEtAAAEcwAAAuIAAAAAAAAAAAeAAAADDAAAAS0AAARzAAAC4nEUhXEVh3EWUnEX
-WAgAAABzZWdtZW50c3EYWA0AAAAodXNlIGRlZmF1bHQpcRlYDgAAAHNldF9icmVha3BvaW50cRqJ
-WBAAAABzaWduYWxfYXV0b3NjYWxlcRuIWAwAAABzdGltX2NoYW5uZWxxHGgDWAsAAAB0aW1lX2Jv
-dW5kc3EdWA0AAAAodXNlIGRlZmF1bHQpcR5YDwAAAHVzZV9zdHJlYW1uYW1lc3EfiXUu
+AAAAY2xvdWRfaG9zdHEGWAcAAABEZWZhdWx0cQdYCAAAAGZpbGVuYW1lcQhYgQAAAEM6L1VzZXJz
+L3ZpemxhYl9zdHVkL2lkYXR0MjkwMF9ncjkyL25ldXJvcHlwZS1waXBlbGluZS9CQ0lTcGVsbGVy
+VjgvTkNJU3BlbGxlcl9FXzVfdGltZXMvZGVqaXR0ZXJlZC11bml0eS1mcmVxdWVuY2llcy1ZZm9y
+bWF0LnhkZnEJWAsAAABsb2FkX2V2ZW50c3EKiFgMAAAAbG9hZF9zaWduYWxzcQuIWAgAAABtZXRh
+ZGF0YXEMfXENWA4AAAByZXRhaW5fc3RyZWFtc3EOWA0AAAAodXNlIGRlZmF1bHQpcQ9YEwAAAHNh
+dmVkV2lkZ2V0R2VvbWV0cnlxEGNzaXAKX3VucGlja2xlX3R5cGUKcRFYDAAAAFB5UXQ1LlF0Q29y
+ZXESWAoAAABRQnl0ZUFycmF5cRNDQgHZ0MsAAwAAAAAGwgAAAtYAAA4GAAAFOwAABsMAAAMDAAAO
+BQAABToAAAAAAAAAAA8AAAAGwwAAAwMAAA4FAAAFOnEUhXEVh3EWUnEXWAgAAABzZWdtZW50c3EY
+WA0AAAAodXNlIGRlZmF1bHQpcRlYDgAAAHNldF9icmVha3BvaW50cRqJWBAAAABzaWduYWxfYXV0
+b3NjYWxlcRuIWAwAAABzdGltX2NoYW5uZWxxHGgDWAsAAAB0aW1lX2JvdW5kc3EdWA0AAAAodXNl
+IGRlZmF1bHQpcR5YDwAAAHVzZV9zdHJlYW1uYW1lc3EfiXUu
 </properties>
 		<properties format="pickle" node_id="9">gAN9cQAoWBcAAABhYnNvbHV0ZV9pbnN0YW5jZV90aW1lc3EBiFgNAAAAY2xvdWRfYWNjb3VudHEC
 WAAAAABxA1gMAAAAY2xvdWRfYnVja2V0cQRoA1gRAAAAY2xvdWRfY3JlZGVudGlhbHNxBWgDWAoA
@@ -207,7 +210,7 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                 "filename": {
                     "customized": true,
                     "type": "StringPort",
-                    "value": "C:/Users/xray2/OneDrive/Documents/NTNU/DataIng2023/s2023/ba/neuropype-pipeline/jitter/data/BCISpellerV6/dejittered-eeg.xdf"
+                    "value": "C:/Users/vizlab_stud/idatt2900_gr92/neuropype-pipeline/BCISpellerV8/NCISpeller_E_5_times/dejittered-eeg.xdf"
                 },
                 "load_events": {
                     "customized": false,
@@ -255,12 +258,12 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                     "value": null
                 },
                 "use_streamnames": {
-                    "customized": false,
+                    "customized": true,
                     "type": "BoolPort",
                     "value": false
                 }
             },
-            "uuid": "77298836-e6ab-4d42-815e-f0a928910ff0"
+            "uuid": "5d50d7ca-a41f-4cce-910d-39a7a2b56031"
         },
         "node10": {
             "class": "RecordToCSV",
@@ -337,7 +340,7 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                     "value": "timestamp"
                 }
             },
-            "uuid": "40ede1ba-0e58-47c1-baaa-616a5db57234"
+            "uuid": "bf0d0b59-0108-45e3-9948-cd1926c0d54a"
         },
         "node2": {
             "class": "StreamData",
@@ -347,6 +350,11 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                     "customized": false,
                     "type": "EnumPort",
                     "value": "float64"
+                },
+                "data_range_to_stream": {
+                    "customized": false,
+                    "type": "EnumPort",
+                    "value": "legacy-warn"
                 },
                 "hitch_probability": {
                     "customized": false,
@@ -409,7 +417,7 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                     "value": 0.04
                 }
             },
-            "uuid": "a14c4057-de66-4fda-86ea-d0379ba20fcd"
+            "uuid": "e9c78aee-d714-4601-9828-20e82385d860"
         },
         "node3": {
             "class": "LSLOutput",
@@ -516,18 +524,13 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                     "value": false
                 }
             },
-            "uuid": "75070f23-8e0e-4cbb-88dc-db3ab4a05b29"
+            "uuid": "04df427b-7957-461a-96bc-ad8d3735688d"
         },
         "node4": {
             "class": "InspectData",
-            "module": "neuropype.nodes.visualization.InspectData",
+            "module": "neuropype.nodes.deprecated.InspectData",
             "params": {
                 "always_on_top": {
-                    "customized": false,
-                    "type": "BoolPort",
-                    "value": true
-                },
-                "auto_close": {
                     "customized": false,
                     "type": "BoolPort",
                     "value": true
@@ -583,19 +586,19 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                     "value": false
                 },
                 "show_axes_table": {
-                    "customized": false,
+                    "customized": true,
                     "type": "BoolPort",
-                    "value": true
+                    "value": false
                 },
                 "show_data_table": {
-                    "customized": false,
+                    "customized": true,
                     "type": "BoolPort",
-                    "value": true
+                    "value": false
                 },
                 "show_markers_table": {
                     "customized": false,
                     "type": "BoolPort",
-                    "value": true
+                    "value": false
                 },
                 "show_max_columns": {
                     "customized": false,
@@ -608,7 +611,7 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                     "value": 0
                 },
                 "show_streams_table": {
-                    "customized": false,
+                    "customized": true,
                     "type": "BoolPort",
                     "value": true
                 },
@@ -617,13 +620,18 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                     "type": "StringPort",
                     "value": "eeg"
                 },
+                "verbose": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": true
+                },
                 "window_title": {
                     "customized": false,
                     "type": "StringPort",
                     "value": "Inspect Data Packet"
                 }
             },
-            "uuid": "41bdc55f-b466-481d-b6d0-d9690bd06c96"
+            "uuid": "d1c5eccc-9de2-4175-b74b-352f1ba5a258"
         },
         "node5": {
             "class": "LSLInput",
@@ -650,6 +658,11 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                     "customized": false,
                     "type": "ListPort",
                     "value": []
+                },
+                "localhost_only": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
                 },
                 "marker_query": {
                     "customized": false,
@@ -730,20 +743,20 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                     "customized": false,
                     "type": "BoolPort",
                     "value": false
+                },
+                "use_streamnames": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
                 }
             },
-            "uuid": "b278cd57-b627-4a30-b34c-3cca5d9664cf"
+            "uuid": "c7545815-0c41-48ea-a5b4-d11d52334ae0"
         },
         "node6": {
             "class": "InspectData",
-            "module": "neuropype.nodes.visualization.InspectData",
+            "module": "neuropype.nodes.deprecated.InspectData",
             "params": {
                 "always_on_top": {
-                    "customized": false,
-                    "type": "BoolPort",
-                    "value": true
-                },
-                "auto_close": {
                     "customized": false,
                     "type": "BoolPort",
                     "value": true
@@ -799,19 +812,19 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                     "value": false
                 },
                 "show_axes_table": {
-                    "customized": false,
+                    "customized": true,
                     "type": "BoolPort",
-                    "value": true
+                    "value": false
                 },
                 "show_data_table": {
-                    "customized": false,
+                    "customized": true,
                     "type": "BoolPort",
-                    "value": true
+                    "value": false
                 },
                 "show_markers_table": {
                     "customized": false,
                     "type": "BoolPort",
-                    "value": true
+                    "value": false
                 },
                 "show_max_columns": {
                     "customized": false,
@@ -824,7 +837,7 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                     "value": 0
                 },
                 "show_streams_table": {
-                    "customized": false,
+                    "customized": true,
                     "type": "BoolPort",
                     "value": true
                 },
@@ -833,13 +846,18 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                     "type": "StringPort",
                     "value": "cca"
                 },
+                "verbose": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": true
+                },
                 "window_title": {
                     "customized": false,
                     "type": "StringPort",
                     "value": "Inspect Data Packet"
                 }
             },
-            "uuid": "9a97fa23-fece-4e61-bf84-bc00eb95122c"
+            "uuid": "679bfb55-0b65-4c96-a1a1-0cc3268a9cc0"
         },
         "node7": {
             "class": "LSLOutput",
@@ -946,7 +964,7 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                     "value": false
                 }
             },
-            "uuid": "696da7f8-1cc3-4036-986e-43c3cb17cbdc"
+            "uuid": "c72da876-ca90-4f95-9943-d6b07cd26cbb"
         },
         "node8": {
             "class": "StreamData",
@@ -956,6 +974,11 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                     "customized": false,
                     "type": "EnumPort",
                     "value": "float64"
+                },
+                "data_range_to_stream": {
+                    "customized": false,
+                    "type": "EnumPort",
+                    "value": "legacy-warn"
                 },
                 "hitch_probability": {
                     "customized": false,
@@ -1018,7 +1041,7 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                     "value": 0.04
                 }
             },
-            "uuid": "e0ad4490-5a6a-4456-917f-ba2be97fcc6b"
+            "uuid": "d40f31da-e9a4-43cd-aa37-1a99f682ba45"
         },
         "node9": {
             "class": "ImportFile",
@@ -1052,7 +1075,7 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                 "filename": {
                     "customized": true,
                     "type": "StringPort",
-                    "value": "C:/Users/xray2/OneDrive/Documents/NTNU/DataIng2023/s2023/ba/neuropype-pipeline/jitter/data/BCISpellerV6/dejittered-unity-frequencies-Yformat.xdf"
+                    "value": "C:/Users/vizlab_stud/idatt2900_gr92/neuropype-pipeline/BCISpellerV8/NCISpeller_E_5_times/dejittered-unity-frequencies-Yformat.xdf"
                 },
                 "load_events": {
                     "customized": false,
@@ -1100,12 +1123,12 @@ AAB0aW1lc3RhbXBfbGFiZWxxG1gJAAAAdGltZXN0YW1wcRx1Lg==
                     "value": null
                 },
                 "use_streamnames": {
-                    "customized": false,
+                    "customized": true,
                     "type": "BoolPort",
                     "value": false
                 }
             },
-            "uuid": "67330d7e-eb99-48ea-857c-f164df968783"
+            "uuid": "7deecb0f-e92c-4a24-88c3-69d1a47a99c9"
         }
     },
     "version": 1.1
