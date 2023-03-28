@@ -23,7 +23,7 @@ def init_stream():
     stream_name = 'CCA'
     stream_type = 'cca'
     channel_count = 1
-    sampling_rate = 0  # Irregular sampling rate (use a positive number for a regular sampling rate)
+    sampling_rate = 1  # Irregular sampling rate (use a positive number for a regular sampling rate)
     channel_format = 'float32'
 
     # Create the stream info object
@@ -36,7 +36,8 @@ def init_stream():
 
 def get_freqs(N):
     start_time = time.time()
-    fs = [8.18, 9, 10, 11.25, 12.85, 15]
+    #fs = [8.18, 9, 10, 11.25, 12.86, 15]
+    fs = [13.0909, 14.4, 16, 18, 20.5714, 24]
     t = N/250
     return_freqs = []
     for fk in fs:
@@ -51,16 +52,20 @@ def get_freqs(N):
     return df
 
 def perform_cca(fragment, n_components):
-    X = fragment[:][['O1', 'O2', 'Oz', 'P3', 'P4', 'Pz', 'P7', 'P8']]
+    X = fragment[:][['Pz', 'O2', 'Oz', 'P3', 'O1', 'P4', 'P7', 'P8']]#,
     freqs = []
     t = 0
     for i in range(0, len(frequencies), 6):
         t = t + 1
         Y = fragment[:][frequencies[i:6 * t]]
-        ca = CCA(n_components=1)
+        #print(frequencies[i:6*t])
+        ca = CCA(n_components=2)
         ca.fit(X, Y)
         X_c, Y_c = ca.transform(X, Y)
-        freqs.append(np.corrcoef(X_c[:, 0], Y_c[:, 0])[0][1])
+        coef = np.corrcoef(X_c[:, 0], Y_c[:, 0])
+        print(np.corrcoef(X_c[:,1], Y_c[:, 1]))
+        freqs.append(coef[0][1])
+        #print(coef)
     return freqs
 
 def return_index(index, info, outlet):
@@ -77,9 +82,9 @@ inlet = StreamInlet(streams[0])
 
 
 fs = 250  # Sampling frequency
-fragment_duration = 7  # Fragment duration in seconds
+fragment_duration = 5 # Fragment duration in seconds
 fragment_samples = fs * fragment_duration
-pre_trigger_samples = fs*1
+pre_trigger_samples = round(fs*1)
 target_value = 0
 
 
@@ -87,22 +92,33 @@ while True:
     buffer = []
     triggered = False
     start_time = None
+    sample_check = False
+    print("Sleep done")
     while not triggered:
         sample, timestamp = inlet.pull_sample()
-        buffer.append((timestamp, sample))
+        #print(timestamp)
+        buffer.append(sample)
 
         # Remove old samples from the buffer
         while len(buffer) > fragment_samples:
             buffer.pop(0)
 
         # Check if the current sample value is different from target_value
-        if sample[0] != target_value:
+        #print("Reading LSL Stream")
+        if(sample[0] != target_value and not sample_check):
+            print("stuck")
+            print(len(buffer))
+            del buffer[:-pre_trigger_samples]
+            print(len(buffer))
+            sample_check = True
+
+        if sample_check and len(buffer) >= fragment_samples:
             # Find the index of the first non-zero sample
-            index = next(i for i, (_, s) in enumerate(buffer) if s[0] != target_value)
 
             # Get the fragment starting 250 samples before the change and lasting for 7*250 samples
-            fragment = buffer[max(0, index - pre_trigger_samples):index + fragment_samples - pre_trigger_samples]
-
+            fragment = np.array(buffer[:fragment_samples])
+            #fragment = np.array(buffer[:fragment_samples])
+            print(fragment)
             triggered = True
             print("Fragment: found")
             # Convert the buffer to a NumPy array and reshape it
@@ -110,6 +126,7 @@ while True:
             # Remove the processed fragment from the buffer
             #buffer = buffer[fragment_samples:]
             df = pd.DataFrame(fragment)
+            df.columns = ['N'] + channels
             df = pd.concat([df, get_freqs(df[:]['N'])], axis=1, join='inner')
             df.columns = ['N'] + frequencies + channels
             cca = perform_cca(df, 1)
@@ -118,4 +135,5 @@ while True:
             print(index)
             print(np.argpartition(cca, -2)[-2:])
             return_index(index, info, outlet)
-    time.sleep(fragment_duration)
+    print("Sleep")
+    #time.sleep(fragment_duration)
