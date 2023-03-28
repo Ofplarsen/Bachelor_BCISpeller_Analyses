@@ -79,10 +79,26 @@ def perform_cca(fragment, n_components):
     for i in range(0, len(frequencies), 6):
         t = t + 1
         Y = fragment[:][frequencies[i:6 * t]]
-        ca = CCA(n_components=1)
+        ca = CCA(n_components=2)
         ca.fit(X, Y)
         X_c, Y_c = ca.transform(X, Y)
         freqs.append(np.corrcoef(X_c[:, 0], Y_c[:, 0])[0][1])
+    return freqs
+
+def perform_cca_2(fragment):
+    n_components = 2
+    X = fragment[:][occ_channels]
+    freqs = []
+    t = 0
+    for i in range(0, len(frequencies), 6):
+        t = t + 1
+        Y = fragment[:][frequencies[i:6 * t]]
+        ca = CCA(n_components=n_components)
+        ca.fit(X, Y)
+        X_c, Y_c = ca.transform(X, Y)
+        p1 = np.corrcoef(X_c[:, 0], Y_c[:, 0])[0][1]
+        p2 = np.corrcoef(X_c[:, 1], Y_c[:, 1])[0][1]
+        freqs.append(np.sqrt(p1**2+p2**2))
     return freqs
 
 
