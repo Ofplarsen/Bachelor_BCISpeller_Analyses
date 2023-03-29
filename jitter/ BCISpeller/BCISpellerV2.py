@@ -109,7 +109,7 @@ fragment_duration = 6  # Fragment duration in seconds
 fragment_samples = fs * fragment_duration
 pre_trigger_samples = fs * 1
 target_value = 0
-delay = round(fs*0.14)
+delay = round(fs*0.20)
 
 
 while True:

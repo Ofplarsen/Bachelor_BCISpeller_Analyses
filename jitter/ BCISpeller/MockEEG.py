@@ -2,8 +2,9 @@ import numpy as np
 import time
 from pylsl import StreamInfo, StreamOutlet
 
-# Define the LSL stream parameters for the EEG stream
-num_channels = 8
+
+# Define the LSL stream parameters
+num_channels = 35
 sampling_rate = 500
 channel_format = 'float32'
 eeg_stream_name = 'MockEEG'

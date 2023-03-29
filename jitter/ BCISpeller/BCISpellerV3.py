@@ -57,7 +57,7 @@ def add_padding(data, lenght=100):
     return padding(data, lenght)
 
 def remove_padding(data, length=100):
-    return data[length:-length]
+    return data.iloc[length:-length].reset_index(drop=True)
 
 def padding(data, pad_length = 100):
     return np.pad(data, (pad_length, pad_length), mode="reflect")
@@ -114,7 +114,7 @@ def perform_cca_2(fragment):
         p1 = np.corrcoef(X_c[:, 0], Y_c[:, 0])[0][1]
         p2 = np.corrcoef(X_c[:, 1], Y_c[:, 1])[0][1]
         freqs.append(np.sqrt(p1**2+p2**2))
-        if True:
+        if False:
             plt.scatter(X_c[:, 0], Y_c[:, 0], label='EEG Channels', alpha=0.7)
             plt.scatter(X_c[:, 1], Y_c[:, 1], label='Sine curves', alpha=0.7)
             plt.xlabel('X Transformed')
@@ -146,7 +146,7 @@ def zero_phase_butter(data):
     b_bandpass, a_bandpass = signal.butter(order, [low, high], btype="band")
 
     # Zero-phase filtering using filtfilt
-    return signal.filtfilt(b_bandpass, a_bandpass, data, method='gust')
+    return signal.filtfilt(b_bandpass, a_bandpass, data)
 
 
 def notch(data):
@@ -168,7 +168,7 @@ fragment_duration = 6  # Fragment duration in seconds
 fragment_samples = fs * fragment_duration
 pre_trigger_samples = fs * 1
 target_value = 0
-delay = round(fs*0.14)
+delay = round(fs*0.20)
 pad_length = 100
 while True:
     buffer = []
@@ -213,18 +213,26 @@ while True:
             df = pd.DataFrame(fragment)
             df.columns = ['N'] + channels
             start_time = time.time()
-            #plot_single(df, 'O1')
-            df[occ_channels] = df[occ_channels].apply(lambda x: add_padding(x, pad_length))
+            plot_single(df, 'O1')
+            print(len(df['O1']))
+            df = df.apply(lambda x: add_padding(x, pad_length))
+            print(len(df['O1']))
+            plot_single(df, 'O1')
             df[occ_channels] = df[occ_channels].apply(lambda x: notch(x))
-            #plot_single(df, 'O1')
+            plot_single(df, 'O1')
             df[occ_channels] = df[occ_channels].apply(lambda x: zero_phase_butter(x))
-            df[occ_channels] = df[occ_channels].apply(lambda x: remove_padding(x, pad_length))
+            plot_single(df, 'O1')
+            df = df.apply(lambda x: remove_padding(x, pad_length))
             plot_single(df, 'O1')
             #for i in occ_channels:
                 #df[i] = normalize_data(df[i])
             print("--- Filter time:  %s seconds ---" % (time.time() - start_time))
             N = np.arange(1, len(df['O1']) + 1)
+            print(df.shape)
             df = pd.concat([df, get_freqs(N)], axis=1, join='inner')
+            print(df.shape)
+            print([(index,row['O1']) for index, row in df.iterrows() if pd.isna(row['O1'])])
+
             cca = perform_cca_2(df)
             print("CCA single: " + str(perform_cca(df,1)))
             print(cca)
