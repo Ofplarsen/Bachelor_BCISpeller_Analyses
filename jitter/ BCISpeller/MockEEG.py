@@ -1,7 +1,6 @@
 import numpy as np
 import time
-from pylsl import StreamInfo, StreamOutlet
-
+from pylsl import StreamInfo, StreamOutlet, local_clock
 
 # Define the LSL stream parameters
 num_channels = 35
@@ -24,14 +23,17 @@ sample_info = StreamInfo(sample_stream_name, sample_stream_type, sample_channels
 sample_outlet = StreamOutlet(sample_info)
 
 # Define the signal generation parameters
-duration = 7  # Duration of each segment of the signal (seconds)
+duration = 6     # Duration of each segment of the signal (seconds)
 base_frequency = 24  # Frequency of the sinusoidal components (Hz)
 noise_amplitude = 50  # Amplitude of the random noise component
-sample_value = 0  # The value N for the single sample stream
+
 
 # Continuously generate and stream mock EEG data and the single sample value
+start_time = local_clock()
+channels = [11, 12, 13, 14, 15, 16, 18, 19]
 while True:
     t = np.arange(0, duration, 1/sampling_rate)
+    sample_value = 0  # The value N for the single sample stream
     eeg_data = []
 
     for ch in range(num_channels):
@@ -42,7 +44,13 @@ while True:
     eeg_data = np.array(eeg_data).T
 
     # Stream the generated mock EEG data
+    x = 0
     for sample in eeg_data:
-        sample_value = sample_value + 1
+        if x % 2 == 0:
+            sample_value = sample_value + 1
+            sample_outlet.push_sample([sample_value])
+
         eeg_outlet.push_sample(sample)
-        sample_outlet.push_sample([sample_value])  #
+        x = x+1
+        time.sleep(1 / sampling_rate)
+

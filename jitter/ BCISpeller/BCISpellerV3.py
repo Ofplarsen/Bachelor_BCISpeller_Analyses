@@ -72,7 +72,8 @@ def hamming_window(data, duration):
 def get_freqs(N):
     start_time = time.time()
     # fs = [8.18, 9, 10, 11.25, 12.86, 15]
-    fs = [13.0909, 14.4, 16, 18, 20.5714, 24]
+    #fs = [13.0909, 14.4, 16, 18, 20.5714, 24]
+    fs = [13, 14, 16, 18, 20, 24]
     t = N / 250
     return_freqs = []
     for fk in fs:
@@ -135,8 +136,8 @@ def return_index(index, info, outlet):
 def zero_phase_butter(data):
     # Butterworth filter parameters
     fs = 250
-    lowcut = 12.0
-    highcut = 27.0
+    lowcut = 8.0
+    highcut = 70.0
     order = 10
 
     # Design Butterworth bandpass filter
@@ -160,18 +161,20 @@ def notch(data):
 
 info, outlet = init_stream()
 print("Looking for an LSL stream...")
-streams = resolve_stream('type', 'Speller')
-inlet = StreamInlet(streams[0])
-
+streams_counter = resolve_stream('type', 'DejitteredSpeller')
+streams_eeg = resolve_stream('type', 'ButterEEG')
+inlet = StreamInlet(streams_counter[0])
+inlet_2 = StreamInlet(streams_eeg[0])
 fs = 250  # Sampling frequency
 fragment_duration = 6  # Fragment duration in seconds
 fragment_samples = fs * fragment_duration
 pre_trigger_samples = fs * 1
 target_value = 0
-delay = round(fs*0.20)
+delay = round(fs*0.01)
 pad_length = 100
 while True:
     buffer = []
+    buffer_eeg = []
     triggered = False
     start_time = None
     scan_values = False
@@ -179,62 +182,59 @@ while True:
     i = 0
     while not triggered:
         sample, timestamp = inlet.pull_sample()
+        sample_eeg, timestamp_eeg = inlet_2.pull_sample()
         buffer.append(sample)
-
+        buffer_eeg.append(sample_eeg)
         # Remove old samples from the buffer
         while len(buffer) > fragment_samples:
             buffer.pop(0)
-        # print(sample[0])
-        # Check if the current sample value is different from target_value
-        if sample[0] != target_value and not scan_values:
-            print("Deleting buffer")
-            print(sample[0])
-            del buffer[:-1]
-            print(len(buffer))
-            scan_values = True
+            buffer_eeg.pop(0)
 
-        if scan_values and len(buffer) == delay and not count:
-            print("Shifting for visual system delay")
-            del buffer[:-1]
-            count = True
-
-        if count and sample[0] == target_value:
-            i += 1
-
-        if count and scan_values and (len(buffer) == fragment_samples or (i == delay)) :
+        if (len(buffer) == fragment_samples) and buffer[0][0] == 1:
             print(len(buffer))
             fragment = np.array(buffer[:fragment_samples])
+            fragment_eeg = np.array(buffer_eeg[:fragment_samples])
             triggered = True
             print("Fragment: found")
-            # Convert the buffer to a NumPy array and reshape it
-            fragment = np.array(fragment)
-            # Remove the processed fragment from the buffer
-            # buffer = buffer[fragment_samples:]
-            df = pd.DataFrame(fragment)
+
+            df = pd.concat([pd.DataFrame(np.array(fragment)), pd.DataFrame(np.array(fragment_eeg))], axis=1, join='inner')
+
             df.columns = ['N'] + channels
+            print(df.columns)
+            print(df[occ_channels])
             start_time = time.time()
-            plot_single(df, 'O1')
-            print(len(df['O1']))
             df = df.apply(lambda x: add_padding(x, pad_length))
             print(len(df['O1']))
-            plot_single(df, 'O1')
             df[occ_channels] = df[occ_channels].apply(lambda x: notch(x))
-            plot_single(df, 'O1')
             df[occ_channels] = df[occ_channels].apply(lambda x: zero_phase_butter(x))
-            plot_single(df, 'O1')
             df = df.apply(lambda x: remove_padding(x, pad_length))
-            plot_single(df, 'O1')
-            #for i in occ_channels:
-                #df[i] = normalize_data(df[i])
+            # for i in occ_channels:
+            # df[i] = normalize_data(df[i])
             print("--- Filter time:  %s seconds ---" % (time.time() - start_time))
-            N = np.arange(1, len(df['O1']) + 1)
+            print(df['N'].tolist())
+            N = df['N']
             print(df.shape)
             df = pd.concat([df, get_freqs(N)], axis=1, join='inner')
             print(df.shape)
-            print([(index,row['O1']) for index, row in df.iterrows() if pd.isna(row['O1'])])
+            print([(index, row['O1']) for index, row in df.iterrows() if pd.isna(row['O1'])])
 
-            cca = perform_cca_2(df)
-            print("CCA single: " + str(perform_cca(df,1)))
+            #N = np.arange(1, len(df['O1']) + 1)
+            N = df['N']
+            frs = get_freqs(N)
+            X = df[:][occ_channels]
+            freqs = []
+            h = 0
+            for y in range(0, len(frequencies), 6):
+                h = h + 1
+                Y = frs[:][frequencies[y:6 * h]]
+                ca = CCA(n_components=2)
+                ca.fit(X, Y)
+                X_c, Y_c = ca.transform(X, Y)
+                p1 = np.corrcoef(X_c[:, 0], Y_c[:, 0])[0][1]
+                p2 = np.corrcoef(X_c[:, 1], Y_c[:, 1])[0][1]
+                freqs.append(np.sqrt(p1 ** 2 + p2 ** 2))
+            cca = freqs
+            #print("CCA single: " + str(perform_cca(df,1)))
             print(cca)
             index = np.argmax(cca)
             print(index)

@@ -44,7 +44,8 @@ def plot_single(df, column):
 def get_freqs(N):
     start_time = time.time()
     #fs = [8.18, 9, 10, 11.25, 12.86, 15]
-    fs = [13.0909, 14.4, 16, 18, 20.5714, 24]
+    #fs = [13.0909, 14.4, 16, 18, 20.5714, 24]
+    fs = [13, 14, 16, 18, 20, 24]
     t = N/250
     return_freqs = []
     for fk in fs:
@@ -100,8 +101,10 @@ def return_index(index, info, outlet):
 
 info, outlet = init_stream()
 print("Looking for an LSL stream...")
-streams = resolve_stream('type', 'SpellerV2')
-inlet = StreamInlet(streams[0])
+streams_counter = resolve_stream('type', 'DejitteredSpeller')
+streams_eeg = resolve_stream('type', 'ButterEEG')
+inlet = StreamInlet(streams_counter[0])
+inlet_2 = StreamInlet(streams_eeg[0])
 
 
 fs = 250  # Sampling frequency
@@ -114,6 +117,7 @@ delay = round(fs*0.20)
 
 while True:
     buffer = []
+    buffer_eeg = []
     triggered = False
     start_time = None
     scan_values = False
@@ -122,50 +126,45 @@ while True:
     print("Sleep done")
     while not triggered:
         sample, timestamp = inlet.pull_sample()
+        sample_eeg, timestamp_eeg = inlet_2.pull_sample()
         #print(timestamp)
         buffer.append(sample)
+        buffer_eeg.append(sample_eeg)
 
         # Remove old samples from the buffer
         while len(buffer) > fragment_samples:
             buffer.pop(0)
-        # print(sample[0])
-        # Check if the current sample value is different from target_value
-        if sample[0] != target_value and not scan_values:
-            print("Deleting buffer")
-            print(sample[0])
-            del buffer[:-1]
+            buffer_eeg.pop(0)
+
+        if (len(buffer) == fragment_samples) and buffer[0][0] == 1:
             print(len(buffer))
-            scan_values = True
-
-        if scan_values and len(buffer) == delay and not count:
-            print("Shifting for visual system delay")
-            del buffer[:-1]
-            count = True
-
-        if count and sample[0] == target_value:
-            i += 1
-
-        if count and scan_values and (len(buffer) == fragment_samples or (i == delay)):
-            # Find the index of the first non-zero sample
-            print(len(buffer))
-            # Get the fragment starting 250 samples before the change and lasting for 7*250 samples
             fragment = np.array(buffer[:fragment_samples])
-            #fragment = np.array(buffer[:fragment_samples])
+            fragment_eeg = np.array(buffer_eeg[:fragment_samples])
+
             triggered = True
             print("Fragment: found")
+            df = pd.concat([pd.DataFrame(np.array(fragment)), pd.DataFrame(np.array(fragment_eeg))], axis=1, join='inner')
 
-            # Convert the buffer to a NumPy array and reshape it
-            fragment = np.array(fragment)
-            # Remove the processed fragment from the buffer
-            #buffer = buffer[fragment_samples:]
-            df = pd.DataFrame(fragment)
             df.columns = ['N'] + channels
-            N = np.arange(1, len(df['O1']) + 1)
-            df = pd.concat([df, get_freqs(N)], axis=1, join='inner')
-            #plot_single(df, 'O1')
-            #plot_single(df, '8.18_sin_h1')
-            cca = perform_cca_2(df)
-            print("CCA single: " + str(perform_cca(df,1)))
+            print(df['N'].tolist())
+
+            # N = np.arange(1, len(df['O1']) + 1)
+            N = df['N']
+            frs = get_freqs(N)
+            X = df[:][occ_channels]
+            freqs = []
+            h = 0
+            for y in range(0, len(frequencies), 6):
+                h = h + 1
+                Y = frs[:][frequencies[y:6 * h]]
+                ca = CCA(n_components=2)
+                ca.fit(X, Y)
+                X_c, Y_c = ca.transform(X, Y)
+                p1 = np.corrcoef(X_c[:, 0], Y_c[:, 0])[0][1]
+                p2 = np.corrcoef(X_c[:, 1], Y_c[:, 1])[0][1]
+                freqs.append(np.sqrt(p1 ** 2 + p2 ** 2))
+            cca = freqs
+            # print("CCA single: " + str(perform_cca(df,1)))
             print(cca)
             index = np.argmax(cca)
             print(index)
