@@ -53,6 +53,14 @@ def init_stream():
     outlet = StreamOutlet(info)
     return info, outlet
 
+def add_padding(data, lenght=100):
+    return padding(data, lenght)
+
+def remove_padding(data, length=100):
+    return data[length:-length]
+
+def padding(data, pad_length = 100):
+    return np.pad(data, (pad_length, pad_length), mode="reflect")
 
 def hamming_window(data, duration):
     window_size = int(duration)
@@ -161,7 +169,7 @@ fragment_samples = fs * fragment_duration
 pre_trigger_samples = fs * 1
 target_value = 0
 delay = round(fs*0.14)
-
+pad_length = 100
 while True:
     buffer = []
     triggered = False
@@ -206,18 +214,19 @@ while True:
             df.columns = ['N'] + channels
             start_time = time.time()
             #plot_single(df, 'O1')
-            df[occ_channels] = df[occ_channels].apply(lambda x: hamming_window(x, len(df['O1'])))
+            df[occ_channels] = df[occ_channels].apply(lambda x: add_padding(x, pad_length))
             df[occ_channels] = df[occ_channels].apply(lambda x: notch(x))
             #plot_single(df, 'O1')
             df[occ_channels] = df[occ_channels].apply(lambda x: zero_phase_butter(x))
-            plot_single(df[fs:-fs], 'O1')
+            df[occ_channels] = df[occ_channels].apply(lambda x: remove_padding(x, pad_length))
+            plot_single(df, 'O1')
             #for i in occ_channels:
                 #df[i] = normalize_data(df[i])
             print("--- Filter time:  %s seconds ---" % (time.time() - start_time))
             N = np.arange(1, len(df['O1']) + 1)
             df = pd.concat([df, get_freqs(N)], axis=1, join='inner')
-            cca = perform_cca_2(df[fs:-fs])
-            print("CCA single: " + str(perform_cca(df[fs:-fs],1)))
+            cca = perform_cca_2(df)
+            print("CCA single: " + str(perform_cca(df,1)))
             print(cca)
             index = np.argmax(cca)
             print(index)
