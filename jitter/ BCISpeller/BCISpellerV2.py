@@ -147,11 +147,10 @@ while True:
 
         if count and scan_values and (len(buffer) == fragment_samples or (i == delay)):
             # Find the index of the first non-zero sample
-
+            print(len(buffer))
             # Get the fragment starting 250 samples before the change and lasting for 7*250 samples
             fragment = np.array(buffer[:fragment_samples])
             #fragment = np.array(buffer[:fragment_samples])
-            print(fragment)
             triggered = True
             print("Fragment: found")
 
@@ -166,6 +165,7 @@ while True:
             #plot_single(df, 'O1')
             #plot_single(df, '8.18_sin_h1')
             cca = perform_cca_2(df)
+            print("CCA single: " + str(perform_cca(df,1)))
             print(cca)
             index = np.argmax(cca)
             print(index)

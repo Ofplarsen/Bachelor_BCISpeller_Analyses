@@ -31,9 +31,9 @@ def normalize_data(data, lower_bound=-1, upper_bound=1):
 
 def plot_single(df, column):
     t = np.arange(0, 10, 1 / fs)
-    df[column] = normalize_data(df[column])
+    #df[column] = normalize_data(df[column])
     axis = plt.subplot()
-    axis.plot(t[250:len(df[column])-250], df[column][250:-250])
+    axis.plot(t[:len(df[column])], df[column])
     axis.set_title(column)
     plt.show()
 
@@ -53,9 +53,17 @@ def init_stream():
     outlet = StreamOutlet(info)
     return info, outlet
 
+def add_padding(data, lenght=100):
+    return padding(data, lenght)
 
-def hamming_window(data, duration, fs):
-    window_size = int(duration*fs)
+def remove_padding(data, length=100):
+    return data[length:-length]
+
+def padding(data, pad_length = 100):
+    return np.pad(data, (pad_length, pad_length), mode="reflect")
+
+def hamming_window(data, duration):
+    window_size = int(duration)
     window = np.hamming(window_size)
 
     data[:window_size] *= window
@@ -80,7 +88,7 @@ def get_freqs(N):
 
 
 def perform_cca(fragment, n_components):
-    X = fragment[250:-250][occ_channels]
+    X = fragment[:][occ_channels]
     freqs = []
     t = 0
     for i in range(0, len(frequencies), 6):
@@ -106,6 +114,14 @@ def perform_cca_2(fragment):
         p1 = np.corrcoef(X_c[:, 0], Y_c[:, 0])[0][1]
         p2 = np.corrcoef(X_c[:, 1], Y_c[:, 1])[0][1]
         freqs.append(np.sqrt(p1**2+p2**2))
+        if True:
+            plt.scatter(X_c[:, 0], Y_c[:, 0], label='EEG Channels', alpha=0.7)
+            plt.scatter(X_c[:, 1], Y_c[:, 1], label='Sine curves', alpha=0.7)
+            plt.xlabel('X Transformed')
+            plt.ylabel('Y Transformed')
+            plt.title('CCA Transformed Canonical Variates')
+            plt.legend()
+            plt.show()
     return freqs
 
 
@@ -120,7 +136,7 @@ def zero_phase_butter(data):
     # Butterworth filter parameters
     fs = 250
     lowcut = 12.0
-    highcut = 28.0
+    highcut = 27.0
     order = 10
 
     # Design Butterworth bandpass filter
@@ -148,12 +164,12 @@ streams = resolve_stream('type', 'Speller')
 inlet = StreamInlet(streams[0])
 
 fs = 250  # Sampling frequency
-fragment_duration = 5  # Fragment duration in seconds
+fragment_duration = 6  # Fragment duration in seconds
 fragment_samples = fs * fragment_duration
 pre_trigger_samples = fs * 1
 target_value = 0
 delay = round(fs*0.14)
-
+pad_length = 100
 while True:
     buffer = []
     triggered = False
@@ -198,18 +214,19 @@ while True:
             df.columns = ['N'] + channels
             start_time = time.time()
             #plot_single(df, 'O1')
+            df[occ_channels] = df[occ_channels].apply(lambda x: add_padding(x, pad_length))
             df[occ_channels] = df[occ_channels].apply(lambda x: notch(x))
             #plot_single(df, 'O1')
-            #df[occ_channels] = df[occ_channels].apply(lambda x: hamming_window(x,fragment_duration,fs))
             df[occ_channels] = df[occ_channels].apply(lambda x: zero_phase_butter(x))
-
-            for i in occ_channels:
-                df[i] = normalize_data(df[i])
+            df[occ_channels] = df[occ_channels].apply(lambda x: remove_padding(x, pad_length))
+            plot_single(df, 'O1')
+            #for i in occ_channels:
+                #df[i] = normalize_data(df[i])
             print("--- Filter time:  %s seconds ---" % (time.time() - start_time))
             N = np.arange(1, len(df['O1']) + 1)
             df = pd.concat([df, get_freqs(N)], axis=1, join='inner')
-
             cca = perform_cca_2(df)
+            print("CCA single: " + str(perform_cca(df,1)))
             print(cca)
             index = np.argmax(cca)
             print(index)
