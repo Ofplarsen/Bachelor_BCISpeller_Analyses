@@ -43,7 +43,7 @@ def init_stream():
     stream_name = 'CCA'
     stream_type = 'cca'
     channel_count = 1
-    sampling_rate = 0  # Irregular sampling rate (use a positive number for a regular sampling rate)
+    sampling_rate = 1  # Irregular sampling rate (use a positive number for a regular sampling rate)
     channel_format = 'float32'
 
     # Create the stream info object
