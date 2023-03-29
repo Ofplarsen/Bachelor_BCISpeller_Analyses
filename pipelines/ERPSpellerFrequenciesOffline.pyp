@@ -1,33 +1,33 @@
 <?xml version='1.0' encoding='utf-8'?>
 <scheme description="" title="ERPSpellerFrequencies" version="2.0">
 	<nodes>
-		<node id="0" name="LSL Input" position="(348.0, 609.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="LSL Input" uuid="b81c47c9-6ed7-4554-b7b0-f2f8f1399f64" version="1.5.1" />
-		<node id="1" name="Time Series Plot" position="(507.0, 252.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Time Series Plot" uuid="2d61cff7-7886-4afa-9433-b06b2d5de161" version="1.1.0" />
-		<node id="2" name="LSL Input" position="(275.0, 1058.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="LSL Input (1)" uuid="f9ef86bc-13a3-4a3f-ad63-18c2bf39739c" version="1.5.1" />
-		<node id="3" name="Dejitter Timestamps" position="(418.0, 1059.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owdejittertimestamps.OWDejitterTimestamps" title="Dejitter Timestamps" uuid="d38b1c57-b021-4fc8-95f9-f5955ec49154" version="1.0.0" />
-		<node id="4" name="Dejitter Timestamps" position="(478.0, 616.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owdejittertimestamps.OWDejitterTimestamps" title="Dejitter Timestamps (1)" uuid="b36a8366-454b-4249-a36a-9eb1e81b328f" version="1.0.0" />
-		<node id="5" name="IIR Filter" position="(822.0, 998.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owiirfilter.OWIIRFilter" title="IIR Filter" uuid="58415f81-9b3d-4e5b-a636-9070ca9abc25" version="1.1.0" />
-		<node id="6" name="Record to XDF" position="(583.0, 1140.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (1)" uuid="26071ba3-e620-485c-a2e4-76a7a7973dde" version="1.4.0" />
-		<node id="7" name="Record to XDF" position="(602.0, 728.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (2)" uuid="4fff9f3b-d5df-414a-b3b7-4d71998a7978" version="1.4.0" />
-		<node id="8" name="Constant String" position="(24.0, 1250.0)" project_name="NeuroPype" qualified_name="widgets.programming.owconstantstring.OWConstantString" title="Constant String" uuid="2c09e5a2-bdb4-43d2-b0ac-d88fb1c9ff47" version="1.0.0" />
-		<node id="9" name="Record to XDF" position="(907.0, 1157.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF" uuid="c80df348-da4a-44f0-9f04-51fe3c36ba13" version="1.4.0" />
-		<node id="10" name="Resample" position="(2509.0, 836.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owresample.OWResample" title="Resample" uuid="724f49f5-adf3-4e4c-9c3a-b67656c79e10" version="1.0.0" />
-		<node id="11" name="Segmentation" position="(2510.0, 682.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owsegmentation.OWSegmentation" title="Segmentation" uuid="3f9985c0-ef78-4141-86f1-5fcb712fc4ca" version="1.0.2" />
-		<node id="12" name="FFT Band-Pass Filter" position="(2507.0, 1018.0)" project_name="NeuroPype" qualified_name="widgets.spectral.owspectralselection.OWSpectralSelection" title="FFT Band-Pass Filter" uuid="fac1a765-c6c0-420d-9a6d-951896db7050" version="1.0.0" />
-		<node id="13" name="Continuous Wavelet Transform" position="(2599.0, 1024.0)" project_name="NeuroPype" qualified_name="widgets.spectral.owcontinuouswavelettransform.OWContinuousWaveletTransform" title="Continuous Wavelet Transform" uuid="2040dcea-6eff-4a95-baed-46341c6038a3" version="1.0.0" />
-		<node id="14" name="Rename Streams" position="(745.0, 608.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owrenamestreams.OWRenameStreams" title="Rename Streams (1)" uuid="2fc2df94-13fa-42d9-9cb3-419ba76c9f64" version="1.1.0" />
-		<node id="15" name="Merge Streams" position="(449.0, 815.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owmergestreams.OWMergeStreams" title="Merge Streams" uuid="69118805-4e9a-407d-8b6f-15284cea33aa" version="1.0.0" />
-		<node id="16" name="Fuse Streams" position="(555.0, 817.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owfusestreams.OWFuseStreams" title="Fuse Streams (2)" uuid="cd9785fa-4ffc-424a-a914-73a99649f306" version="0.9.6" />
-		<node id="17" name="Record to XDF" position="(722.0, 809.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (4)" uuid="3ac68258-cab5-4cca-a882-5ca4348efce1" version="1.4.0" />
-		<node id="18" name="Shift Timestamps" position="(488.0, 965.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owshifttimestamps.OWShiftTimestamps" title="Shift Timestamps (1)" uuid="45fbac2a-c35c-437d-9b3a-67f5002402d0" version="1.2.1" />
-		<node id="19" name="Decimate" position="(618.0, 966.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owdecimate.OWDecimate" title="Decimate (1)" uuid="fc6411af-5ca1-4970-ae04-ffb519e6377f" version="1.0.1" />
-		<node id="20" name="Merge Streams" position="(858.0, 802.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owmergestreams.OWMergeStreams" title="Merge Streams (1)" uuid="80c0cff5-523c-400a-9cde-ea99694a1abc" version="1.0.0" />
-		<node id="21" name="Fuse Streams" position="(972.0, 816.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owfusestreams.OWFuseStreams" title="Fuse Streams (1)" uuid="e2dc83e2-41b7-46b9-ad15-f6fbd9ff9796" version="0.9.6" />
-		<node id="22" name="Record to XDF" position="(1134.6000000000001, 745.3799999999999)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (5)" uuid="cd6495b4-3d59-4fc4-af29-e30a7ecc6e62" version="1.4.0" />
-		<node id="23" name="LSL Output" position="(685.7300000000002, 875.9200000000001)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output" uuid="5926b930-3627-4542-ab00-c54f15650dd3" version="1.4.3" />
-		<node id="24" name="IIR Filter" position="(729.0, 1002.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owiirfilter.OWIIRFilter" title="IIR Filter (1)" uuid="db203921-a002-495d-95bd-f966b1c6ff20" version="1.1.0" />
-		<node id="25" name="Inspect Data" position="(666.0, 823.0)" project_name="NeuroPype" qualified_name="widgets.deprecated.owinspectdata.OWInspectData" title="Inspect Data" uuid="2a98b7cf-bc51-4b08-9965-193d9e31918d" version="1.0.0" />
-		<node id="26" name="LSL Output" position="(1092.0, 906.0)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output (1)" uuid="43bcefc4-d07e-4fe1-aa6e-58c9fb309cf1" version="1.4.3" />
+		<node id="0" name="LSL Input" position="(348.0, 609.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="LSL Input" uuid="e7f7825b-7052-452a-8ed9-ac52b9d92b43" version="1.5.1" />
+		<node id="1" name="Time Series Plot" position="(507.0, 252.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Time Series Plot" uuid="25039ab1-46e4-4d56-9e9f-1d2157ae26bf" version="1.1.0" />
+		<node id="2" name="LSL Input" position="(275.0, 1058.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="LSL Input (1)" uuid="81de5078-c554-4fa6-87e4-fbd08df95d8f" version="1.5.1" />
+		<node id="3" name="Dejitter Timestamps" position="(418.0, 1059.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owdejittertimestamps.OWDejitterTimestamps" title="Dejitter Timestamps" uuid="6956f376-5faf-4241-89dc-38d05bb0b151" version="1.0.0" />
+		<node id="4" name="Dejitter Timestamps" position="(478.0, 616.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owdejittertimestamps.OWDejitterTimestamps" title="Dejitter Timestamps (1)" uuid="c10bf757-3e67-407f-af73-3570a36e9e85" version="1.0.0" />
+		<node id="5" name="IIR Filter" position="(822.0, 998.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owiirfilter.OWIIRFilter" title="IIR Filter" uuid="3e51f49c-49b1-4dd8-8acf-10cfbb2e86bf" version="1.1.0" />
+		<node id="6" name="Record to XDF" position="(583.0, 1140.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (1)" uuid="1c5825cb-db08-4577-8a96-a066cd4a4e4f" version="1.4.0" />
+		<node id="7" name="Record to XDF" position="(602.0, 728.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (2)" uuid="792960f6-5573-422e-872a-89522cea9e24" version="1.4.0" />
+		<node id="8" name="Constant String" position="(24.0, 1250.0)" project_name="NeuroPype" qualified_name="widgets.programming.owconstantstring.OWConstantString" title="Constant String" uuid="d13e7f0b-3580-4fe8-8731-c2f233fa6270" version="1.0.0" />
+		<node id="9" name="Record to XDF" position="(907.0, 1157.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF" uuid="daa051b8-3613-43ea-8f63-6c962b1195c3" version="1.4.0" />
+		<node id="10" name="Resample" position="(2509.0, 836.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owresample.OWResample" title="Resample" uuid="68aace8d-a829-40f1-b791-fa28920cb935" version="1.0.0" />
+		<node id="11" name="Segmentation" position="(2510.0, 682.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owsegmentation.OWSegmentation" title="Segmentation" uuid="5700485d-143b-4819-a80f-a988dc027f6c" version="1.0.2" />
+		<node id="12" name="FFT Band-Pass Filter" position="(2507.0, 1018.0)" project_name="NeuroPype" qualified_name="widgets.spectral.owspectralselection.OWSpectralSelection" title="FFT Band-Pass Filter" uuid="ea0016ea-464d-4a4d-ae57-bd5f9ae9b114" version="1.0.0" />
+		<node id="13" name="Continuous Wavelet Transform" position="(2599.0, 1024.0)" project_name="NeuroPype" qualified_name="widgets.spectral.owcontinuouswavelettransform.OWContinuousWaveletTransform" title="Continuous Wavelet Transform" uuid="8e3968b1-946d-420a-b4cd-2c997772bd05" version="1.0.0" />
+		<node id="14" name="Rename Streams" position="(745.0, 608.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owrenamestreams.OWRenameStreams" title="Rename Streams (1)" uuid="4b96941e-3107-4065-bb30-ea6ba045badc" version="1.1.0" />
+		<node id="15" name="Merge Streams" position="(449.0, 815.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owmergestreams.OWMergeStreams" title="Merge Streams" uuid="85866bea-b3f9-44ab-82a5-9706c03202d6" version="1.0.0" />
+		<node id="16" name="Fuse Streams" position="(555.0, 817.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owfusestreams.OWFuseStreams" title="Fuse Streams (2)" uuid="0073045c-7ac9-4328-921b-e2e1f60dc238" version="0.9.6" />
+		<node id="17" name="Record to XDF" position="(722.0, 809.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (4)" uuid="749155c4-cbd3-4774-9ed7-e380f08e2dd7" version="1.4.0" />
+		<node id="18" name="Shift Timestamps" position="(488.0, 965.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owshifttimestamps.OWShiftTimestamps" title="Shift Timestamps (1)" uuid="ad956dd8-3127-4bbe-93b7-7b697323a342" version="1.2.1" />
+		<node id="19" name="Decimate" position="(618.0, 966.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owdecimate.OWDecimate" title="Decimate (1)" uuid="26dd15c1-019e-4782-aa6f-8ae4ccc126cb" version="1.0.1" />
+		<node id="20" name="Merge Streams" position="(858.0, 802.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owmergestreams.OWMergeStreams" title="Merge Streams (1)" uuid="3b4231ad-9f5f-4852-835a-63e355f49743" version="1.0.0" />
+		<node id="21" name="Fuse Streams" position="(972.0, 816.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owfusestreams.OWFuseStreams" title="Fuse Streams (1)" uuid="4a2b842f-9933-499c-8176-89ceea04285b" version="0.9.6" />
+		<node id="22" name="Record to XDF" position="(1134.6000000000001, 745.3799999999999)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (5)" uuid="2f863213-a660-41dc-bb4b-36bef7387a83" version="1.4.0" />
+		<node id="23" name="LSL Output" position="(685.7300000000002, 875.9200000000001)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output" uuid="169778c3-107c-4746-8971-8bb1928e4e6d" version="1.4.3" />
+		<node id="24" name="IIR Filter" position="(729.0, 1002.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owiirfilter.OWIIRFilter" title="IIR Filter (1)" uuid="73bdc7d9-8cfb-4cf7-bd5a-1cb901365584" version="1.1.0" />
+		<node id="25" name="Inspect Data" position="(666.0, 823.0)" project_name="NeuroPype" qualified_name="widgets.deprecated.owinspectdata.OWInspectData" title="Inspect Data" uuid="7d4c34c7-e048-48dc-adf4-187d259dd8fe" version="1.0.0" />
+		<node id="26" name="LSL Output" position="(1092.0, 906.0)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output (1)" uuid="5e009bd3-6cd9-46f5-8832-c9d8f08a7ee5" version="1.4.3" />
 	</nodes>
 	<links>
 		<link enabled="true" id="0" sink_channel="Data" sink_node_id="3" source_channel="Data" source_node_id="2" />
@@ -102,8 +102,8 @@ cHJvY19kZWppdHRlcnEViVgPAAAAcHJvY19tb25vdG9uaXplcRaJWA8AAABwcm9jX3RocmVhZHNh
 ZmVxF4lYBQAAAHF1ZXJ5cRhYHAAAAG5hbWU9J0xpdmVBbXBTTi0wNTYzMDktMDUzMydxGVgHAAAA
 cmVjb3ZlcnEaiFgUAAAAcmVzb2x2ZV9taW5pbXVtX3RpbWVxG0c/4AAAAAAAAFgTAAAAc2F2ZWRX
 aWRnZXRHZW9tZXRyeXEcY3NpcApfdW5waWNrbGVfdHlwZQpxHVgMAAAAUHlRdDUuUXRDb3JlcR5Y
-CgAAAFFCeXRlQXJyYXlxH0NCAdnQywADAAAAAAaqAAACgwAACEQAAAWPAAAGqwAAArAAAAhDAAAF
-jgAAAAAAAAAADwAAAAarAAACsAAACEMAAAWOcSCFcSGHcSJScSNYDgAAAHNldF9icmVha3BvaW50
+CgAAAFFCeXRlQXJyYXlxH0NCAdnQywADAAAAAATlAAAC6wAABn8AAAX3AAAE5gAAAxgAAAZ+AAAF
+9gAAAAAAAAAADwAAAATmAAADGAAABn4AAAX2cSCFcSGHcSJScSNYDgAAAHNldF9icmVha3BvaW50
 cSSJWA8AAAB1c2Vfc3RyZWFtbmFtZXNxJYl1Lg==
 </properties>
 		<properties format="pickle" node_id="3">gAN9cQAoWA8AAABmb3JjZV9tb25vdG9uaWNxAYhYDwAAAGZvcmdldF9oYWxmdGltZXECS1pYDgAA
@@ -550,7 +550,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": false
                 }
             },
-            "uuid": "b81c47c9-6ed7-4554-b7b0-f2f8f1399f64"
+            "uuid": "e7f7825b-7052-452a-8ed9-ac52b9d92b43"
         },
         "node10": {
             "class": "RecordToXDF",
@@ -637,7 +637,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": false
                 }
             },
-            "uuid": "c80df348-da4a-44f0-9f04-51fe3c36ba13"
+            "uuid": "daa051b8-3613-43ea-8f63-6c962b1195c3"
         },
         "node11": {
             "class": "Resample",
@@ -669,7 +669,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": false
                 }
             },
-            "uuid": "724f49f5-adf3-4e4c-9c3a-b67656c79e10"
+            "uuid": "68aace8d-a829-40f1-b791-fa28920cb935"
         },
         "node12": {
             "class": "Segmentation",
@@ -724,7 +724,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": false
                 }
             },
-            "uuid": "3f9985c0-ef78-4141-86f1-5fcb712fc4ca"
+            "uuid": "5700485d-143b-4819-a80f-a988dc027f6c"
         },
         "node13": {
             "class": "SpectralSelection",
@@ -754,7 +754,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": false
                 }
             },
-            "uuid": "fac1a765-c6c0-420d-9a6d-951896db7050"
+            "uuid": "ea0016ea-464d-4a4d-ae57-bd5f9ae9b114"
         },
         "node14": {
             "class": "ContinuousWaveletTransform",
@@ -794,7 +794,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": "cmor"
                 }
             },
-            "uuid": "2040dcea-6eff-4a95-baed-46341c6038a3"
+            "uuid": "8e3968b1-946d-420a-b4cd-2c997772bd05"
         },
         "node15": {
             "class": "RenameStreams",
@@ -823,7 +823,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": "any stream"
                 }
             },
-            "uuid": "2fc2df94-13fa-42d9-9cb3-419ba76c9f64"
+            "uuid": "4b96941e-3107-4065-bb30-ea6ba045badc"
         },
         "node16": {
             "class": "MergeStreams",
@@ -850,7 +850,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": "input"
                 }
             },
-            "uuid": "69118805-4e9a-407d-8b6f-15284cea33aa"
+            "uuid": "85866bea-b3f9-44ab-82a5-9706c03202d6"
         },
         "node17": {
             "class": "FuseStreams",
@@ -897,7 +897,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": 1
                 }
             },
-            "uuid": "cd9785fa-4ffc-424a-a914-73a99649f306"
+            "uuid": "0073045c-7ac9-4328-921b-e2e1f60dc238"
         },
         "node18": {
             "class": "RecordToXDF",
@@ -984,7 +984,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": false
                 }
             },
-            "uuid": "3ac68258-cab5-4cca-a882-5ca4348efce1"
+            "uuid": "749155c4-cbd3-4774-9ed7-e380f08e2dd7"
         },
         "node19": {
             "class": "ShiftTimestamps",
@@ -1041,7 +1041,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": false
                 }
             },
-            "uuid": "45fbac2a-c35c-437d-9b3a-67f5002402d0"
+            "uuid": "ad956dd8-3127-4bbe-93b7-7b697323a342"
         },
         "node2": {
             "class": "TimeSeriesPlot",
@@ -1193,7 +1193,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": true
                 }
             },
-            "uuid": "2d61cff7-7886-4afa-9433-b06b2d5de161"
+            "uuid": "25039ab1-46e4-4d56-9e9f-1d2157ae26bf"
         },
         "node20": {
             "class": "Decimate",
@@ -1220,7 +1220,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": false
                 }
             },
-            "uuid": "fc6411af-5ca1-4970-ae04-ffb519e6377f"
+            "uuid": "26dd15c1-019e-4782-aa6f-8ae4ccc126cb"
         },
         "node21": {
             "class": "MergeStreams",
@@ -1247,7 +1247,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": "input"
                 }
             },
-            "uuid": "80c0cff5-523c-400a-9cde-ea99694a1abc"
+            "uuid": "3b4231ad-9f5f-4852-835a-63e355f49743"
         },
         "node22": {
             "class": "FuseStreams",
@@ -1294,7 +1294,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": 1
                 }
             },
-            "uuid": "e2dc83e2-41b7-46b9-ad15-f6fbd9ff9796"
+            "uuid": "4a2b842f-9933-499c-8176-89ceea04285b"
         },
         "node23": {
             "class": "RecordToXDF",
@@ -1381,7 +1381,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": false
                 }
             },
-            "uuid": "cd6495b4-3d59-4fc4-af29-e30a7ecc6e62"
+            "uuid": "2f863213-a660-41dc-bb4b-36bef7387a83"
         },
         "node24": {
             "class": "LSLOutput",
@@ -1488,7 +1488,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": false
                 }
             },
-            "uuid": "5926b930-3627-4542-ab00-c54f15650dd3"
+            "uuid": "169778c3-107c-4746-8971-8bb1928e4e6d"
         },
         "node25": {
             "class": "IIRFilter",
@@ -1553,7 +1553,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": 50.0
                 }
             },
-            "uuid": "db203921-a002-495d-95bd-f966b1c6ff20"
+            "uuid": "73bdc7d9-8cfb-4cf7-bd5a-1cb901365584"
         },
         "node26": {
             "class": "InspectData",
@@ -1660,7 +1660,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": "Inspect Data Packet"
                 }
             },
-            "uuid": "2a98b7cf-bc51-4b08-9965-193d9e31918d"
+            "uuid": "7d4c34c7-e048-48dc-adf4-187d259dd8fe"
         },
         "node27": {
             "class": "LSLOutput",
@@ -1767,7 +1767,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": false
                 }
             },
-            "uuid": "43bcefc4-d07e-4fe1-aa6e-58c9fb309cf1"
+            "uuid": "5e009bd3-6cd9-46f5-8832-c9d8f08a7ee5"
         },
         "node3": {
             "class": "LSLInput",
@@ -1920,7 +1920,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": false
                 }
             },
-            "uuid": "f9ef86bc-13a3-4a3f-ad63-18c2bf39739c"
+            "uuid": "81de5078-c554-4fa6-87e4-fbd08df95d8f"
         },
         "node4": {
             "class": "DejitterTimestamps",
@@ -1957,7 +1957,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": -1
                 }
             },
-            "uuid": "d38b1c57-b021-4fc8-95f9-f5955ec49154"
+            "uuid": "6956f376-5faf-4241-89dc-38d05bb0b151"
         },
         "node5": {
             "class": "DejitterTimestamps",
@@ -1994,7 +1994,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": -1
                 }
             },
-            "uuid": "b36a8366-454b-4249-a36a-9eb1e81b328f"
+            "uuid": "c10bf757-3e67-407f-af73-3570a36e9e85"
         },
         "node6": {
             "class": "IIRFilter",
@@ -2059,7 +2059,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": 50.0
                 }
             },
-            "uuid": "58415f81-9b3d-4e5b-a636-9070ca9abc25"
+            "uuid": "3e51f49c-49b1-4dd8-8acf-10cfbb2e86bf"
         },
         "node7": {
             "class": "RecordToXDF",
@@ -2146,7 +2146,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": false
                 }
             },
-            "uuid": "26071ba3-e620-485c-a2e4-76a7a7973dde"
+            "uuid": "1c5825cb-db08-4577-8a96-a066cd4a4e4f"
         },
         "node8": {
             "class": "RecordToXDF",
@@ -2233,7 +2233,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": false
                 }
             },
-            "uuid": "4fff9f3b-d5df-414a-b3b7-4d71998a7978"
+            "uuid": "792960f6-5573-422e-872a-89522cea9e24"
         },
         "node9": {
             "class": "ConstantString",
@@ -2255,7 +2255,7 @@ c2VfZGF0YV90aW1lc3RhbXBzcSOIWBYAAAB1c2VfbnVtcHlfb3B0aW1pemF0aW9ucSSJdS4=
                     "value": "C:/Users/vizlab_stud/idatt2900_gr92/neuropype-pipeline/ERPSpellerData"
                 }
             },
-            "uuid": "2c09e5a2-bdb4-43d2-b0ac-d88fb1c9ff47"
+            "uuid": "d13e7f0b-3580-4fe8-8731-c2f233fa6270"
         }
     },
     "version": 1.1
