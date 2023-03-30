@@ -11,7 +11,7 @@ channels = ['Fp1', 'Fz', 'F3', 'F7', 'F9', 'FC5', 'FC1', 'C3', 'T7', 'CP5', 'CP1
     , 'P9', 'O1', 'Oz', 'O2', 'P10', 'P8', 'P4', 'CP2', 'CP6', 'T8', 'C4', 'Cz'
     , 'FC2', 'FC6', 'F10', 'F8', 'F4', 'Fp2', 'ACC_X', 'ACC_Y', 'ACC_Z']
 removed_channels = ['Fp1', 'F8', 'F7', 'Fp2', 'F3', 'F4']
-frequencies_main = ['8.18', '9', '10', '11.25', '12.85', '15']
+frequencies_main = [4,5,6,7,10,13]
 occ_channels = ['O1', 'O2', 'Oz', 'P3', 'P4', 'Pz', 'P7', 'P8']
 frequencies = ['8.18_sin_h1', '8.18_cos_h1', '8.18_sin_h2', '8.18_cos_h2', '8.18_sin_h3', '8.18_cos_h3',
                '9_sin_h1', '9_cos_h1', '9_sin_h2', '9_cos_h2', '9_sin_h3', '9_cos_h3',
@@ -73,7 +73,9 @@ def get_freqs(N):
     start_time = time.time()
     # fs = [8.18, 9, 10, 11.25, 12.86, 15]
     #fs = [13.0909, 14.4, 16, 18, 20.5714, 24]
-    fs = [13, 14, 16, 18, 20, 24]
+    #fs = [13, 14, 16, 18, 20, 24]
+    fs = [4,5,6,7,10,13]
+    #fs = [7, 6, 5, 4, 10, 13]
     t = N / 250
     return_freqs = []
     for fk in fs:
@@ -136,9 +138,9 @@ def return_index(index, info, outlet):
 def zero_phase_butter(data):
     # Butterworth filter parameters
     fs = 250
-    lowcut = 8.0
-    highcut = 70.0
-    order = 10
+    lowcut = 1.0
+    highcut = 15.0
+    order = 3
 
     # Design Butterworth bandpass filter
     nyquist = 0.5 * fs
@@ -162,7 +164,7 @@ def notch(data):
 info, outlet = init_stream()
 print("Looking for an LSL stream...")
 streams_counter = resolve_stream('type', 'DejitteredSpeller')
-streams_eeg = resolve_stream('type', 'ButterEEG')
+streams_eeg = resolve_stream('type', 'DEEG')
 inlet = StreamInlet(streams_counter[0])
 inlet_2 = StreamInlet(streams_eeg[0])
 fs = 250  # Sampling frequency
@@ -190,7 +192,7 @@ while True:
             buffer.pop(0)
             buffer_eeg.pop(0)
 
-        if (len(buffer) == fragment_samples) and buffer[0][0] == 1:
+        if (len(buffer) == fragment_samples):#and buffer[0][0] == 1
             print(len(buffer))
             fragment = np.array(buffer[:fragment_samples])
             fragment_eeg = np.array(buffer_eeg[:fragment_samples])
@@ -237,6 +239,6 @@ while True:
             #print("CCA single: " + str(perform_cca(df,1)))
             print(cca)
             index = np.argmax(cca)
-            print(index)
-            print(np.argpartition(cca, -2)[-2:])
+            print("Looking at: " + str(frequencies_main[index]) + "Hz")
+            #print(np.argpartition(cca, -2)[-2:])
             return_index(index, info, outlet)

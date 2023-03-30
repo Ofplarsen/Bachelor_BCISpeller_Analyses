@@ -32,8 +32,8 @@ def padding(data, pad_length = 100):
 def zero_phase_butter(data):
     # Butterworth filter parameters
     fs = 250
-    lowcut = 12
-    highcut = 27.0
+    lowcut = 1
+    highcut = 15
     order = 10
 
     # Design Butterworth bandpass filter
@@ -57,7 +57,8 @@ def notch(data):
 def get_freqs(N):
     # fs = [8.18, 9, 10, 11.25, 12.86, 15]
     #fs = [13.0909, 14.4, 16, 18, 20.5714, 24]
-    fs = [13, 14, 16, 18, 20, 24]
+    #fs = [13, 14, 16, 18, 20, 24]
+    fs = [4,5,6,7,10,13]
     t = N / 250
     return_freqs = []
     for fk in fs:
@@ -104,7 +105,7 @@ while True:
     start_time = None
     scan_values = False
     count = False
-    target = 2
+    target = 0
     i = 0
     while not triggered:
         sample, timestamp = inlet.pull_sample()
@@ -116,7 +117,7 @@ while True:
             buffer.pop(0)
             buffer_eeg.pop(0)
 
-        if (len(buffer) == fragment_samples) and buffer[set_N][0] == 1:
+        if (len(buffer) == fragment_samples):
             print(len(buffer))
             fragment = np.array(buffer[:fragment_samples])
             fragment_eeg = np.array(buffer_eeg[:fragment_samples])
@@ -131,8 +132,8 @@ while True:
             df[occ_channels] = df[occ_channels].apply(lambda x: zero_phase_butter(x))
             df = df.apply(lambda x: remove_padding(x, pad_length))
 
-            N = df['N']
-            start = (N.eq(1).cumsum() == 1).idxmax()
+            #N = df['N']
+            start = set_N
             N = df['N'][start:start+6*fs]
             frs = get_freqs(N)
             start = 0
@@ -149,5 +150,6 @@ while True:
 
             print(highest)
             print(fragment_samples)
+            print(highest[0]-start)
             print(highest[0] - (N.eq(1).cumsum() == 1).idxmax())
             sys.exit()
