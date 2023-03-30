@@ -26,7 +26,8 @@ sample_outlet = StreamOutlet(sample_info)
 duration = 6     # Duration of each segment of the signal (seconds)
 base_frequency = 24  # Frequency of the sinusoidal components (Hz)
 noise_amplitude = 50  # Amplitude of the random noise component
-
+t = np.arange(0, duration, 1/sampling_rate)
+eeg_channel = np.sin(2 * np.pi * base_frequency * t) + noise_amplitude * np.random.randn(len(t))
 
 # Continuously generate and stream mock EEG data and the single sample value
 start_time = local_clock()
