@@ -1,45 +1,46 @@
 <?xml version='1.0' encoding='utf-8'?>
 <scheme description="" title="ERPSpellerFrequencies" version="2.0">
 	<nodes>
-		<node id="0" name="LSL Input" position="(348.0, 609.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="LSL Input" uuid="09e694ed-ef33-4dc3-ab80-ffb0cd04a3ba" version="1.5.1" />
-		<node id="1" name="Time Series Plot" position="(507.0, 252.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Time Series Plot" uuid="d446f522-3b40-4449-b40f-3446ca70347d" version="1.1.0" />
-		<node id="2" name="LSL Input" position="(275.0, 1058.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="LSL Input (1)" uuid="47a13599-819a-429a-b4a2-fa8f0a4ef4f0" version="1.5.1" />
-		<node id="3" name="Dejitter Timestamps" position="(382.0, 1066.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owdejittertimestamps.OWDejitterTimestamps" title="Dejitter Timestamps" uuid="3b36888e-9a4f-4e5a-9f39-51a1e7ed44a4" version="1.0.0" />
-		<node id="4" name="Dejitter Timestamps" position="(478.0, 616.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owdejittertimestamps.OWDejitterTimestamps" title="Dejitter Timestamps (1)" uuid="bc6d951a-eb80-4cbf-a1d3-a0b260b6cd72" version="1.0.0" />
-		<node id="5" name="IIR Filter" position="(887.0, 1157.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owiirfilter.OWIIRFilter" title="IIR Filter" uuid="f4d54c35-8873-49b3-8605-ec46bd412373" version="1.1.0" />
-		<node id="6" name="Record to XDF" position="(338.0, 1186.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (1)" uuid="a53d450d-bf1a-4731-b9ae-495708f38bd2" version="1.4.0" />
-		<node id="7" name="Record to XDF" position="(602.0, 728.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (2)" uuid="50b85765-6c99-41ad-a37c-125d45367048" version="1.4.0" />
-		<node id="8" name="Constant String" position="(194.0, 811.0)" project_name="NeuroPype" qualified_name="widgets.programming.owconstantstring.OWConstantString" title="Constant String" uuid="afd13781-c739-4c62-82a7-7dbc0d559ea1" version="1.0.0" />
-		<node id="9" name="Record to XDF" position="(956.0, 1270.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF" uuid="558421ff-87e3-4c8a-86e9-7a6c2e60cf9b" version="1.4.0" />
-		<node id="10" name="Canonical Correlation Analysis" position="(1685.6899999999998, 712.06)" project_name="NeuroPype" qualified_name="widgets.feature_extraction.owcca.OWCCA" title="Canonical Correlation Analysis" uuid="066dd954-d23f-4ef3-9ef0-816bd68c8732" version="1.1.0" />
-		<node id="11" name="Resample" position="(2509.0, 836.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owresample.OWResample" title="Resample" uuid="db349e62-c50e-4a87-af69-4dccf7794d5b" version="1.0.0" />
-		<node id="12" name="Segmentation" position="(2510.0, 682.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owsegmentation.OWSegmentation" title="Segmentation" uuid="26825891-e8bf-4d53-97aa-5a23eb637972" version="1.0.2" />
-		<node id="13" name="FFT Band-Pass Filter" position="(2507.0, 1018.0)" project_name="NeuroPype" qualified_name="widgets.spectral.owspectralselection.OWSpectralSelection" title="FFT Band-Pass Filter" uuid="ec99e530-9768-462c-937c-1698b71dda1c" version="1.0.0" />
-		<node id="14" name="Segmentation" position="(1385.2299999999993, 610.1300000000001)" project_name="NeuroPype" qualified_name="widgets.formatting.owsegmentation.OWSegmentation" title="Segmentation (1)" uuid="7822ebd6-db88-4be3-b32d-575c5e581478" version="1.0.2" />
-		<node id="15" name="Segmentation" position="(1509.9200000000003, 968.39)" project_name="NeuroPype" qualified_name="widgets.formatting.owsegmentation.OWSegmentation" title="Segmentation (2)" uuid="954f0366-08cc-4a61-9e0c-32f6d6c04ca3" version="1.0.2" />
-		<node id="16" name="Time Series Plot" position="(1680.2500000000002, 1053.7799999999997)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Time Series Plot (3)" uuid="8d1185a5-23ba-4c55-9948-e47be2702f85" version="1.1.0" />
-		<node id="17" name="Time Series Plot" position="(1328.6899999999998, 502.05999999999995)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Time Series Plot (4)" uuid="8e77a781-8b20-44b5-b2c9-6d93979a17e3" version="1.1.0" />
-		<node id="18" name="Select Range" position="(1363.0400000000002, 1076.79)" project_name="NeuroPype" qualified_name="widgets.tensor_math.owselectrange.OWSelectRange" title="Select Range (2)" uuid="fd631532-ccdf-4cf7-9713-73faf9bd4cfc" version="1.1.0" />
-		<node id="19" name="Continuous Wavelet Transform" position="(2599.0, 1024.0)" project_name="NeuroPype" qualified_name="widgets.spectral.owcontinuouswavelettransform.OWContinuousWaveletTransform" title="Continuous Wavelet Transform" uuid="f4edaf4f-c006-40fd-b0f8-63c1b13f9aea" version="1.0.0" />
-		<node id="20" name="Rename Streams" position="(769.0, 694.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owrenamestreams.OWRenameStreams" title="Rename Streams (1)" uuid="cd0a6b52-c0a5-499d-9815-b94a3314cd4c" version="1.1.0" />
-		<node id="21" name="Merge Streams" position="(449.0, 815.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owmergestreams.OWMergeStreams" title="Merge Streams" uuid="5b190b47-0a38-4c2d-acec-51f4fc71ee57" version="1.0.0" />
-		<node id="22" name="Fuse Streams" position="(555.0, 817.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owfusestreams.OWFuseStreams" title="Fuse Streams (2)" uuid="e34e638d-ccd3-4af8-8b8a-2d77d56afe67" version="0.9.6" />
-		<node id="23" name="Record to XDF" position="(671.0, 819.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (4)" uuid="1c034ecb-d983-41c2-a2a2-403687499b40" version="1.4.0" />
-		<node id="24" name="Shift Timestamps" position="(484.0, 1068.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owshifttimestamps.OWShiftTimestamps" title="Shift Timestamps (1)" uuid="6da8e8e5-9c21-4ff5-9f25-5412881ab4cd" version="1.2.1" />
-		<node id="25" name="Decimate" position="(610.0, 1021.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owdecimate.OWDecimate" title="Decimate (1)" uuid="701e444b-8fce-4fab-aa74-daca28ba7047" version="1.0.1" />
-		<node id="26" name="Merge Streams" position="(858.0, 802.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owmergestreams.OWMergeStreams" title="Merge Streams (1)" uuid="5277363c-4942-4ae5-84af-a66c89a3e656" version="1.0.0" />
-		<node id="27" name="Fuse Streams" position="(972.0, 816.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owfusestreams.OWFuseStreams" title="Fuse Streams (1)" uuid="21b6f6d2-b26f-406b-9576-016cd3b9a8cf" version="0.9.6" />
-		<node id="28" name="Record to XDF" position="(1134.6000000000001, 745.3799999999999)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (5)" uuid="5ee6766b-ffaa-4b68-8981-3eec657debc8" version="1.4.0" />
-		<node id="29" name="LSL Output" position="(739.7300000000005, 906.9200000000001)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output" uuid="54bfe9cf-dfe2-456a-ac93-48f3e065f688" version="1.4.3" />
-		<node id="30" name="Inspect Packet" position="(762.0, 812.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owinspectpacket.OWInspectPacket" title="Inspect Packet" uuid="d587cf28-7706-4054-baa8-5dc4b398200d" version="3.0.1" />
-		<node id="31" name="Interpolation" position="(2515.0, 544.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owinterpolate.OWInterpolate" title="Interpolation" uuid="f110a5a8-befb-419c-bbca-22239b12d6a9" version="1.0.1" />
-		<node id="32" name="IIR Filter" position="(716.0, 1160.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owiirfilter.OWIIRFilter" title="IIR Filter (1)" uuid="09b9043a-73e5-475d-9edc-591f25d82cab" version="1.1.0" />
-		<node id="33" name="LSL Output" position="(1090.0, 903.0)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output (1)" uuid="39ee9270-b600-43bf-b9e2-4484fa5a4f96" version="1.4.3" />
-		<node id="34" name="Inspect Packet" position="(1850.0, 623.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owinspectpacket.OWInspectPacket" title="Inspect Packet (1)" uuid="7a534d99-0753-4276-b0c7-6c568af42897" version="3.0.1" />
-		<node id="35" name="Inspect Packet" position="(1886.0, 739.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owinspectpacket.OWInspectPacket" title="Inspect Packet (2)" uuid="5cf28613-a7fa-4bd8-b9ad-5ba64a649762" version="3.0.1" />
-		<node id="36" name="Inspect Packet" position="(1868.0, 899.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owinspectpacket.OWInspectPacket" title="Inspect Packet (3)" uuid="1d29db9c-f0b6-4a6a-886d-720e0fd84c66" version="3.0.1" />
-		<node id="37" name="LSL Output" position="(1041.0, 1203.0)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output (2)" uuid="ec618efd-d761-489c-8bd3-49c6f180e1a3" version="1.4.3" />
-		<node id="38" name="LSL Output" position="(650.0, 550.0)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output (3)" uuid="1b34af7e-ad94-412c-9ddf-fe387107cf75" version="1.4.3" />
+		<node id="0" name="LSL Input" position="(348.0, 609.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="LSL Input" uuid="b1754318-be83-47bb-804c-336a3d4b4439" version="1.5.1" />
+		<node id="1" name="Time Series Plot" position="(507.0, 252.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Time Series Plot" uuid="5acf575f-d7f9-4370-876d-c87ffc1de1a2" version="1.1.0" />
+		<node id="2" name="LSL Input" position="(275.0, 1058.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="LSL Input (1)" uuid="998cfe0b-52ad-4406-b41f-57ed866561cc" version="1.5.1" />
+		<node id="3" name="Dejitter Timestamps" position="(382.0, 1066.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owdejittertimestamps.OWDejitterTimestamps" title="Dejitter Timestamps" uuid="37babe8f-f153-4f1d-a6c3-6ad9e1ed94d6" version="1.0.0" />
+		<node id="4" name="Dejitter Timestamps" position="(478.0, 616.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owdejittertimestamps.OWDejitterTimestamps" title="Dejitter Timestamps (1)" uuid="b231e510-ba4c-4907-9c37-28a86113a1d0" version="1.0.0" />
+		<node id="5" name="IIR Filter" position="(887.0, 1157.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owiirfilter.OWIIRFilter" title="IIR Filter" uuid="eda50da0-d0b5-4941-ad98-bb9220400514" version="1.1.0" />
+		<node id="6" name="Record to XDF" position="(338.0, 1186.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (1)" uuid="c8d7b31e-b0d2-498c-a8f6-de6b7d767197" version="1.4.0" />
+		<node id="7" name="Record to XDF" position="(602.0, 728.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (2)" uuid="9888d80e-c3b6-41bf-b328-66599245c9c6" version="1.4.0" />
+		<node id="8" name="Constant String" position="(194.0, 811.0)" project_name="NeuroPype" qualified_name="widgets.programming.owconstantstring.OWConstantString" title="Constant String" uuid="c6c29aa6-ce13-4c81-a2f3-3344edd14cc4" version="1.0.0" />
+		<node id="9" name="Record to XDF" position="(956.0, 1270.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF" uuid="0dc5dd92-7869-4e1f-ab09-9dc50c1269eb" version="1.4.0" />
+		<node id="10" name="Canonical Correlation Analysis" position="(1685.6899999999998, 712.06)" project_name="NeuroPype" qualified_name="widgets.feature_extraction.owcca.OWCCA" title="Canonical Correlation Analysis" uuid="d2180ca2-3704-48e7-9afb-05578dc81799" version="1.1.0" />
+		<node id="11" name="Resample" position="(2509.0, 836.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owresample.OWResample" title="Resample" uuid="4e4fcafd-2e60-4cd1-a1ac-6c836f8ee170" version="1.0.0" />
+		<node id="12" name="Segmentation" position="(2510.0, 682.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owsegmentation.OWSegmentation" title="Segmentation" uuid="04718ebb-d2d5-4ffe-8448-891eeba5deee" version="1.0.2" />
+		<node id="13" name="FFT Band-Pass Filter" position="(1023.0, 1190.0)" project_name="NeuroPype" qualified_name="widgets.spectral.owspectralselection.OWSpectralSelection" title="FFT Band-Pass Filter" uuid="99d596a1-0077-4599-a43f-6b9f95e03d56" version="1.0.0" />
+		<node id="14" name="Segmentation" position="(1385.2299999999993, 610.1300000000001)" project_name="NeuroPype" qualified_name="widgets.formatting.owsegmentation.OWSegmentation" title="Segmentation (1)" uuid="c6873515-42f4-4233-ba74-8b4696fa9746" version="1.0.2" />
+		<node id="15" name="Segmentation" position="(1509.9200000000003, 968.39)" project_name="NeuroPype" qualified_name="widgets.formatting.owsegmentation.OWSegmentation" title="Segmentation (2)" uuid="8733b8ec-f072-442c-97ab-52a2a08bfe60" version="1.0.2" />
+		<node id="16" name="Time Series Plot" position="(1680.2500000000002, 1053.7799999999997)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Time Series Plot (3)" uuid="d87f84be-0406-4292-84b1-d9e849e774ed" version="1.1.0" />
+		<node id="17" name="Time Series Plot" position="(1328.6899999999998, 502.05999999999995)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Time Series Plot (4)" uuid="782e9249-a28d-4cc0-a4ff-600d65d1127a" version="1.1.0" />
+		<node id="18" name="Select Range" position="(1363.0400000000002, 1076.79)" project_name="NeuroPype" qualified_name="widgets.tensor_math.owselectrange.OWSelectRange" title="Select Range (2)" uuid="990a8400-5e34-4fa6-846d-b7c1c43fbe32" version="1.1.0" />
+		<node id="19" name="Continuous Wavelet Transform" position="(2599.0, 1024.0)" project_name="NeuroPype" qualified_name="widgets.spectral.owcontinuouswavelettransform.OWContinuousWaveletTransform" title="Continuous Wavelet Transform" uuid="bfee824a-769b-4be5-a7b1-80496cdc2002" version="1.0.0" />
+		<node id="20" name="Rename Streams" position="(769.0, 694.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owrenamestreams.OWRenameStreams" title="Rename Streams (1)" uuid="36218b99-c79b-4b61-be7a-5b55396ee7b1" version="1.1.0" />
+		<node id="21" name="Merge Streams" position="(449.0, 815.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owmergestreams.OWMergeStreams" title="Merge Streams" uuid="54e99612-13fb-4853-971d-1fbbe5df8d48" version="1.0.0" />
+		<node id="22" name="Fuse Streams" position="(555.0, 817.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owfusestreams.OWFuseStreams" title="Fuse Streams (2)" uuid="68329b03-66e8-44e6-84e3-de8cec7b066c" version="0.9.6" />
+		<node id="23" name="Record to XDF" position="(671.0, 819.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (4)" uuid="e8e9ab90-8823-4d8d-814a-9a4d63d02b23" version="1.4.0" />
+		<node id="24" name="Shift Timestamps" position="(484.0, 1068.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owshifttimestamps.OWShiftTimestamps" title="Shift Timestamps (1)" uuid="6a32ef5a-45a9-4c0a-9b78-3339ba2c309e" version="1.2.1" />
+		<node id="25" name="Decimate" position="(610.0, 1021.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owdecimate.OWDecimate" title="Decimate (1)" uuid="60ad34b5-161b-4413-9fd2-a19fd976407f" version="1.0.1" />
+		<node id="26" name="Merge Streams" position="(858.0, 802.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owmergestreams.OWMergeStreams" title="Merge Streams (1)" uuid="724c84b3-942b-42fd-bc43-45fd10e601b9" version="1.0.0" />
+		<node id="27" name="Fuse Streams" position="(972.0, 816.0)" project_name="NeuroPype" qualified_name="widgets.formatting.owfusestreams.OWFuseStreams" title="Fuse Streams (1)" uuid="c1a909f7-7fde-4d6d-9b0f-012d166e5221" version="0.9.6" />
+		<node id="28" name="Record to XDF" position="(1134.6000000000001, 745.3799999999999)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (5)" uuid="346db581-de5d-4831-a9c8-3e9668e924cf" version="1.4.0" />
+		<node id="29" name="LSL Output" position="(739.7300000000005, 906.9200000000001)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output" uuid="53190417-ff74-4b70-97ae-c792d4dbd492" version="1.4.3" />
+		<node id="30" name="Inspect Packet" position="(762.0, 812.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owinspectpacket.OWInspectPacket" title="Inspect Packet" uuid="a9e9ea15-0d6b-4e24-bc1b-646d0a72b273" version="3.0.1" />
+		<node id="31" name="Interpolation" position="(2515.0, 544.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owinterpolate.OWInterpolate" title="Interpolation" uuid="76cb2e72-97bd-4449-81ea-51c1d86caae5" version="1.0.1" />
+		<node id="32" name="IIR Filter" position="(716.0, 1160.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owiirfilter.OWIIRFilter" title="IIR Filter (1)" uuid="b7052152-3ac0-471b-b138-d523521aa3d8" version="1.1.0" />
+		<node id="33" name="LSL Output" position="(1090.0, 903.0)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output (1)" uuid="f070d3bc-0d18-4461-90d5-bb5dfd63b618" version="1.4.3" />
+		<node id="34" name="Inspect Packet" position="(1850.0, 623.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owinspectpacket.OWInspectPacket" title="Inspect Packet (1)" uuid="b2563eb2-a7f0-447e-bdb5-8f078a23730b" version="3.0.1" />
+		<node id="35" name="Inspect Packet" position="(1886.0, 739.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owinspectpacket.OWInspectPacket" title="Inspect Packet (2)" uuid="42fc2bbb-8f03-4d3e-b76b-621f3ff192df" version="3.0.1" />
+		<node id="36" name="Inspect Packet" position="(1868.0, 899.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owinspectpacket.OWInspectPacket" title="Inspect Packet (3)" uuid="fd4f1658-a9ef-4ce6-a2e1-a607783f204e" version="3.0.1" />
+		<node id="37" name="LSL Output" position="(1134.0, 1180.0)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output (2)" uuid="1abe8af0-8a9a-4170-8fc1-e7d0eef34cb9" version="1.4.3" />
+		<node id="38" name="LSL Output" position="(650.0, 550.0)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output (3)" uuid="3fe5660f-05b6-4efe-b5ba-d8f39b4040e7" version="1.4.3" />
+		<node id="39" name="LSL Output" position="(388.0, 971.0)" project_name="NeuroPype" qualified_name="widgets.network.owlsloutput.OWLSLOutput" title="LSL Output (4)" uuid="c7b28bdb-53a8-4c0d-a9c4-2770ca25128a" version="1.4.3" />
 	</nodes>
 	<links>
 		<link enabled="true" id="0" sink_channel="Data" sink_node_id="3" source_channel="Data" source_node_id="2" />
@@ -79,8 +80,10 @@
 		<link enabled="true" id="34" sink_channel="Data" sink_node_id="34" source_channel="A" source_node_id="10" />
 		<link enabled="true" id="35" sink_channel="Data" sink_node_id="35" source_channel="B" source_node_id="10" />
 		<link enabled="true" id="36" sink_channel="Data" sink_node_id="36" source_channel="D" source_node_id="10" />
-		<link enabled="true" id="37" sink_channel="Data" sink_node_id="37" source_channel="Data" source_node_id="5" />
-		<link enabled="true" id="38" sink_channel="Data" sink_node_id="38" source_channel="Data" source_node_id="4" />
+		<link enabled="true" id="37" sink_channel="Data" sink_node_id="38" source_channel="Data" source_node_id="4" />
+		<link enabled="true" id="38" sink_channel="Data" sink_node_id="39" source_channel="Data" source_node_id="25" />
+		<link enabled="true" id="39" sink_channel="Data" sink_node_id="13" source_channel="Data" source_node_id="5" />
+		<link enabled="true" id="40" sink_channel="Data" sink_node_id="37" source_channel="Data" source_node_id="5" />
 	</links>
 	<annotations>
 		<text font-family="Helvetica" font-size="16" id="0" rect="(674.0, 1066.0, 342.0, 88.0)">First bandstop filter at 50Hz, then bandpass filter for frequencies used in speller</text>
@@ -101,8 +104,8 @@ cHJvY19kZWppdHRlcnEViVgPAAAAcHJvY19tb25vdG9uaXplcRaJWA8AAABwcm9jX3RocmVhZHNh
 ZmVxF4lYBQAAAHF1ZXJ5cRhYGQAAAG5hbWU9J1NhbXBsZVBvaW50Q291bnRlcidxGVgHAAAAcmVj
 b3ZlcnEaiFgUAAAAcmVzb2x2ZV9taW5pbXVtX3RpbWVxG0c/4AAAAAAAAFgTAAAAc2F2ZWRXaWRn
 ZXRHZW9tZXRyeXEcY3NpcApfdW5waWNrbGVfdHlwZQpxHVgMAAAAUHlRdDUuUXRDb3JlcR5YCgAA
-AFFCeXRlQXJyYXlxH0NCAdnQywADAAAAAAarAAACsAAACEMAAAWOAAAGqwAAArAAAAhDAAAFjgAA
-AAAAAAAADwAAAAarAAACsAAACEMAAAWOcSCFcSGHcSJScSNYDgAAAHNldF9icmVha3BvaW50cSSJ
+AFFCeXRlQXJyYXlxH0NCAdnQywADAAAAAAatAAACkQAACRYAAAcPAAAGrgAAAr4AAAkVAAAHDgAA
+AAAAAAAADwAAAAauAAACvgAACRUAAAcOcSCFcSGHcSJScSNYDgAAAHNldF9icmVha3BvaW50cSSJ
 WA8AAAB1c2Vfc3RyZWFtbmFtZXNxJYl1Lg==
 </properties>
 		<properties format="pickle" node_id="1">gAN9cQAoWA0AAABhYnNvbHV0ZV90aW1lcQGJWA0AAABhbHdheXNfb25fdG9wcQKJWAsAAABhbnRp
@@ -129,11 +132,11 @@ ZW5xC00ABFgKAAAAbWF4X2J1ZmxlbnEMSx5YDAAAAG1heF9jaHVua2xlbnENSwBYCAAAAG1ldGFk
 YXRhcQ59cQ9YDAAAAG5vbWluYWxfcmF0ZXEQWA0AAAAodXNlIGRlZmF1bHQpcRFYCQAAAG9taXRf
 ZGVzY3ESiVgPAAAAcHJlYWxsb2NfYnVmZmVycROIWA4AAABwcm9jX2Nsb2Nrc3luY3EUiFgNAAAA
 cHJvY19kZWppdHRlcnEViVgPAAAAcHJvY19tb25vdG9uaXplcRaJWA8AAABwcm9jX3RocmVhZHNh
-ZmVxF4lYBQAAAHF1ZXJ5cRhYHAAAAG5hbWU9J0xpdmVBbXBTTi0wNTYzMDktMDUzMydxGVgHAAAA
+ZmVxF4lYBQAAAHF1ZXJ5cRhYHAAAAG5hbWU9J0xpdmVBbXBTTi0wNTYzMDktMDU1MydxGVgHAAAA
 cmVjb3ZlcnEaiFgUAAAAcmVzb2x2ZV9taW5pbXVtX3RpbWVxG0c/4AAAAAAAAFgTAAAAc2F2ZWRX
 aWRnZXRHZW9tZXRyeXEcY3NpcApfdW5waWNrbGVfdHlwZQpxHVgMAAAAUHlRdDUuUXRDb3JlcR5Y
-CgAAAFFCeXRlQXJyYXlxH0NCAdnQywADAAAAAAarAAACsAAACEMAAAWOAAAGqwAAArAAAAhDAAAF
-jgAAAAAAAAAADwAAAAarAAACsAAACEMAAAWOcSCFcSGHcSJScSNYDgAAAHNldF9icmVha3BvaW50
+CgAAAFFCeXRlQXJyYXlxH0NCAdnQywADAAAAAAWyAAABCQAACU8AAAPnAAAFsgAAAQkAAAlPAAAD
+5wAAAAAAAAAADwAAAAWyAAABCQAACU8AAAPncSCFcSGHcSJScSNYDgAAAHNldF9icmVha3BvaW50
 cSSJWA8AAAB1c2Vfc3RyZWFtbmFtZXNxJYl1Lg==
 </properties>
 		<properties format="pickle" node_id="3">gAN9cQAoWA8AAABmb3JjZV9tb25vdG9uaWNxAYhYDwAAAGZvcmdldF9oYWxmdGltZXECS1pYDgAA
@@ -145,7 +148,7 @@ d2FybXVwX3NhbXBsZXNxD0r/////dS4=
 </properties>
 		<properties format="literal" node_id="4">{'force_monotonic': True, 'forget_halftime': 90, 'max_updaterate': 500, 'metadata': {}, 'savedWidgetGeometry': None, 'set_breakpoint': False, 'warmup_samples': -1}</properties>
 		<properties format="pickle" node_id="5">gAN9cQAoWAQAAABheGlzcQFYBAAAAHRpbWVxAlgGAAAAZGVzaWducQNYBgAAAGJ1dHRlcnEEWAsA
-AABmcmVxdWVuY2llc3EFXXEGKEsKSxtlWAsAAABpZ25vcmVfbmFuc3EHiVgIAAAAbWV0YWRhdGFx
+AABmcmVxdWVuY2llc3EFXXEGKEsBSw9lWAsAAABpZ25vcmVfbmFuc3EHiVgIAAAAbWV0YWRhdGFx
 CH1xCVgEAAAAbW9kZXEKWAgAAABiYW5kcGFzc3ELWBAAAABvZmZsaW5lX2ZpbHRmaWx0cQyJWAUA
 AABvcmRlcnENSwNYCQAAAHBhc3NfbG9zc3EOR0AIAAAAAAAAWBMAAABzYXZlZFdpZGdldEdlb21l
 dHJ5cQ9jc2lwCl91bnBpY2tsZV90eXBlCnEQWAwAAABQeVF0NS5RdENvcmVxEVgKAAAAUUJ5dGVB
@@ -456,8 +459,8 @@ ZV9pZHEIWAAAAABxCVgMAAAAbWF4X2J1ZmZlcmVkcQpLPFgIAAAAbWV0YWRhdGFxC31xDFgXAAAA
 bnVtZXJpY19sYWJlbF9wcmVjaXNpb25xDUsBWBgAAABudW1lcmljX21hcmtlcl9wcmVjaXNpb25x
 DksDWBcAAAByZXNldF9pZl9sYWJlbHNfY2hhbmdlZHEPiVgTAAAAc2F2ZWRXaWRnZXRHZW9tZXRy
 eXEQY3NpcApfdW5waWNrbGVfdHlwZQpxEVgMAAAAUHlRdDUuUXRDb3JlcRJYCgAAAFFCeXRlQXJy
-YXlxE0NCAdnQywADAAAAAAa0AAACxAAACDkAAAV5AAAGtAAAAsQAAAg5AAAFeQAAAAAAAAAADwAA
-AAa0AAACxAAACDkAAAV5cRSFcRWHcRZScRdYDAAAAHNlbmRfbWFya2Vyc3EYiVgJAAAAc2VwYXJh
+YXlxE0NCAdnQywADAAAAAAa2AAACpQAACQIAAAbmAAAGtwAAAtIAAAkBAAAG5QAAAAAAAAAADwAA
+AAa3AAAC0gAACQEAAAblcRSFcRWHcRZScRdYDAAAAHNlbmRfbWFya2Vyc3EYiVgJAAAAc2VwYXJh
 dG9ycRlYAQAAAC1xGlgOAAAAc2V0X2JyZWFrcG9pbnRxG4lYCQAAAHNvdXJjZV9pZHEcaAlYBQAA
 AHNyYXRlcR1YDQAAACh1c2UgZGVmYXVsdClxHlgLAAAAc3RyZWFtX25hbWVxH1gJAAAAQnV0dGVy
 RUVHcSBYCwAAAHN0cmVhbV90eXBlcSFYCQAAAEJ1dHRlckVFR3EiWBMAAAB1c2VfZGF0YV90aW1l
@@ -470,12 +473,26 @@ ZV9pZHEIWAAAAABxCVgMAAAAbWF4X2J1ZmZlcmVkcQpLPFgIAAAAbWV0YWRhdGFxC31xDFgXAAAA
 bnVtZXJpY19sYWJlbF9wcmVjaXNpb25xDUsBWBgAAABudW1lcmljX21hcmtlcl9wcmVjaXNpb25x
 DksDWBcAAAByZXNldF9pZl9sYWJlbHNfY2hhbmdlZHEPiVgTAAAAc2F2ZWRXaWRnZXRHZW9tZXRy
 eXEQY3NpcApfdW5waWNrbGVfdHlwZQpxEVgMAAAAUHlRdDUuUXRDb3JlcRJYCgAAAFFCeXRlQXJy
-YXlxE0NCAdnQywADAAAAAAazAAAClwAACDoAAAV6AAAGtAAAAsQAAAg5AAAFeQAAAAAAAAAADwAA
-AAa0AAACxAAACDkAAAV5cRSFcRWHcRZScRdYDAAAAHNlbmRfbWFya2Vyc3EYiVgJAAAAc2VwYXJh
+YXlxE0NCAdnQywADAAAAAAa2AAACpQAACQIAAAbmAAAGtwAAAtIAAAkBAAAG5QAAAAAAAAAADwAA
+AAa3AAAC0gAACQEAAAblcRSFcRWHcRZScRdYDAAAAHNlbmRfbWFya2Vyc3EYiVgJAAAAc2VwYXJh
 dG9ycRlYAQAAAC1xGlgOAAAAc2V0X2JyZWFrcG9pbnRxG4lYCQAAAHNvdXJjZV9pZHEcaAlYBQAA
 AHNyYXRlcR1YDQAAACh1c2UgZGVmYXVsdClxHlgLAAAAc3RyZWFtX25hbWVxH1gRAAAARGVqaXR0
 ZXJlZFNwZWxsZXJxIFgLAAAAc3RyZWFtX3R5cGVxIVgRAAAARGVqaXR0ZXJlZFNwZWxsZXJxIlgT
 AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
+</properties>
+		<properties format="pickle" node_id="39">gAN9cQAoWAkAAABjaHVua19sZW5xAUsAWBUAAABpZ25vcmVfc2lnbmFsX2NoYW5nZWRxAolYEwAA
+AGtlZXBfc2luZ2xldG9uX2F4ZXNxA4lYDAAAAG1hcmtlcl9maWVsZHEEWAYAAABNYXJrZXJxBVgL
+AAAAbWFya2VyX25hbWVxBlgRAAAAT3V0U3RyZWFtLW1hcmtlcnNxB1gQAAAAbWFya2VyX3NvdXJj
+ZV9pZHEIWAAAAABxCVgMAAAAbWF4X2J1ZmZlcmVkcQpLPFgIAAAAbWV0YWRhdGFxC31xDFgXAAAA
+bnVtZXJpY19sYWJlbF9wcmVjaXNpb25xDUsBWBgAAABudW1lcmljX21hcmtlcl9wcmVjaXNpb25x
+DksDWBcAAAByZXNldF9pZl9sYWJlbHNfY2hhbmdlZHEPiVgTAAAAc2F2ZWRXaWRnZXRHZW9tZXRy
+eXEQY3NpcApfdW5waWNrbGVfdHlwZQpxEVgMAAAAUHlRdDUuUXRDb3JlcRJYCgAAAFFCeXRlQXJy
+YXlxE0NCAdnQywADAAD///uIAAABL////PEAAAO8///7iQAAAU7///zwAAADuwAAAAEAAAAAB4D/
+//uJAAABTv///PAAAAO7cRSFcRWHcRZScRdYDAAAAHNlbmRfbWFya2Vyc3EYiVgJAAAAc2VwYXJh
+dG9ycRlYAQAAAC1xGlgOAAAAc2V0X2JyZWFrcG9pbnRxG4lYCQAAAHNvdXJjZV9pZHEcaAlYBQAA
+AHNyYXRlcR1YDQAAACh1c2UgZGVmYXVsdClxHlgLAAAAc3RyZWFtX25hbWVxH1gEAAAAREVFR3Eg
+WAsAAABzdHJlYW1fdHlwZXEhWAQAAABERUVHcSJYEwAAAHVzZV9kYXRhX3RpbWVzdGFtcHNxI4hY
+FgAAAHVzZV9udW1weV9vcHRpbWl6YXRpb25xJIl1Lg==
 </properties>
 	</node_properties>
 	<patch>{
@@ -617,6 +634,12 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
         [
             "node6",
             "data",
+            "node14",
+            "data"
+        ],
+        [
+            "node6",
+            "data",
             "node38",
             "data"
         ],
@@ -663,6 +686,12 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
             "data2"
         ],
         [
+            "node26",
+            "data",
+            "node40",
+            "data"
+        ],
+        [
             "node33",
             "data",
             "node6",
@@ -705,9 +734,11 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
             "module": "neuropype.nodes.network.LSLInput",
             "params": {
                 "channel_names": {
-                    "customized": false,
+                    "customized": true,
                     "type": "ListPort",
-                    "value": []
+                    "value": [
+                        "counter"
+                    ]
                 },
                 "data_dtype": {
                     "customized": false,
@@ -815,7 +846,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "09e694ed-ef33-4dc3-ab80-ffb0cd04a3ba"
+            "uuid": "b1754318-be83-47bb-804c-336a3d4b4439"
         },
         "node10": {
             "class": "RecordToXDF",
@@ -872,9 +903,9 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": {}
                 },
                 "output_root": {
-                    "customized": false,
+                    "customized": true,
                     "type": "StringPort",
-                    "value": ""
+                    "value": "C:/Users/vizlab_stud/idatt2900_gr92/neuropype-pipeline/ERPSpellerData"
                 },
                 "preserve_original_metadata": {
                     "customized": false,
@@ -902,7 +933,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "558421ff-87e3-4c8a-86e9-7a6c2e60cf9b"
+            "uuid": "0dc5dd92-7869-4e1f-ab09-9dc50c1269eb"
         },
         "node11": {
             "class": "CCA",
@@ -924,7 +955,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "066dd954-d23f-4ef3-9ef0-816bd68c8732"
+            "uuid": "d2180ca2-3704-48e7-9afb-05578dc81799"
         },
         "node12": {
             "class": "Resample",
@@ -956,7 +987,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "db349e62-c50e-4a87-af69-4dccf7794d5b"
+            "uuid": "4e4fcafd-2e60-4cd1-a1ac-6c836f8ee170"
         },
         "node13": {
             "class": "Segmentation",
@@ -1011,7 +1042,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "26825891-e8bf-4d53-97aa-5a23eb637972"
+            "uuid": "04718ebb-d2d5-4ffe-8448-891eeba5deee"
         },
         "node14": {
             "class": "SpectralSelection",
@@ -1041,7 +1072,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "ec99e530-9768-462c-937c-1698b71dda1c"
+            "uuid": "99d596a1-0077-4599-a43f-6b9f95e03d56"
         },
         "node15": {
             "class": "Segmentation",
@@ -1096,7 +1127,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "7822ebd6-db88-4be3-b32d-575c5e581478"
+            "uuid": "c6873515-42f4-4233-ba74-8b4696fa9746"
         },
         "node16": {
             "class": "Segmentation",
@@ -1151,7 +1182,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "954f0366-08cc-4a61-9e0c-32f6d6c04ca3"
+            "uuid": "8733b8ec-f072-442c-97ab-52a2a08bfe60"
         },
         "node17": {
             "class": "TimeSeriesPlot",
@@ -1303,7 +1334,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": true
                 }
             },
-            "uuid": "8d1185a5-23ba-4c55-9948-e47be2702f85"
+            "uuid": "d87f84be-0406-4292-84b1-d9e849e774ed"
         },
         "node18": {
             "class": "TimeSeriesPlot",
@@ -1455,7 +1486,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": true
                 }
             },
-            "uuid": "8e77a781-8b20-44b5-b2c9-6d93979a17e3"
+            "uuid": "782e9249-a28d-4cc0-a4ff-600d65d1127a"
         },
         "node19": {
             "class": "SelectRange",
@@ -1504,7 +1535,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": "names"
                 }
             },
-            "uuid": "fd631532-ccdf-4cf7-9713-73faf9bd4cfc"
+            "uuid": "990a8400-5e34-4fa6-846d-b7c1c43fbe32"
         },
         "node2": {
             "class": "TimeSeriesPlot",
@@ -1581,9 +1612,9 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": "#FF0000"
                 },
                 "max_channels": {
-                    "customized": false,
+                    "customized": true,
                     "type": "IntPort",
-                    "value": 32
+                    "value": 1
                 },
                 "metadata": {
                     "customized": false,
@@ -1656,7 +1687,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": true
                 }
             },
-            "uuid": "d446f522-3b40-4449-b40f-3446ca70347d"
+            "uuid": "5acf575f-d7f9-4370-876d-c87ffc1de1a2"
         },
         "node20": {
             "class": "ContinuousWaveletTransform",
@@ -1696,7 +1727,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": "cmor"
                 }
             },
-            "uuid": "f4edaf4f-c006-40fd-b0f8-63c1b13f9aea"
+            "uuid": "bfee824a-769b-4be5-a7b1-80496cdc2002"
         },
         "node21": {
             "class": "RenameStreams",
@@ -1725,7 +1756,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": "any stream"
                 }
             },
-            "uuid": "cd0a6b52-c0a5-499d-9815-b94a3314cd4c"
+            "uuid": "36218b99-c79b-4b61-be7a-5b55396ee7b1"
         },
         "node22": {
             "class": "MergeStreams",
@@ -1752,7 +1783,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": "input"
                 }
             },
-            "uuid": "5b190b47-0a38-4c2d-acec-51f4fc71ee57"
+            "uuid": "54e99612-13fb-4853-971d-1fbbe5df8d48"
         },
         "node23": {
             "class": "FuseStreams",
@@ -1799,7 +1830,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": 1
                 }
             },
-            "uuid": "e34e638d-ccd3-4af8-8b8a-2d77d56afe67"
+            "uuid": "68329b03-66e8-44e6-84e3-de8cec7b066c"
         },
         "node24": {
             "class": "RecordToXDF",
@@ -1856,9 +1887,9 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": {}
                 },
                 "output_root": {
-                    "customized": false,
+                    "customized": true,
                     "type": "StringPort",
-                    "value": ""
+                    "value": "C:/Users/vizlab_stud/idatt2900_gr92/neuropype-pipeline/ERPSpellerData"
                 },
                 "preserve_original_metadata": {
                     "customized": false,
@@ -1886,7 +1917,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "1c034ecb-d983-41c2-a2a2-403687499b40"
+            "uuid": "e8e9ab90-8823-4d8d-814a-9a4d63d02b23"
         },
         "node25": {
             "class": "ShiftTimestamps",
@@ -1943,7 +1974,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "6da8e8e5-9c21-4ff5-9f25-5412881ab4cd"
+            "uuid": "6a32ef5a-45a9-4c0a-9b78-3339ba2c309e"
         },
         "node26": {
             "class": "Decimate",
@@ -1970,7 +2001,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "701e444b-8fce-4fab-aa74-daca28ba7047"
+            "uuid": "60ad34b5-161b-4413-9fd2-a19fd976407f"
         },
         "node27": {
             "class": "MergeStreams",
@@ -1997,7 +2028,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": "input"
                 }
             },
-            "uuid": "5277363c-4942-4ae5-84af-a66c89a3e656"
+            "uuid": "724c84b3-942b-42fd-bc43-45fd10e601b9"
         },
         "node28": {
             "class": "FuseStreams",
@@ -2044,7 +2075,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": 1
                 }
             },
-            "uuid": "21b6f6d2-b26f-406b-9576-016cd3b9a8cf"
+            "uuid": "c1a909f7-7fde-4d6d-9b0f-012d166e5221"
         },
         "node29": {
             "class": "RecordToXDF",
@@ -2101,9 +2132,9 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": {}
                 },
                 "output_root": {
-                    "customized": false,
+                    "customized": true,
                     "type": "StringPort",
-                    "value": ""
+                    "value": "C:/Users/vizlab_stud/idatt2900_gr92/neuropype-pipeline/ERPSpellerData"
                 },
                 "preserve_original_metadata": {
                     "customized": false,
@@ -2131,16 +2162,52 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "5ee6766b-ffaa-4b68-8981-3eec657debc8"
+            "uuid": "346db581-de5d-4831-a9c8-3e9668e924cf"
         },
         "node3": {
             "class": "LSLInput",
             "module": "neuropype.nodes.network.LSLInput",
             "params": {
                 "channel_names": {
-                    "customized": false,
+                    "customized": true,
                     "type": "ListPort",
-                    "value": []
+                    "value": [
+                        "Fp1",
+                        "Fz",
+                        "F3",
+                        "F7",
+                        "F9",
+                        "FC5",
+                        "FC1",
+                        "C3",
+                        "T7",
+                        "CP5",
+                        "CP1",
+                        "Pz",
+                        "P3",
+                        "P7",
+                        "P9",
+                        "O1",
+                        "Oz",
+                        "O2",
+                        "P10",
+                        "P8",
+                        "P4",
+                        "CP2",
+                        "CP6",
+                        "T8",
+                        "C4",
+                        "Cz",
+                        "FC2",
+                        "FC6",
+                        "F10",
+                        "F8",
+                        "F4",
+                        "Fp2",
+                        "ACC_X",
+                        "ACC_Y",
+                        "ACC_Z"
+                    ]
                 },
                 "data_dtype": {
                     "customized": false,
@@ -2225,7 +2292,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                 "query": {
                     "customized": true,
                     "type": "StringPort",
-                    "value": "name='LiveAmpSN-056309-0533'"
+                    "value": "name='LiveAmpSN-056309-0553'"
                 },
                 "recover": {
                     "customized": false,
@@ -2248,7 +2315,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "47a13599-819a-429a-b4a2-fa8f0a4ef4f0"
+            "uuid": "998cfe0b-52ad-4406-b41f-57ed866561cc"
         },
         "node30": {
             "class": "LSLOutput",
@@ -2355,7 +2422,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "54bfe9cf-dfe2-456a-ac93-48f3e065f688"
+            "uuid": "53190417-ff74-4b70-97ae-c792d4dbd492"
         },
         "node31": {
             "class": "InspectPacket",
@@ -2437,9 +2504,9 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": 20
                 },
                 "show_max_values": {
-                    "customized": false,
+                    "customized": true,
                     "type": "IntPort",
-                    "value": 50
+                    "value": 0
                 },
                 "show_streams_table": {
                     "customized": false,
@@ -2447,9 +2514,9 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 },
                 "stream_name": {
-                    "customized": false,
+                    "customized": true,
                     "type": "StringPort",
-                    "value": null
+                    "value": "eeg"
                 },
                 "verbose": {
                     "customized": false,
@@ -2462,7 +2529,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": "Inspect Data Packet"
                 }
             },
-            "uuid": "d587cf28-7706-4054-baa8-5dc4b398200d"
+            "uuid": "a9e9ea15-0d6b-4e24-bc1b-646d0a72b273"
         },
         "node32": {
             "class": "Interpolate",
@@ -2514,7 +2581,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "f110a5a8-befb-419c-bbca-22239b12d6a9"
+            "uuid": "76cb2e72-97bd-4449-81ea-51c1d86caae5"
         },
         "node33": {
             "class": "IIRFilter",
@@ -2579,7 +2646,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": 50.0
                 }
             },
-            "uuid": "09b9043a-73e5-475d-9edc-591f25d82cab"
+            "uuid": "b7052152-3ac0-471b-b138-d523521aa3d8"
         },
         "node34": {
             "class": "LSLOutput",
@@ -2686,7 +2753,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "39ee9270-b600-43bf-b9e2-4484fa5a4f96"
+            "uuid": "f070d3bc-0d18-4461-90d5-bb5dfd63b618"
         },
         "node35": {
             "class": "InspectPacket",
@@ -2793,7 +2860,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": "CCA A"
                 }
             },
-            "uuid": "7a534d99-0753-4276-b0c7-6c568af42897"
+            "uuid": "b2563eb2-a7f0-447e-bdb5-8f078a23730b"
         },
         "node36": {
             "class": "InspectPacket",
@@ -2900,7 +2967,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": "CCA B"
                 }
             },
-            "uuid": "5cf28613-a7fa-4bd8-b9ad-5ba64a649762"
+            "uuid": "42fc2bbb-8f03-4d3e-b76b-621f3ff192df"
         },
         "node37": {
             "class": "InspectPacket",
@@ -3007,7 +3074,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": "CCA D"
                 }
             },
-            "uuid": "1d29db9c-f0b6-4a6a-886d-720e0fd84c66"
+            "uuid": "fd4f1658-a9ef-4ce6-a2e1-a607783f204e"
         },
         "node38": {
             "class": "LSLOutput",
@@ -3114,7 +3181,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "ec618efd-d761-489c-8bd3-49c6f180e1a3"
+            "uuid": "1abe8af0-8a9a-4170-8fc1-e7d0eef34cb9"
         },
         "node39": {
             "class": "LSLOutput",
@@ -3221,7 +3288,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "1b34af7e-ad94-412c-9ddf-fe387107cf75"
+            "uuid": "3fe5660f-05b6-4efe-b5ba-d8f39b4040e7"
         },
         "node4": {
             "class": "DejitterTimestamps",
@@ -3258,7 +3325,114 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": -1
                 }
             },
-            "uuid": "3b36888e-9a4f-4e5a-9f39-51a1e7ed44a4"
+            "uuid": "37babe8f-f153-4f1d-a6c3-6ad9e1ed94d6"
+        },
+        "node40": {
+            "class": "LSLOutput",
+            "module": "neuropype.nodes.network.LSLOutput",
+            "params": {
+                "chunk_len": {
+                    "customized": false,
+                    "type": "IntPort",
+                    "value": 0
+                },
+                "ignore_signal_changed": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                },
+                "keep_singleton_axes": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                },
+                "marker_field": {
+                    "customized": false,
+                    "type": "StringPort",
+                    "value": "Marker"
+                },
+                "marker_name": {
+                    "customized": false,
+                    "type": "StringPort",
+                    "value": "OutStream-markers"
+                },
+                "marker_source_id": {
+                    "customized": false,
+                    "type": "StringPort",
+                    "value": ""
+                },
+                "max_buffered": {
+                    "customized": false,
+                    "type": "IntPort",
+                    "value": 60
+                },
+                "metadata": {
+                    "customized": false,
+                    "type": "DictPort",
+                    "value": {}
+                },
+                "numeric_label_precision": {
+                    "customized": false,
+                    "type": "IntPort",
+                    "value": 1
+                },
+                "numeric_marker_precision": {
+                    "customized": false,
+                    "type": "IntPort",
+                    "value": 3
+                },
+                "reset_if_labels_changed": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                },
+                "send_markers": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                },
+                "separator": {
+                    "customized": false,
+                    "type": "StringPort",
+                    "value": "-"
+                },
+                "set_breakpoint": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                },
+                "source_id": {
+                    "customized": false,
+                    "type": "StringPort",
+                    "value": ""
+                },
+                "srate": {
+                    "customized": false,
+                    "type": "FloatPort",
+                    "value": null
+                },
+                "stream_name": {
+                    "customized": true,
+                    "type": "StringPort",
+                    "value": "DEEG"
+                },
+                "stream_type": {
+                    "customized": true,
+                    "type": "StringPort",
+                    "value": "DEEG"
+                },
+                "use_data_timestamps": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": true
+                },
+                "use_numpy_optimization": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                }
+            },
+            "uuid": "c7b28bdb-53a8-4c0d-a9c4-2770ca25128a"
         },
         "node5": {
             "class": "DejitterTimestamps",
@@ -3295,7 +3469,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": -1
                 }
             },
-            "uuid": "bc6d951a-eb80-4cbf-a1d3-a0b260b6cd72"
+            "uuid": "b231e510-ba4c-4907-9c37-28a86113a1d0"
         },
         "node6": {
             "class": "IIRFilter",
@@ -3315,8 +3489,8 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "customized": true,
                     "type": "ListPort",
                     "value": [
-                        10,
-                        27
+                        1,
+                        15
                     ]
                 },
                 "ignore_nans": {
@@ -3360,7 +3534,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": 50.0
                 }
             },
-            "uuid": "f4d54c35-8873-49b3-8605-ec46bd412373"
+            "uuid": "eda50da0-d0b5-4941-ad98-bb9220400514"
         },
         "node7": {
             "class": "RecordToXDF",
@@ -3417,9 +3591,9 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": {}
                 },
                 "output_root": {
-                    "customized": false,
+                    "customized": true,
                     "type": "StringPort",
-                    "value": ""
+                    "value": "C:/Users/vizlab_stud/idatt2900_gr92/neuropype-pipeline/ERPSpellerData"
                 },
                 "preserve_original_metadata": {
                     "customized": false,
@@ -3447,7 +3621,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "a53d450d-bf1a-4731-b9ae-495708f38bd2"
+            "uuid": "c8d7b31e-b0d2-498c-a8f6-de6b7d767197"
         },
         "node8": {
             "class": "RecordToXDF",
@@ -3504,9 +3678,9 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": {}
                 },
                 "output_root": {
-                    "customized": false,
+                    "customized": true,
                     "type": "StringPort",
-                    "value": ""
+                    "value": "C:/Users/vizlab_stud/idatt2900_gr92/neuropype-pipeline/ERPSpellerData"
                 },
                 "preserve_original_metadata": {
                     "customized": false,
@@ -3534,7 +3708,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": false
                 }
             },
-            "uuid": "50b85765-6c99-41ad-a37c-125d45367048"
+            "uuid": "9888d80e-c3b6-41bf-b328-66599245c9c6"
         },
         "node9": {
             "class": "ConstantString",
@@ -3556,7 +3730,7 @@ AAAAdXNlX2RhdGFfdGltZXN0YW1wc3EjiFgWAAAAdXNlX251bXB5X29wdGltaXphdGlvbnEkiXUu
                     "value": "C:/Users/vizlab_stud/idatt2900_gr92/neuropype-pipeline/ERPSpellerData"
                 }
             },
-            "uuid": "afd13781-c739-4c62-82a7-7dbc0d559ea1"
+            "uuid": "c6c29aa6-ce13-4c81-a2f3-3344edd14cc4"
         }
     },
     "version": 1.1
