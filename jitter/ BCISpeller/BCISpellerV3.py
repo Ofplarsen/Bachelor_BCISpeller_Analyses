@@ -75,7 +75,7 @@ def get_freqs(N):
     # fs = [8.18, 9, 10, 11.25, 12.86, 15]
     #fs = [13.0909, 14.4, 16, 18, 20.5714, 24]
     #fs = [13, 14, 16, 18, 20, 24]
-    fs = [4,5,6,7,9,11]
+    fs = frequencies_main
     #fs = [7, 6, 5, 4, 10, 13]
     t = N / 250
     return_freqs = []
@@ -169,11 +169,11 @@ streams_eeg = resolve_stream('type', 'DEEG')
 inlet = StreamInlet(streams_counter[0])
 inlet_2 = StreamInlet(streams_eeg[0])
 fs = 250  # Sampling frequency
-fragment_duration = 6  # Fragment duration in seconds
-fragment_samples = fs * fragment_duration
+delay = 0.01
+fragment_duration = 4+delay  # Fragment duration in seconds
+fragment_samples = round(fs * fragment_duration)
 pre_trigger_samples = fs * 1
 target_value = 0
-delay = round(fs*0.01)
 pad_length = 100
 while True:
     buffer = []
@@ -193,7 +193,9 @@ while True:
             buffer.pop(0)
             buffer_eeg.pop(0)
 
-        if (len(buffer) == fragment_samples):#and buffer[0][0] == 1
+
+
+        if (len(buffer) == fragment_samples) and buffer[0][0] == 1:
             print(len(buffer))
             fragment = np.array(buffer[:fragment_samples])
             fragment_eeg = np.array(buffer_eeg[:fragment_samples])
@@ -203,6 +205,7 @@ while True:
             df = pd.concat([pd.DataFrame(np.array(fragment)), pd.DataFrame(np.array(fragment_eeg))], axis=1, join='inner')
 
             df.columns = ['N'] + channels
+
             print(df.columns)
             print(df[occ_channels])
             start_time = time.time()
@@ -215,6 +218,10 @@ while True:
             # df[i] = normalize_data(df[i])
             print("--- Filter time:  %s seconds ---" % (time.time() - start_time))
             print(df['N'].tolist())
+            df['N'] = df['N'].shift(round(delay*fs))
+            df = df.iloc[round(delay*fs):]
+            # Reset the index
+            df = df.reset_index(drop=True)
             N = df['N']
             print(df.shape)
             df = pd.concat([df, get_freqs(N)], axis=1, join='inner')

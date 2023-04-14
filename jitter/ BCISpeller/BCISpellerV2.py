@@ -10,7 +10,7 @@ channels = ['Fp1', 'Fz', 'F3', 'F7', 'F9', 'FC5', 'FC1', 'C3', 'T7', 'CP5', 'CP1
             , 'P9', 'O1', 'Oz', 'O2', 'P10', 'P8', 'P4', 'CP2', 'CP6', 'T8', 'C4', 'Cz'
             , 'FC2', 'FC6', 'F10', 'F8', 'F4', 'Fp2', 'ACC_X', 'ACC_Y', 'ACC_Z']
 removed_channels = ['Fp1', 'F8', 'F7', 'Fp2', 'F3', 'F4']
-frequencies_main = [4,5,6,7,10,13]
+frequencies_main = [4,5,6,7,9,11]
 frequencies = ['8.18_sin_h1','8.18_cos_h1','8.18_sin_h2','8.18_cos_h2','8.18_sin_h3','8.18_cos_h3',
                '9_sin_h1', '9_cos_h1','9_sin_h2', '9_cos_h2','9_sin_h3', '9_cos_h3',
                '10_sin_h1','10_cos_h1','10_sin_h2','10_cos_h2','10_sin_h3','10_cos_h3',
@@ -46,7 +46,7 @@ def get_freqs(N):
     #fs = [8.18, 9, 10, 11.25, 12.86, 15]
     #fs = [13.0909, 14.4, 16, 18, 20.5714, 24]
     #fs = [13, 14, 16, 18, 20, 24]
-    fs = [4,5,6,7,10,13]
+    fs = frequencies_main
     t = N/250
     return_freqs = []
     for fk in fs:
@@ -109,11 +109,13 @@ inlet_2 = StreamInlet(streams_eeg[0])
 
 
 fs = 250  # Sampling frequency
-fragment_duration = 6  # Fragment duration in seconds
-fragment_samples = fs * fragment_duration
+delay = 0.01
+fragment_duration = 4+delay  # Fragment duration in seconds
+print(fragment_duration)
+fragment_samples = round(fs * fragment_duration)
 pre_trigger_samples = fs * 1
 target_value = 0
-delay = round(fs*0.20)
+
 
 
 while True:
@@ -133,11 +135,12 @@ while True:
         buffer_eeg.append(sample_eeg)
 
         # Remove old samples from the buffer
+
         while len(buffer) > fragment_samples:
             buffer.pop(0)
             buffer_eeg.pop(0)
 
-        if (len(buffer) == fragment_samples): #and buffer[0][0] == 1:
+        if (len(buffer) == fragment_samples) and buffer[0][0] == 1:
             print(len(buffer))
             fragment = np.array(buffer[:fragment_samples])
             fragment_eeg = np.array(buffer_eeg[:fragment_samples])
@@ -148,8 +151,11 @@ while True:
 
             df.columns = ['N'] + channels
             print(df['N'].tolist())
-
             # N = np.arange(1, len(df['O1']) + 1)
+            df['N'] = df['N'].shift(round(delay*fs))
+            df = df.iloc[round(delay*fs):]
+            # Reset the index
+            df = df.reset_index(drop=True)
             N = df['N']
             frs = get_freqs(N)
             X = df[:][occ_channels]
