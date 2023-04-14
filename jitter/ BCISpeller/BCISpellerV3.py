@@ -11,7 +11,7 @@ channels = ['Fp1', 'Fz', 'F3', 'F7', 'F9', 'FC5', 'FC1', 'C3', 'T7', 'CP5', 'CP1
     , 'P9', 'O1', 'Oz', 'O2', 'P10', 'P8', 'P4', 'CP2', 'CP6', 'T8', 'C4', 'Cz'
     , 'FC2', 'FC6', 'F10', 'F8', 'F4', 'Fp2', 'ACC_X', 'ACC_Y', 'ACC_Z']
 removed_channels = ['Fp1', 'F8', 'F7', 'Fp2', 'F3', 'F4']
-frequencies_main = [4,5,6,7,10,13]
+frequencies_main = [4,5,6,7,9,11]
 occ_channels = ['O1', 'O2', 'Oz', 'P3', 'P4', 'Pz', 'P7', 'P8']
 frequencies = ['8.18_sin_h1', '8.18_cos_h1', '8.18_sin_h2', '8.18_cos_h2', '8.18_sin_h3', '8.18_cos_h3',
                '9_sin_h1', '9_cos_h1', '9_sin_h2', '9_cos_h2', '9_sin_h3', '9_cos_h3',
@@ -74,7 +74,7 @@ def get_freqs(N):
     # fs = [8.18, 9, 10, 11.25, 12.86, 15]
     #fs = [13.0909, 14.4, 16, 18, 20.5714, 24]
     #fs = [13, 14, 16, 18, 20, 24]
-    fs = [4,5,6,7,10,13]
+    fs = frequencies_main
     #fs = [7, 6, 5, 4, 10, 13]
     t = N / 250
     return_freqs = []
@@ -168,9 +168,9 @@ streams_eeg = resolve_stream('type', 'DEEG')
 inlet = StreamInlet(streams_counter[0])
 inlet_2 = StreamInlet(streams_eeg[0])
 fs = 250  # Sampling frequency
-delay = round(fs*0.01)
-fragment_duration = 6+delay  # Fragment duration in seconds
-fragment_samples = fs * fragment_duration
+delay = 0.01
+fragment_duration = 4+delay  # Fragment duration in seconds
+fragment_samples = round(fs * fragment_duration)
 pre_trigger_samples = fs * 1
 target_value = 0
 pad_length = 100
@@ -217,8 +217,8 @@ while True:
             # df[i] = normalize_data(df[i])
             print("--- Filter time:  %s seconds ---" % (time.time() - start_time))
             print(df['N'].tolist())
-            df['N'] = df['N'].shift(delay)
-            df = df.iloc[delay:]
+            df['N'] = df['N'].shift(round(delay*fs))
+            df = df.iloc[round(delay*fs):]
             # Reset the index
             df = df.reset_index(drop=True)
             N = df['N']
