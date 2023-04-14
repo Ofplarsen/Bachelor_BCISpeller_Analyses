@@ -109,11 +109,12 @@ inlet_2 = StreamInlet(streams_eeg[0])
 
 
 fs = 250  # Sampling frequency
-fragment_duration = 6  # Fragment duration in seconds
+delay = round(fs*0.20)
+fragment_duration = 6+delay  # Fragment duration in seconds
 fragment_samples = fs * fragment_duration
 pre_trigger_samples = fs * 1
 target_value = 0
-delay = round(fs*0.20)
+
 
 
 while True:
@@ -137,7 +138,7 @@ while True:
             buffer.pop(0)
             buffer_eeg.pop(0)
 
-        if (len(buffer) == fragment_samples): #and buffer[0][0] == 1:
+        if (len(buffer) == fragment_samples) and buffer[0][0] == 1:
             print(len(buffer))
             fragment = np.array(buffer[:fragment_samples])
             fragment_eeg = np.array(buffer_eeg[:fragment_samples])
@@ -148,8 +149,11 @@ while True:
 
             df.columns = ['N'] + channels
             print(df['N'].tolist())
-
             # N = np.arange(1, len(df['O1']) + 1)
+            df['N'] = df['N'].shift(delay)
+            df = df.iloc[delay:]
+            # Reset the index
+            df = df.reset_index(drop=True)
             N = df['N']
             frs = get_freqs(N)
             X = df[:][occ_channels]
