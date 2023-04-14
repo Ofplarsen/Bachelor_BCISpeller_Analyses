@@ -2,6 +2,7 @@ import sys
 
 import pandas as pd
 import numpy as np
+import pyxdf
 from pylsl import resolve_stream, StreamInlet
 from scipy import signal
 from sklearn.cross_decomposition import CCA
@@ -19,7 +20,6 @@ frequencies = ['8.18_sin_h1', '8.18_cos_h1', '8.18_sin_h2', '8.18_cos_h2', '8.18
                '12.85_sin_h1', '12.85_cos_h1', '12.85_sin_h2', '12.85_cos_h2', '12.85_sin_h3', '12.85_cos_h3',
                '15_sin_h1', '15_cos_h1', '15_sin_h2', '15_cos_h2', '15_sin_h3', '15_cos_h3'
                ]
-
 def add_padding(data, lenght=100):
     return padding(data, lenght)
 
@@ -29,12 +29,33 @@ def remove_padding(data, length=100):
 def padding(data, pad_length = 100):
     return np.pad(data, (pad_length, pad_length), mode="reflect")
 
+def get_freqs(N):
+
+    # fs = [8.18, 9, 10, 11.25, 12.86, 15]
+    #fs = [13.0909, 14.4, 16, 18, 20.5714, 24]
+    #fs = [13, 14, 16, 18, 20, 24]
+    fs = [4,5,6,7,9,11]
+    #fs = [7, 6, 5, 4, 10, 13]
+    t = N / 250
+    return_freqs = []
+    for fk in fs:
+        for i in range(1, 4):
+            return_freqs.append(np.sin(2 * np.pi * i * (t * fk)).tolist())
+            return_freqs.append(np.cos(2 * np.pi * i * (t * fk)).tolist())
+
+    df = pd.DataFrame(return_freqs)
+    df = df.T
+    df.columns = frequencies
+    return df
+
+
+
 def zero_phase_butter(data):
     # Butterworth filter parameters
     fs = 250
-    lowcut = 1
-    highcut = 15
-    order = 10
+    lowcut = 1.0
+    highcut = 15.0
+    order = 3
 
     # Design Butterworth bandpass filter
     nyquist = 0.5 * fs
@@ -54,22 +75,7 @@ def notch(data):
     b_notch, a_notch = signal.iirnotch(f0, Q, fs)
     return signal.lfilter(b_notch, a_notch, data)
 
-def get_freqs(N):
-    # fs = [8.18, 9, 10, 11.25, 12.86, 15]
-    #fs = [13.0909, 14.4, 16, 18, 20.5714, 24]
-    #fs = [13, 14, 16, 18, 20, 24]
-    fs = [4,5,6,7,10,13]
-    t = N / 250
-    return_freqs = []
-    for fk in fs:
-        for i in range(1, 4):
-            return_freqs.append(np.sin(2 * np.pi * i * (t * fk)).tolist())
-            return_freqs.append(np.cos(2 * np.pi * i * (t * fk)).tolist())
 
-    df = pd.DataFrame(return_freqs)
-    df = df.T
-    df.columns = frequencies
-    return df
 
 def cca_placeholder(X, N_s):
     freqs = []
@@ -85,71 +91,56 @@ def cca_placeholder(X, N_s):
         freqs.append(np.sqrt(p1 ** 2 + p2 ** 2))
     return freqs
 
-
-streams_counter = resolve_stream('type', 'DejitteredSpeller')
-streams_eeg = resolve_stream('type', 'DEEG')
-inlet = StreamInlet(streams_counter[0])
-inlet_2 = StreamInlet(streams_eeg[0])
 fs = 250  # Sampling frequency
-fragment_duration = 15  # Fragment duration in seconds
-fragment_samples = fs * fragment_duration
-pre_trigger_samples = fs * 1
-target_value = 0
-delay = round(fs*0.01)
+stim_leng = 4
 pad_length = 100
-set_N = round(fragment_samples / 3)
-while True:
-    buffer = []
-    buffer_eeg = []
-    triggered = False
-    start_time = None
-    scan_values = False
-    count = False
-    target = 0
-    i = 0
-    while not triggered:
-        sample, timestamp = inlet.pull_sample()
-        sample_eeg, timestamp_eeg = inlet_2.pull_sample()
-        buffer.append(sample)
-        buffer_eeg.append(sample_eeg)
-        # Remove old samples from the buffer
-        while len(buffer) > fragment_samples:
-            buffer.pop(0)
-            buffer_eeg.pop(0)
 
-        if (len(buffer) == fragment_samples):
-            print(len(buffer))
-            fragment = np.array(buffer[:fragment_samples])
-            fragment_eeg = np.array(buffer_eeg[:fragment_samples])
-            triggered = True
-            print("Fragment: found")
+data_eeg, header = pyxdf.load_xdf(r"C:\Users\xray2\OneDrive\Documents\NTNU\DataIng2023\s2023\ba\neuropype-pipeline\jitter\data\BCISpellerWindowCheck\BCISpellerWindowCheck9Hz\dejittered-eeg.xdf")
 
-            df = pd.concat([pd.DataFrame(np.array(fragment)), pd.DataFrame(np.array(fragment_eeg))], axis=1, join='inner')
-            df.columns = ['N'] + channels
+data_n, header = pyxdf.load_xdf(r"C:\Users\xray2\OneDrive\Documents\NTNU\DataIng2023\s2023\ba\neuropype-pipeline\jitter\data\BCISpellerWindowCheck\BCISpellerWindowCheck9Hz\dejittered-unity-frequencies-Yformat.xdf")
+df_eeg = None
+df_n = None
+for stream in data_eeg:
+    df_eeg = pd.DataFrame(stream['time_series'])
 
-            df = df.apply(lambda x: add_padding(x, pad_length))
-            df[occ_channels] = df[occ_channels].apply(lambda x: notch(x))
-            df[occ_channels] = df[occ_channels].apply(lambda x: zero_phase_butter(x))
-            df = df.apply(lambda x: remove_padding(x, pad_length))
+for stream in data_n:
+    df_n = pd.DataFrame(stream['time_series'])
 
-            #N = df['N']
-            start = set_N
-            N = df['N'][start:start+6*fs]
-            frs = get_freqs(N)
-            start = 0
-            highest = None
-            while fragment_samples - start > 6*fs:
-                cca_ = cca_placeholder(X =df[start:start+6*fs][occ_channels], N_s =frs)
-                cca = cca_[target]
-                if highest is None or cca > highest[1]:
-                    print(cca_)
-                    highest = (start, cca)
-                    print(highest)
-                    print(np.argpartition(cca_, -2)[-2:])
-                start = start+ 1
+target = 4
 
-            print(highest)
-            print(fragment_samples)
-            print(highest[0]-start)
-            print(highest[0] - (N.eq(1).cumsum() == 1).idxmax())
-            sys.exit()
+df = pd.concat([df_n, df_eeg], axis=1, join='inner')
+df.columns = ['N'] + channels
+
+df = df.apply(lambda x: add_padding(x, pad_length))
+
+df[occ_channels] = df[occ_channels].apply(lambda x: notch(x))
+
+df[occ_channels] = df[occ_channels].apply(lambda x: zero_phase_butter(x))
+df = df.apply(lambda x: remove_padding(x, pad_length))
+
+#N = df['N']
+N =  np.array([i for i in range(1,stim_leng*fs+1)])
+frs = get_freqs(N)
+start = df[df['N'] == 1].index[0] - 250
+print(start)
+print(df['N'])
+highest = None
+
+fragment_samples = len(df['N'])
+while fragment_samples - start > stim_leng*fs:
+
+    cca_ = cca_placeholder(X =df[start:start+stim_leng*fs][occ_channels], N_s =frs)
+    cca = cca_[target]
+    if highest is None or (cca > highest[1] and cca == max(cca_)):
+        print(cca_)
+        highest = (start, cca)
+        print(highest)
+        print(np.argpartition(cca_, -2)[-2:])
+    start = start + 1
+
+print(fragment_samples)
+print(start)
+print(df[df['N'] == 1].index[0])
+print(highest)
+print(highest[0]-start)
+print(highest[0] - df[df['N'] == 1].index[0])
