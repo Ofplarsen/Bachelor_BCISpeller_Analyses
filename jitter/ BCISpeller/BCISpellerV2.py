@@ -123,14 +123,11 @@ while True:
     buffer_eeg = []
     triggered = False
     start_time = None
-    scan_values = False
-    count = False
-    i = 0
-    print("Sleep done")
+
     while not triggered:
+        # Gets data from the Eye Tracker LSL stream, and the EEG LSL stream
         sample, timestamp = inlet.pull_sample()
         sample_eeg, timestamp_eeg = inlet_2.pull_sample()
-        #print(timestamp)
         buffer.append(sample)
         buffer_eeg.append(sample_eeg)
 
@@ -140,6 +137,8 @@ while True:
             buffer.pop(0)
             buffer_eeg.pop(0)
 
+        # If buffer is filled with data ready to be compared in CCA, and the start of the buffer is the start of
+        # the Eye Tracking data (Eye Tracking trigger)
         if (len(buffer) == fragment_samples) and buffer[0][0] == 1:
             print(len(buffer))
             fragment = np.array(buffer[:fragment_samples])
@@ -147,26 +146,35 @@ while True:
 
             triggered = True
             print("Fragment: found")
+
+            # Makes both streams to a single dataframe
             df = pd.concat([pd.DataFrame(np.array(fragment)), pd.DataFrame(np.array(fragment_eeg))], axis=1, join='inner')
 
-            df.columns = ['N'] + channels
-            print(df['N'].tolist())
-            # N = np.arange(1, len(df['O1']) + 1)
-            df['N'] = df['N'].shift(round(delay*fs))
-            df = df.iloc[round(delay*fs):]
+            # If any delay added, shift signal accordingly
+            df['N'] = df['N'].shift(round(delay * fs))
+            df = df.iloc[round(delay * fs):]
             # Reset the index
             df = df.reset_index(drop=True)
+            N = df['N']
+            print(df.shape)
+            df = pd.concat([df, get_freqs(N)], axis=1, join='inner')
+            print(df.shape)
+            print([(index, row['O1']) for index, row in df.iterrows() if pd.isna(row['O1'])])
+
+
             N = df['N']
             frs = get_freqs(N)
             X = df[:][occ_channels]
             freqs = []
             h = 0
+            # CCA on the target frequencies, and the occular channels
             for y in range(0, len(frequencies), 6):
                 h = h + 1
                 Y = frs[:][frequencies[y:6 * h]]
                 ca = CCA(n_components=2)
                 ca.fit(X, Y)
                 X_c, Y_c = ca.transform(X, Y)
+                # Uses two coefficients pk = sqrt(p1**2+p2*'2)
                 p1 = np.corrcoef(X_c[:, 0], Y_c[:, 0])[0][1]
                 p2 = np.corrcoef(X_c[:, 1], Y_c[:, 1])[0][1]
                 freqs.append(np.sqrt(p1 ** 2 + p2 ** 2))
@@ -174,8 +182,7 @@ while True:
             # print("CCA single: " + str(perform_cca(df,1)))
             print(cca)
             index = np.argmax(cca)
-            print(index)
             print("Looking at: " + str(frequencies_main[index]) + "Hz")
+            # Sends result in LSL stream
             return_index(index, info, outlet)
-    print("Sleep")
-    #time.sleep(fragment_duration)
+
