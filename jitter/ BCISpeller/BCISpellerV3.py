@@ -189,7 +189,7 @@ inlet = StreamInlet(streams_counter[0]) #LSL Eyetracker data
 inlet_2 = StreamInlet(streams_eeg[0])# LSL EEG data
 
 fs = 250  # Sampling frequency
-delay = 0.060 #Occular delay
+delay = 0.061 #Occular delay
 fragment_duration = 4+delay  # Fragment duration in seconds
 fragment_samples = round(fs * fragment_duration)
 
