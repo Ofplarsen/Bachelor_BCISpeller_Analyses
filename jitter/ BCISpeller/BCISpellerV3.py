@@ -189,7 +189,7 @@ inlet = StreamInlet(streams_counter[0]) #LSL Eyetracker data
 inlet_2 = StreamInlet(streams_eeg[0])# LSL EEG data
 
 fs = 250  # Sampling frequency
-delay = 0.01 #Occular delay
+delay = 0.060 #Occular delay
 fragment_duration = 4+delay  # Fragment duration in seconds
 fragment_samples = round(fs * fragment_duration)
 
@@ -214,7 +214,7 @@ while True:
 
         # If buffer is filled with data ready to be compared in CCA, and the start of the buffer is the start of
         # the Eye Tracking data (Eye Tracking trigger)
-        if (len(buffer) == fragment_samples) and buffer[0][0] == 1:
+        if (len(buffer) == fragment_samples) and buffer[0][0] == 1 and buffer[0][fragment_samples] <= 0:
             print(len(buffer))
             fragment = np.array(buffer[:fragment_samples])
             fragment_eeg = np.array(buffer_eeg[:fragment_samples])
@@ -247,6 +247,7 @@ while True:
             df['N'] = df['N'].shift(round(delay*fs))
             df = df.iloc[round(delay*fs):]
             # Reset the index
+
             df = df.reset_index(drop=True)
             N = df['N']
             print(df.shape)
@@ -254,7 +255,6 @@ while True:
             print(df.shape)
             print([(index, row['O1']) for index, row in df.iterrows() if pd.isna(row['O1'])])
 
-            #N = np.arange(1, len(df['O1']) + 1)
             N = df['N']
             frs = get_freqs(N)
             X = df[:][occ_channels]
