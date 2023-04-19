@@ -214,7 +214,7 @@ while True:
 
         # If buffer is filled with data ready to be compared in CCA, and the start of the buffer is the start of
         # the Eye Tracking data (Eye Tracking trigger)
-        if (len(buffer) == fragment_samples) and buffer[0][0] == 1 and buffer[0][fragment_samples-round(delay*fs)] <= 0:
+        if (len(buffer) == fragment_samples) and buffer[0][0] == 1 and buffer[0][fragment_samples-round(delay*fs)] != 0:
             print(len(buffer))
             fragment = np.array(buffer[:fragment_samples])
             fragment_eeg = np.array(buffer_eeg[:fragment_samples])
