@@ -95,6 +95,7 @@ fs = 250  # Sampling frequency
 stim_leng = 4
 pad_length = 100
 
+# Loads the EEG and Eye Tracking Data
 data_eeg, header = pyxdf.load_xdf(r"C:\Users\xray2\OneDrive\Documents\NTNU\DataIng2023\s2023\ba\neuropype-pipeline\jitter\data\BCISpellerWindowCheck\BCISpellerWindowCheck9Hz\dejittered-eeg.xdf")
 
 data_n, header = pyxdf.load_xdf(r"C:\Users\xray2\OneDrive\Documents\NTNU\DataIng2023\s2023\ba\neuropype-pipeline\jitter\data\BCISpellerWindowCheck\BCISpellerWindowCheck9Hz\dejittered-unity-frequencies-Yformat.xdf")
@@ -126,6 +127,9 @@ print(start)
 print(df['N'])
 highest = None
 
+# Method that shifts the to stream 1 second before marker signals the Speller frequencies start, then until end
+# of entire signal. This is to find the highest
+# correlation, and how much the signal is shifted. This is used to find the "best" synchronization of the two signals
 fragment_samples = len(df['N'])
 while fragment_samples - start > stim_leng*fs:
 
