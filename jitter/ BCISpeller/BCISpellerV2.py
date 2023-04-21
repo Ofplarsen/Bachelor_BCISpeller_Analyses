@@ -12,6 +12,8 @@ channels = ['Fp1', 'Fz', 'F3', 'F7', 'F9', 'FC5', 'FC1', 'C3', 'T7', 'CP5', 'CP1
 removed_channels = ['Fp1', 'F8', 'F7', 'Fp2', 'F3', 'F4']
 #frequencies_main = [4,5,6,7,9,11]
 frequencies_main = [4,5,5.5,6,7,7.4]
+#frequencies_main = [8.18,9,10,11.25,12.86,15]
+
 frequencies = ['8.18_sin_h1','8.18_cos_h1','8.18_sin_h2','8.18_cos_h2','8.18_sin_h3','8.18_cos_h3',
                '9_sin_h1', '9_cos_h1','9_sin_h2', '9_cos_h2','9_sin_h3', '9_cos_h3',
                '10_sin_h1','10_cos_h1','10_sin_h2','10_cos_h2','10_sin_h3','10_cos_h3',
@@ -141,8 +143,11 @@ while True:
 
         # If buffer is filled with data ready to be compared in CCA, and the start of the buffer is the start of
         # the Eye Tracking data (Eye Tracking trigger)
-        if (len(buffer) == fragment_samples) and buffer[0][0] == 1 and buffer[0][fragment_samples-round(delay*fs)] != 0:
-            print(len(buffer))
+        if (len(buffer) == fragment_samples) and buffer[0][0] == 1:
+            if (buffer[fragment_samples - round(delay * fs) - 1][0] != (fragment_samples - round(delay * fs))):
+                print("Found invalid stare")
+                continue
+
             fragment = np.array(buffer[:fragment_samples])
             fragment_eeg = np.array(buffer_eeg[:fragment_samples])
 
@@ -151,7 +156,7 @@ while True:
 
             # Makes both streams to a single dataframe
             df = pd.concat([pd.DataFrame(np.array(fragment)), pd.DataFrame(np.array(fragment_eeg))], axis=1, join='inner')
-
+            df.columns = ['N'] + channels
             # If any delay added, shift signal accordingly
             df['N'] = df['N'].shift(round(delay * fs))
             df = df.iloc[round(delay * fs):]

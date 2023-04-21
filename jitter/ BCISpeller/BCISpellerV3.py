@@ -17,6 +17,7 @@ removed_channels = ['Fp1', 'F8', 'F7', 'Fp2', 'F3', 'F4']
 #The frequencies used for the SSVEP speller
 #frequencies_main = [4,5,6,7,9,11]
 frequencies_main = [4,5,5.5,6,7,7.4]
+#frequencies_main = [8.18,9,10,11.25,12.86,15]
 
 #The channels used for the BCI Speller combined with CCA
 occ_channels = ['O1', 'O2', 'Oz', 'P3', 'P4', 'Pz', 'P7', 'P8']
@@ -216,8 +217,12 @@ while True:
 
         # If buffer is filled with data ready to be compared in CCA, and the start of the buffer is the start of
         # the Eye Tracking data (Eye Tracking trigger)
-        if (len(buffer) == fragment_samples) and buffer[0][0] == 1 and buffer[0][fragment_samples-round(delay*fs)] != 0:
-            print(len(buffer))
+
+        if (len(buffer) == fragment_samples) and (buffer[0][0] == 1):
+            if(buffer[fragment_samples - round(delay * fs)-1][0] != (fragment_samples-round(delay * fs))):
+                print("Found invalid stare")
+                continue
+
             fragment = np.array(buffer[:fragment_samples])
             fragment_eeg = np.array(buffer_eeg[:fragment_samples])
             triggered = True
