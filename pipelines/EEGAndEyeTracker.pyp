@@ -1,19 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
 <scheme description="" title="EEGAndEyeTracker" version="2.0">
 	<nodes>
-		<node id="0" name="LSL Input" position="(595.0, 368.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="EyeTrackerStream" uuid="ddff5e58-7c8b-4abb-9866-4cda5e4f0dff" version="1.5.1" />
-		<node id="1" name="Select Range" position="(1077.0, 448.0)" project_name="NeuroPype" qualified_name="widgets.tensor_math.owselectrange.OWSelectRange" title="Blinking Data" uuid="3c5d5583-86ea-4aa7-814b-9b18799bd870" version="1.1.0" />
-		<node id="2" name="LSL Input" position="(615.0, 888.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="EEG" uuid="509ce87b-77d8-480d-ba21-67edad6c497e" version="1.5.1" />
-		<node id="3" name="Dejitter Timestamps" position="(815.0, 888.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owdejittertimestamps.OWDejitterTimestamps" title="Dejitter Timestamps" uuid="05e68c74-13ba-4f11-8f68-d00647996c7d" version="1.0.0" />
-		<node id="4" name="Record to XDF" position="(829.0, 528.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF" uuid="acb44b04-12cf-4f63-b7ba-24a6d4319cbb" version="1.4.0" />
-		<node id="5" name="Record to XDF" position="(715.0, 1088.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (1)" uuid="ea7b1ce9-144b-481d-8936-bef1af7bc181" version="1.4.0" />
-		<node id="6" name="Time Series Plot" position="(1243.0, 446.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Time Series Plot (2)" uuid="6dc03f1e-1d5c-433f-bb26-3aa177107bb7" version="1.1.0" />
-		<node id="7" name="Dejitter Timestamps" position="(825.0, 359.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owdejittertimestamps.OWDejitterTimestamps" title="Dejitter Timestamps (2)" uuid="4d11b86f-60e0-4f94-9d73-dfd81cf05ea6" version="1.0.0" />
-		<node id="8" name="Record to XDF" position="(615.0, 1088.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (5)" uuid="faa5f5c8-26cb-41ca-b953-46e4c2d19338" version="1.4.0" />
-		<node id="9" name="Record to XDF" position="(729.0, 528.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (7)" uuid="822dc471-b53c-4fe8-aa5b-46e0142c15ce" version="1.4.0" />
-		<node id="10" name="Constant String" position="(100, 700)" project_name="NeuroPype" qualified_name="widgets.programming.owconstantstring.OWConstantString" title="Constant String" uuid="66a84109-b822-40ff-b693-86d798a1de90" version="1.0.0" />
-		<node id="11" name="IIR Filter" position="(1029.0, 890.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owiirfilter.OWIIRFilter" title="IIR Filter (1)" uuid="2d038d0c-9d2a-44f5-ad91-e02ea46323ee" version="1.1.0" />
-		<node id="12" name="Record to XDF" position="(1200.0, 883.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (6)" uuid="727cbe5a-5841-4d0c-a8ab-20e40833e4c9" version="1.4.0" />
+		<node id="0" name="LSL Input" position="(595.0, 368.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="EyeTrackerStream" uuid="48b946bb-5102-4912-9592-c56bbaa745e8" version="1.5.1" />
+		<node id="1" name="Select Range" position="(1077.0, 448.0)" project_name="NeuroPype" qualified_name="widgets.tensor_math.owselectrange.OWSelectRange" title="Blinking Data" uuid="1f5fd4a4-6b47-4505-98ed-235dbfdb1242" version="1.1.0" />
+		<node id="2" name="LSL Input" position="(615.0, 888.0)" project_name="NeuroPype" qualified_name="widgets.network.owlslinput.OWLSLInput" title="EEG" uuid="80c08671-e35f-4de8-b3f7-af3f26b607a0" version="1.5.1" />
+		<node id="3" name="Dejitter Timestamps" position="(815.0, 888.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owdejittertimestamps.OWDejitterTimestamps" title="Dejitter Timestamps" uuid="0f127e5e-480f-493f-816d-d7470bb9b638" version="1.0.0" />
+		<node id="4" name="Record to XDF" position="(829.0, 528.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF" uuid="847c7840-a7b8-4914-9d98-648bea461c4b" version="1.4.0" />
+		<node id="5" name="Record to XDF" position="(715.0, 1088.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (1)" uuid="36663dcb-2c5f-45fb-bad3-04c331341de6" version="1.4.0" />
+		<node id="6" name="Time Series Plot" position="(1243.0, 446.0)" project_name="NeuroPype" qualified_name="widgets.visualization.owtimeseriesplot.OWTimeSeriesPlot" title="Time Series Plot (2)" uuid="2ac07903-770a-437b-b821-86c4c995fd0d" version="1.1.0" />
+		<node id="7" name="Dejitter Timestamps" position="(825.0, 359.0)" project_name="NeuroPype" qualified_name="widgets.utilities.owdejittertimestamps.OWDejitterTimestamps" title="Dejitter Timestamps (2)" uuid="ba6fba06-6dd4-452a-bbd1-33ac0fd32337" version="1.0.0" />
+		<node id="8" name="Record to XDF" position="(615.0, 1088.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (5)" uuid="84a7754e-d9b2-4b7f-84e1-593acc648480" version="1.4.0" />
+		<node id="9" name="Record to XDF" position="(729.0, 528.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (7)" uuid="4987a0d4-4c7e-4184-bfe2-a0a279f441a4" version="1.4.0" />
+		<node id="10" name="Constant String" position="(100, 700)" project_name="NeuroPype" qualified_name="widgets.programming.owconstantstring.OWConstantString" title="Constant String" uuid="7a60007b-0dee-4a24-b756-c87cc54bb19f" version="1.0.0" />
+		<node id="11" name="IIR Filter" position="(1042.0, 885.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owiirfilter.OWIIRFilter" title="IIR Filter (1)" uuid="be7540a9-b2c8-47a7-b02b-fc97d1970d4c" version="1.1.0" />
+		<node id="12" name="Record to XDF" position="(1200.0, 883.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (6)" uuid="d810da39-73a2-4c52-b54b-d99129a90140" version="1.4.0" />
+		<node id="13" name="Decimate" position="(932.0, 884.0)" project_name="NeuroPype" qualified_name="widgets.signal_processing.owdecimate.OWDecimate" title="Decimate" uuid="d1704ca9-79cb-4105-b562-3caa4391c403" version="1.0.1" />
+		<node id="14" name="Record to XDF" position="(1011.0, 1019.0)" project_name="NeuroPype" qualified_name="widgets.file_system.owrecordtoxdf.OWRecordToXDF" title="Record to XDF (1)" uuid="1be502fb-af73-4c38-bc17-5920f7714f08" version="1.4.0" />
 	</nodes>
 	<links>
 		<link enabled="true" id="0" sink_channel="Data" sink_node_id="3" source_channel="Data" source_node_id="2" />
@@ -28,15 +30,19 @@
 		<link enabled="true" id="9" sink_channel="Output Root" sink_node_id="9" source_channel="Data" source_node_id="10" />
 		<link enabled="true" id="10" sink_channel="Output Root" sink_node_id="5" source_channel="Data" source_node_id="10" />
 		<link enabled="true" id="11" sink_channel="Output Root" sink_node_id="8" source_channel="Data" source_node_id="10" />
-		<link enabled="true" id="12" sink_channel="Data" sink_node_id="11" source_channel="Data" source_node_id="3" />
-		<link enabled="true" id="13" sink_channel="Output Root" sink_node_id="12" source_channel="Data" source_node_id="10" />
-		<link enabled="true" id="14" sink_channel="Data" sink_node_id="12" source_channel="Data" source_node_id="11" />
+		<link enabled="true" id="12" sink_channel="Output Root" sink_node_id="12" source_channel="Data" source_node_id="10" />
+		<link enabled="true" id="13" sink_channel="Data" sink_node_id="12" source_channel="Data" source_node_id="11" />
+		<link enabled="true" id="14" sink_channel="Data" sink_node_id="13" source_channel="Data" source_node_id="3" />
+		<link enabled="true" id="15" sink_channel="Data" sink_node_id="11" source_channel="Data" source_node_id="13" />
+		<link enabled="true" id="16" sink_channel="Data" sink_node_id="14" source_channel="Data" source_node_id="13" />
+		<link enabled="true" id="17" sink_channel="Output Root" sink_node_id="14" source_channel="Data" source_node_id="10" />
 	</links>
 	<annotations>
 		<text font-family="Helvetica" font-size="16" id="0" rect="(499.0, 805.0, 244.0, 62.0)">LSL stream for EEG and cleaning up data.</text>
 		<text font-family="Helvetica" font-size="16" id="1" rect="(535.0, 247.0, 198.0, 50.0)">LSL stream for eye tracking and blinking.</text>
 		<text font-family="Helvetica" font-size="16" id="2" rect="(13.0, 643.0, 252.0, 83.0)">String containing root for recordings</text>
 		<text font-family="Helvetica" font-size="16" id="3" rect="(1243.0, 870.0, 340.0, 59.0)">Dejittered + IIR 3rd order, [0.75, 5], EEG</text>
+		<text font-family="Helvetica" font-size="16" id="4" rect="(166.0, 1505.0, 367.0, 186.0)">IPDKNOB</text>
 	</annotations>
 	<thumbnail />
 	<node_properties>
@@ -73,7 +79,7 @@ cHJvY19kZWppdHRlcnEViVgPAAAAcHJvY19tb25vdG9uaXplcRaJWA8AAABwcm9jX3RocmVhZHNh
 ZmVxF4lYBQAAAHF1ZXJ5cRhYHAAAAG5hbWU9J0xpdmVBbXBTTi0wNTYzMDktMDU1MydxGVgHAAAA
 cmVjb3ZlcnEaiFgUAAAAcmVzb2x2ZV9taW5pbXVtX3RpbWVxG0c/4AAAAAAAAFgTAAAAc2F2ZWRX
 aWRnZXRHZW9tZXRyeXEcY3NpcApfdW5waWNrbGVfdHlwZQpxHVgMAAAAUHlRdDUuUXRDb3JlcR5Y
-CgAAAFFCeXRlQXJyYXlxH0NCAdnQywADAAAAAAaqAAACgwAACEQAAAWPAAAGqwAAArAAAAhDAAAF
+CgAAAFFCeXRlQXJyYXlxH0NCAdnQywADAAAAAAarAAACsAAACEMAAAWOAAAGqwAAArAAAAhDAAAF
 jgAAAAAAAAAADwAAAAarAAACsAAACEMAAAWOcSCFcSGHcSJScSNYDgAAAHNldF9icmVha3BvaW50
 cSSJWA8AAAB1c2Vfc3RyZWFtbmFtZXNxJYl1Lg==
 </properties>
@@ -161,7 +167,7 @@ AABmcmVxdWVuY2llc3EFXXEGKEc/6AAAAAAAAEsFZVgLAAAAaWdub3JlX25hbnNxB4lYCAAAAG1l
 dGFkYXRhcQh9cQlYBAAAAG1vZGVxClgIAAAAYmFuZHBhc3NxC1gQAAAAb2ZmbGluZV9maWx0Zmls
 dHEMiVgFAAAAb3JkZXJxDUsDWAkAAABwYXNzX2xvc3NxDkdACAAAAAAAAFgTAAAAc2F2ZWRXaWRn
 ZXRHZW9tZXRyeXEPY3NpcApfdW5waWNrbGVfdHlwZQpxEFgMAAAAUHlRdDUuUXRDb3JlcRFYCgAA
-AFFCeXRlQXJyYXlxEkNCAdnQywADAAAAAAaxAAADTwAACDwAAATvAAAGsQAAA08AAAg8AAAE7wAA
+AFFCeXRlQXJyYXlxEkNCAdnQywADAAAAAAawAAADIgAACD0AAATwAAAGsQAAA08AAAg8AAAE7wAA
 AAAAAAAADwAAAAaxAAADTwAACDwAAATvcROFcRSHcRVScRZYDgAAAHNldF9icmVha3BvaW50cReJ
 WAoAAABzdG9wX2F0dGVucRhHQEkAAAAAAAB1Lg==
 </properties>
@@ -176,6 +182,24 @@ X3VucGlja2xlX3R5cGUKcRRYDAAAAFB5UXQ1LlF0Q29yZXEVWAoAAABRQnl0ZUFycmF5cRZDQgHZ
 0MsAAwAAAAAGwgAAAtYAAAmPAAAFOwAABsMAAAMDAAAJjgAABToAAAAAAAAAAA8AAAAGwwAAAwMA
 AAmOAAAFOnEXhXEYh3EZUnEaWA0AAABzZXNzaW9uX25vdGVzcRtoBVgOAAAAc2V0X2JyZWFrcG9p
 bnRxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
+</properties>
+		<properties format="pickle" node_id="13">gAN9cQAoWAQAAABheGlzcQFYBAAAAHRpbWVxAlgGAAAAZmFjdG9ycQNLAlgIAAAAbWV0YWRhdGFx
+BH1xBVgTAAAAc2F2ZWRXaWRnZXRHZW9tZXRyeXEGY3NpcApfdW5waWNrbGVfdHlwZQpxB1gMAAAA
+UHlRdDUuUXRDb3JlcQhYCgAAAFFCeXRlQXJyYXlxCUNCAdnQywADAAAAAAbCAAADigAACCsAAASI
+AAAGwwAAA7cAAAgqAAAEhwAAAAAAAAAADwAAAAbDAAADtwAACCoAAASHcQqFcQuHcQxScQ1YDgAA
+AHNldF9icmVha3BvaW50cQ6JdS4=
+</properties>
+		<properties format="pickle" node_id="14">gAN9cQAoWAwAAABhbGxvd19kb3VibGVxAYlYDwAAAGNsb3NlX29uX21hcmtlcnECWA8AAABjbG9z
+ZS1yZWNvcmRpbmdxA1gNAAAAY2xvdWRfYWNjb3VudHEEWAAAAABxBVgMAAAAY2xvdWRfYnVja2V0
+cQZoBVgRAAAAY2xvdWRfY3JlZGVudGlhbHNxB2gFWAoAAABjbG91ZF9ob3N0cQhYBwAAAERlZmF1
+bHRxCVgOAAAAY2xvdWRfcGFydHNpemVxCkseWAwAAABkZWxldGVfcGFydHNxC4hYCAAAAGZpbGVu
+YW1lcQxYHAAAAGRlY2ltYXRlZC1kZWppdHRlcmVkLWVlZy54ZGZxDVgIAAAAbWV0YWRhdGFxDn1x
+D1gLAAAAb3V0cHV0X3Jvb3RxEGgFWBoAAABwcmVzZXJ2ZV9vcmlnaW5hbF9tZXRhZGF0YXERiVgL
+AAAAcmV0cmlldmFibGVxEolYEwAAAHNhdmVkV2lkZ2V0R2VvbWV0cnlxE2NzaXAKX3VucGlja2xl
+X3R5cGUKcRRYDAAAAFB5UXQ1LlF0Q29yZXEVWAoAAABRQnl0ZUFycmF5cRZDQgHZ0MsAAwAAAAAG
+wgAAAtYAAAgrAAAFOwAABsMAAAMDAAAIKgAABToAAAAAAAAAAA8AAAAGwwAAAwMAAAgqAAAFOnEX
+hXEYh3EZUnEaWA0AAABzZXNzaW9uX25vdGVzcRtoBVgOAAAAc2V0X2JyZWFrcG9pbnRxHIlYBwAA
+AHZlcmJvc2VxHYl1Lg==
 </properties>
 	</node_properties>
 	<patch>{
@@ -207,18 +231,6 @@ bnRxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
             "data"
         ],
         [
-            "node4",
-            "data",
-            "node6",
-            "data"
-        ],
-        [
-            "node4",
-            "data",
-            "node12",
-            "data"
-        ],
-        [
             "node1",
             "data",
             "node8",
@@ -240,6 +252,18 @@ bnRxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
             "node8",
             "data",
             "node5",
+            "data"
+        ],
+        [
+            "node4",
+            "data",
+            "node6",
+            "data"
+        ],
+        [
+            "node4",
+            "data",
+            "node14",
             "data"
         ],
         [
@@ -273,9 +297,27 @@ bnRxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
             "output_root"
         ],
         [
+            "node11",
+            "data",
+            "node15",
+            "output_root"
+        ],
+        [
             "node12",
             "data",
             "node13",
+            "data"
+        ],
+        [
+            "node14",
+            "data",
+            "node12",
+            "data"
+        ],
+        [
+            "node14",
+            "data",
+            "node15",
             "data"
         ]
     ],
@@ -395,7 +437,7 @@ bnRxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "ddff5e58-7c8b-4abb-9866-4cda5e4f0dff"
+            "uuid": "48b946bb-5102-4912-9592-c56bbaa745e8"
         },
         "node10": {
             "class": "RecordToXDF",
@@ -482,7 +524,7 @@ bnRxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "822dc471-b53c-4fe8-aa5b-46e0142c15ce"
+            "uuid": "4987a0d4-4c7e-4184-bfe2-a0a279f441a4"
         },
         "node11": {
             "class": "ConstantString",
@@ -504,7 +546,7 @@ bnRxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
                     "value": "C:/Users/vizlab_stud/idatt2900_gr92/neuropype-pipeline/LSLData"
                 }
             },
-            "uuid": "66a84109-b822-40ff-b693-86d798a1de90"
+            "uuid": "7a60007b-0dee-4a24-b756-c87cc54bb19f"
         },
         "node12": {
             "class": "IIRFilter",
@@ -569,7 +611,7 @@ bnRxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
                     "value": 50.0
                 }
             },
-            "uuid": "2d038d0c-9d2a-44f5-ad91-e02ea46323ee"
+            "uuid": "be7540a9-b2c8-47a7-b02b-fc97d1970d4c"
         },
         "node13": {
             "class": "RecordToXDF",
@@ -656,7 +698,121 @@ bnRxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "727cbe5a-5841-4d0c-a8ab-20e40833e4c9"
+            "uuid": "d810da39-73a2-4c52-b54b-d99129a90140"
+        },
+        "node14": {
+            "class": "Decimate",
+            "module": "neuropype.nodes.signal_processing.Decimate",
+            "params": {
+                "axis": {
+                    "customized": false,
+                    "type": "EnumPort",
+                    "value": "time"
+                },
+                "factor": {
+                    "customized": false,
+                    "type": "IntPort",
+                    "value": 2
+                },
+                "metadata": {
+                    "customized": false,
+                    "type": "DictPort",
+                    "value": {}
+                },
+                "set_breakpoint": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                }
+            },
+            "uuid": "d1704ca9-79cb-4105-b562-3caa4391c403"
+        },
+        "node15": {
+            "class": "RecordToXDF",
+            "module": "neuropype.nodes.file_system.RecordToXDF",
+            "params": {
+                "allow_double": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                },
+                "close_on_marker": {
+                    "customized": false,
+                    "type": "StringPort",
+                    "value": "close-recording"
+                },
+                "cloud_account": {
+                    "customized": false,
+                    "type": "StringPort",
+                    "value": ""
+                },
+                "cloud_bucket": {
+                    "customized": false,
+                    "type": "StringPort",
+                    "value": ""
+                },
+                "cloud_credentials": {
+                    "customized": false,
+                    "type": "StringPort",
+                    "value": ""
+                },
+                "cloud_host": {
+                    "customized": false,
+                    "type": "EnumPort",
+                    "value": "Default"
+                },
+                "cloud_partsize": {
+                    "customized": false,
+                    "type": "IntPort",
+                    "value": 30
+                },
+                "delete_parts": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": true
+                },
+                "filename": {
+                    "customized": true,
+                    "type": "StringPort",
+                    "value": "decimated-dejittered-eeg.xdf"
+                },
+                "metadata": {
+                    "customized": false,
+                    "type": "DictPort",
+                    "value": {}
+                },
+                "output_root": {
+                    "customized": false,
+                    "type": "StringPort",
+                    "value": ""
+                },
+                "preserve_original_metadata": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                },
+                "retrievable": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                },
+                "session_notes": {
+                    "customized": false,
+                    "type": "StringPort",
+                    "value": ""
+                },
+                "set_breakpoint": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                },
+                "verbose": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                }
+            },
+            "uuid": "1be502fb-af73-4c38-bc17-5920f7714f08"
         },
         "node2": {
             "class": "SelectRange",
@@ -704,7 +860,7 @@ bnRxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
                     "value": "names"
                 }
             },
-            "uuid": "3c5d5583-86ea-4aa7-814b-9b18799bd870"
+            "uuid": "1f5fd4a4-6b47-4505-98ed-235dbfdb1242"
         },
         "node3": {
             "class": "LSLInput",
@@ -821,7 +977,7 @@ bnRxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "509ce87b-77d8-480d-ba21-67edad6c497e"
+            "uuid": "80c08671-e35f-4de8-b3f7-af3f26b607a0"
         },
         "node4": {
             "class": "DejitterTimestamps",
@@ -858,7 +1014,7 @@ bnRxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
                     "value": -1
                 }
             },
-            "uuid": "05e68c74-13ba-4f11-8f68-d00647996c7d"
+            "uuid": "0f127e5e-480f-493f-816d-d7470bb9b638"
         },
         "node5": {
             "class": "RecordToXDF",
@@ -945,7 +1101,7 @@ bnRxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "acb44b04-12cf-4f63-b7ba-24a6d4319cbb"
+            "uuid": "847c7840-a7b8-4914-9d98-648bea461c4b"
         },
         "node6": {
             "class": "RecordToXDF",
@@ -1032,7 +1188,7 @@ bnRxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "ea7b1ce9-144b-481d-8936-bef1af7bc181"
+            "uuid": "36663dcb-2c5f-45fb-bad3-04c331341de6"
         },
         "node7": {
             "class": "TimeSeriesPlot",
@@ -1184,7 +1340,7 @@ bnRxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "6dc03f1e-1d5c-433f-bb26-3aa177107bb7"
+            "uuid": "2ac07903-770a-437b-b821-86c4c995fd0d"
         },
         "node8": {
             "class": "DejitterTimestamps",
@@ -1221,7 +1377,7 @@ bnRxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
                     "value": -1
                 }
             },
-            "uuid": "4d11b86f-60e0-4f94-9d73-dfd81cf05ea6"
+            "uuid": "ba6fba06-6dd4-452a-bbd1-33ac0fd32337"
         },
         "node9": {
             "class": "RecordToXDF",
@@ -1308,7 +1464,7 @@ bnRxHIlYBwAAAHZlcmJvc2VxHYl1Lg==
                     "value": false
                 }
             },
-            "uuid": "faa5f5c8-26cb-41ca-b953-46e4c2d19338"
+            "uuid": "84a7754e-d9b2-4b7f-84e1-593acc648480"
         }
     },
     "version": 1.1
