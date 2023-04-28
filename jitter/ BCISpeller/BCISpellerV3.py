@@ -193,7 +193,12 @@ inlet_2 = StreamInlet(streams_eeg[0])# LSL EEG data
 fs = 250  # Sampling frequency
 delay = 0 #Occular delay
 #delay = 0.00 #Occular delay
-fragment_duration = 6+delay  # Fragment duration in seconds
+sync_delay = 0.061 #sync delay
+ocular_delay = 0.100 # Ocular delay
+
+#fragment_duration = 6+delay  # Fragment duration in seconds
+fragment_duration = 4 + sync_delay + ocular_delay  # Fragment duration in seconds
+
 fragment_samples = round(fs * fragment_duration)
 
 
@@ -218,8 +223,9 @@ while True:
         # If buffer is filled with data ready to be compared in CCA, and the start of the buffer is the start of
         # the Eye Tracking data (Eye Tracking trigger)
 
-        if (len(buffer) == fragment_samples) and (buffer[0][0] == 1):
-            if(buffer[fragment_samples - round(delay * fs)-1][0] != (fragment_samples-round(delay * fs))):
+        if (len(buffer) == fragment_samples) and buffer[0][round(ocular_delay*fs)] == 1 and buffer[0][fragment_samples-round(sync_delay * fs)] != 0:
+            # This prob not working :P
+            if(buffer[fragment_samples - round(sync_delay * fs)-1][0] != (fragment_samples-round(sync_delay * fs))):
                 print("Found invalid stare")
                 continue
 
@@ -250,9 +256,12 @@ while True:
             print("--- Filter time:  %s seconds ---" % (time.time() - start_time))
             print(df['N'].tolist())
 
+            df['N'] = df['N'].shift(-round(ocular_delay * fs))
+
+
             # If any delay added, shift signal accordingly
-            df['N'] = df['N'].shift(round(delay*fs))
-            df = df.iloc[round(delay*fs):]
+            df['N'] = df['N'].shift(round(sync_delay * fs))
+            df = df.iloc[round(sync_delay * fs):]
             # Reset the index
 
             df = df.reset_index(drop=True)
