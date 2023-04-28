@@ -112,9 +112,9 @@ inlet_2 = StreamInlet(streams_eeg[0])
 
 
 fs = 250  # Sampling frequency
-delay = 0.061
+delay = 0
 
-fragment_duration = 4+delay  # Fragment duration in seconds
+fragment_duration = 6+delay  # Fragment duration in seconds
 print(fragment_duration)
 fragment_samples = round(fs * fragment_duration)
 pre_trigger_samples = fs * 1
@@ -183,9 +183,9 @@ while True:
                 X_c, Y_c = ca.transform(X, Y)
                 # Uses two coefficients pk = sqrt(p1**2+p2*'2)
                 p1 = np.corrcoef(X_c[:, 0], Y_c[:, 0])[0][1]
-                #freqs.append(p1)
-                p2 = np.corrcoef(X_c[:, 1], Y_c[:, 1])[0][1]
-                freqs.append(np.sqrt(p1 ** 2 + p2 ** 2))
+                freqs.append(p1)
+                #p2 = np.corrcoef(X_c[:, 1], Y_c[:, 1])[0][1]
+                #freqs.append(np.sqrt(p1 ** 2 + p2 ** 2))
             cca = freqs
             # print("CCA single: " + str(perform_cca(df,1)))
             print(cca)

@@ -191,9 +191,9 @@ inlet = StreamInlet(streams_counter[0]) #LSL Eyetracker data
 inlet_2 = StreamInlet(streams_eeg[0])# LSL EEG data
 
 fs = 250  # Sampling frequency
-delay = 0.061 #Occular delay
-
-fragment_duration = 4+delay  # Fragment duration in seconds
+delay = 0 #Occular delay
+#delay = 0.00 #Occular delay
+fragment_duration = 6+delay  # Fragment duration in seconds
 fragment_samples = round(fs * fragment_duration)
 
 
@@ -276,9 +276,9 @@ while True:
                 X_c, Y_c = ca.transform(X, Y)
                 # Uses two coefficients pk = sqrt(p1**2+p2*'2)
                 p1 = np.corrcoef(X_c[:, 0], Y_c[:, 0])[0][1]
-                #freqs.append(p1)
-                p2 = np.corrcoef(X_c[:, 1], Y_c[:, 1])[0][1]
-                freqs.append(np.sqrt(p1 ** 2 + p2 ** 2))
+                freqs.append(p1)
+                #p2 = np.corrcoef(X_c[:, 1], Y_c[:, 1])[0][1]
+                #freqs.append(np.sqrt(p1 ** 2 + p2 ** 2))
             cca = freqs
             #print("CCA single: " + str(perform_cca(df,1)))
             print(cca)
