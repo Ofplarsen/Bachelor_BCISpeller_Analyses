@@ -112,13 +112,12 @@ inlet_2 = StreamInlet(streams_eeg[0])
 
 
 fs = 250  # Sampling frequency
-delay = 0
+delay = 0.0
 
-fragment_duration = 6+delay  # Fragment duration in seconds
+fragment_duration = 2+delay  # Fragment duration in seconds
 print(fragment_duration)
 fragment_samples = round(fs * fragment_duration)
-pre_trigger_samples = fs * 1
-target_value = 0
+
 
 
 
@@ -163,11 +162,8 @@ while True:
             # Reset the index
             df = df.reset_index(drop=True)
             N = df['N']
-            print(df.shape)
-            df = pd.concat([df, get_freqs(N)], axis=1, join='inner')
-            print(df.shape)
-            print([(index, row['O1']) for index, row in df.iterrows() if pd.isna(row['O1'])])
 
+            df = pd.concat([df, get_freqs(N)], axis=1, join='inner')
 
             N = df['N']
             frs = get_freqs(N)

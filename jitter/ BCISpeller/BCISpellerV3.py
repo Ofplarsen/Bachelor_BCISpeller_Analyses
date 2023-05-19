@@ -197,7 +197,7 @@ sync_delay = 0.061 #sync delay
 ocular_delay = 0.100 # Ocular delay
 
 #fragment_duration = 6+delay  # Fragment duration in seconds
-fragment_duration = 4 + sync_delay + ocular_delay  # Fragment duration in seconds
+fragment_duration = 2 + sync_delay + ocular_delay  # Fragment duration in seconds
 
 fragment_samples = round(fs * fragment_duration)
 
@@ -223,9 +223,11 @@ while True:
         # If buffer is filled with data ready to be compared in CCA, and the start of the buffer is the start of
         # the Eye Tracking data (Eye Tracking trigger)
 
-        if (len(buffer) == fragment_samples) and buffer[0][round(ocular_delay*fs)] == 1 and buffer[0][fragment_samples-round(sync_delay * fs)] != 0:
+
+        if (len(buffer) == fragment_samples) and (buffer[round(ocular_delay*fs)][0] == 1 and buffer[fragment_samples-round(sync_delay * fs)-round(ocular_delay*fs)][0] != 0):
             # This prob not working :P
-            if(buffer[fragment_samples - round(sync_delay * fs)-1][0] != (fragment_samples-round(sync_delay * fs))):
+
+            if(buffer[fragment_samples - round(sync_delay * fs)-1][0] != (fragment_samples-round(sync_delay * fs)-round(ocular_delay*fs))):
                 print("Found invalid stare")
                 continue
 
@@ -239,12 +241,11 @@ while True:
 
             df.columns = ['N'] + channels
 
-            print(df.columns)
-            print(df[occ_channels])
+
             start_time = time.time()
             # Adds padding to the signals
             df = df.apply(lambda x: add_padding(x, pad_length))
-            print(len(df['O1']))
+
             # Adds Notch filter to the occular channels
             df[occ_channels] = df[occ_channels].apply(lambda x: notch(x))
             #Adds Butterworth filter to the occular channels
@@ -254,23 +255,23 @@ while True:
 
 
             print("--- Filter time:  %s seconds ---" % (time.time() - start_time))
-            print(df['N'].tolist())
 
+
+            #Ocluar shift
             df['N'] = df['N'].shift(-round(ocular_delay * fs))
-
 
             # If any delay added, shift signal accordingly
             df['N'] = df['N'].shift(round(sync_delay * fs))
-            df = df.iloc[round(sync_delay * fs):]
+            df = df.iloc[round(sync_delay * fs):fragment_samples-round(ocular_delay * fs)]
             # Reset the index
-
+            df = df.dropna()
             df = df.reset_index(drop=True)
             N = df['N']
-            print(df.shape)
-            df = pd.concat([df, get_freqs(N)], axis=1, join='inner')
-            print(df.shape)
-            print([(index, row['O1']) for index, row in df.iterrows() if pd.isna(row['O1'])])
 
+            df = pd.concat([df, get_freqs(N)], axis=1, join='inner')
+
+            #print([(index, row['O1']) for index, row in df.iterrows() if pd.isna(row['O1'])])
+            #print(df)
             N = df['N']
             frs = get_freqs(N)
             X = df[:][occ_channels]
