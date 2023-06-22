@@ -1,11 +1,14 @@
-# Bachelor's Thesis
+# Bachelor's Thesis - Synchronizing an eye tracker and an EEG, then creating a hybrid SSVEP-based BCI Speller in an immersive VR environment
 
 This project contains three different parts of William G. Tresselt and Olav F. P. Larsen's bachelor's thesis. 
-The initial task was to synchronize an eye tracker and an EEG. The data was streamed using LabStreamingLayer (LSL)
+The initial task was to synchronize an eye tracker and an EEG. This later was expanded to implement a hybrid SSVEP-based BCI Speller in an immersive VR environment.
+The data was streamed using LabStreamingLayer (LSL).
+
+Demonstration of the working BCI Speller: https://www.youtube.com/watch?v=s6PwwigH5AA
 
 ## Synchronization of the EEG and Eye Tracker
 
-This was done to enable other research that wants to explore the combination of these two technologies.
+This was done to enable other researchers to explore the combination of these two technologies.
 The analysis was done by applying a zero-phase ButterWorth filter to an EMG signal (EMG was synchronized with the EEG) recording a subject's blink,
 and aligning the peak with the start of the eyes being fully closed, which the eye tracker recorded. This was then done multiple times (200+). The STD and mean
 offset were then computed and adjusted when using the equipment combined.
@@ -18,7 +21,7 @@ inside the cluster the subject was looking at, were flickering. This allowed the
 in traditional SSVEP spellers, instead of hybrid solutions. The VR environment was used to make the cluster with the letters "fly" toward the subject when looking at it. 
 
 The EEG signal was filtered using zero-phase Butterworth, and a CCA was used to compare the EEG signal with the different target frequencies, to determine what frequency the
-subject was looking at. The index of the frequency with the highest correlation was then streamed from the script also using LSL.
+subject was looking at. The frequency index with the highest correlation was then streamed from the script using LSL.
 
 ### 2DVEP
 The 2DVEP folder contains a C program, which splits the PC screen into four different squares that flickers at different frequencies. This can be set by injecting arguments to the
